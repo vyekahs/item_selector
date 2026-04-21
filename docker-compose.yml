@@ -52,10 +52,12 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     restart: unless-stopped
-    # Bind to 127.0.0.1 only — Caddy on the same host proxies into this
-    # port. Never expose publicly: basic auth lives at the Caddy layer.
+    # Bind on all interfaces (0.0.0.0) so containers in sibling compose
+    # projects (Caddy) can reach via ``host.docker.internal``. Router is
+    # not forwarding 8001 from the internet, so effectively LAN-only;
+    # public access is gated by Caddy basic-auth at 443.
     ports:
-      - "127.0.0.1:${API_HOST_PORT:-8001}:8000"
+      - "${API_HOST_PORT:-8001}:8000"
     environment:
       DATABASE_URL: ${DATABASE_URL}
       REDIS_URL: ${REDIS_URL}
@@ -109,7 +111,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - "127.0.0.1:${WEB_HOST_PORT:-3001}:3000"
+      - "${WEB_HOST_PORT:-3001}:3000"
     environment:
       NODE_ENV: production
       NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:-http://localhost/api}
