@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useMemo, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 
 import { ScoreBadge } from '@/components/ScoreBadge';
 import { useProductList } from '@/lib/api/queries';
@@ -21,6 +21,16 @@ const channelLabel: Record<Channel, string> = {
 };
 
 export default function HistoryPage() {
+  // Next 14 requires useSearchParams to sit under a Suspense boundary;
+  // otherwise `next build`'s static export fails.
+  return (
+    <Suspense fallback={<p className="text-sm text-slate-500">불러오는 중…</p>}>
+      <HistoryPageInner />
+    </Suspense>
+  );
+}
+
+function HistoryPageInner() {
   const searchParams = useSearchParams();
   const keywordIdParam = searchParams.get('keyword_id');
   const keywordId = keywordIdParam ? Number(keywordIdParam) : null;

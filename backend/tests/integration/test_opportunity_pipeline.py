@@ -58,10 +58,13 @@ class _SearchAd:
 
     async def fetch(self, keywords: list[str]) -> list[KeywordVolumeDTO]:
         self.fetch_calls.append(list(keywords))
-        out: list[KeywordVolumeDTO] = []
+        # Naver keywordstool: flat keywordList where each row IS a related
+        # keyword candidate. Include the seed's own row too (production
+        # code filters it out via seed_set dedup).
         related_map = {
             "고양이 자동급수기": ["고양이 분수기", "자동 급수기"],
         }
+        out: list[KeywordVolumeDTO] = []
         for kw in keywords:
             out.append(
                 KeywordVolumeDTO(
@@ -70,9 +73,20 @@ class _SearchAd:
                     mobile_monthly_volume=15_000,
                     total_monthly_volume=20_000,
                     competition_index=0.35,
-                    related_keywords=related_map.get(kw, []),
+                    related_keywords=[],
                 )
             )
+            for related in related_map.get(kw, []):
+                out.append(
+                    KeywordVolumeDTO(
+                        term=related,
+                        pc_monthly_volume=5_000,
+                        mobile_monthly_volume=15_000,
+                        total_monthly_volume=20_000,
+                        competition_index=0.35,
+                        related_keywords=[],
+                    )
+                )
         return out
 
 

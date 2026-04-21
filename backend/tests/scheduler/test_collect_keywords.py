@@ -15,7 +15,8 @@ from app.scheduler.jobs import CollectKeywordsJob
 
 
 class _StubSearchAdClient:
-    """Returns a fixed set of related keywords per call."""
+    """Mimic Naver keywordstool: flat ``keywordList`` where each row IS a
+    related keyword (not nested inside the seed row)."""
 
     cache_ttl = 86_400
 
@@ -26,18 +27,20 @@ class _StubSearchAdClient:
     async def fetch(self, keywords: list[str]) -> list[KeywordVolumeDTO]:
         self.calls.append(list(keywords))
         out: list[KeywordVolumeDTO] = []
+        # Production code calls one seed per request; flatten the related
+        # list into KeywordVolumeDTO rows just like the real API does.
         for kw in keywords:
-            related = self._related.get(kw, [])
-            out.append(
-                KeywordVolumeDTO(
-                    term=kw,
-                    pc_monthly_volume=100,
-                    mobile_monthly_volume=200,
-                    total_monthly_volume=300,
-                    competition_index=0.4,
-                    related_keywords=related,
+            for related in self._related.get(kw, []):
+                out.append(
+                    KeywordVolumeDTO(
+                        term=related,
+                        pc_monthly_volume=100,
+                        mobile_monthly_volume=200,
+                        total_monthly_volume=300,
+                        competition_index=0.4,
+                        related_keywords=[],
+                    )
                 )
-            )
         return out
 
 
@@ -104,8 +107,9 @@ def test_collect_keywords_no_seeds_is_noop(db_session):
     assert client.calls == []
 
 
-def test_collect_keywords_batches_calls(db_session):
-    # 7 seeds → 2 batches (5 + 2).
+def test_collect_keywords_calls_once_per_seed(db_session):
+    # Naver API cost is equal for batch sizes 1–5, and per-seed ranking
+    # requires 1 call per seed. 7 seeds → 7 calls.
     for i in range(7):
         _seed(db_session, f"seed{i}")
 
@@ -115,7 +119,7 @@ def test_collect_keywords_batches_calls(db_session):
     job = CollectKeywordsJob(searchad_client=client)
     metrics = asyncio.run(job.run(db_session))
 
-    assert metrics["api_calls"] == 2
+    assert metrics["api_calls"] == 7
     assert metrics["new_keywords"] == 7
 
 
