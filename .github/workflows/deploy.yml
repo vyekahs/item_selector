@@ -1,9 +1,13 @@
 name: Deploy to Home Server
 
 on:
-  push:
+  # Fires after ``CI`` completes on main. ``workflow_run`` runs even on
+  # CI failure, so the job guards on ``conclusion == 'success'``.
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
     branches: [main]
-  # Allow manual re-deploys without an empty commit.
+  # Allow manual re-deploys without a commit.
   workflow_dispatch:
 
 concurrency:
@@ -12,9 +16,11 @@ concurrency:
 
 jobs:
   deploy:
-    # Only run after CI passes on the same commit — prevents shipping a
-    # broken build. Comment out ``needs`` if you want deploy-on-push.
-    needs: []
+    # Skip when CI failed. ``workflow_dispatch`` events have no
+    # ``workflow_run`` context, so allow them through unconditionally.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Deploy via SSH
@@ -29,7 +35,7 @@ jobs:
           command_timeout: 15m
           script: |
             set -e
-            cd ${{ secrets.DEPLOY_PATH }}
+            cd Documents/projects/itemSelector/item_selector
             git pull
             docker compose up -d --build
             docker compose ps
