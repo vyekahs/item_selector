@@ -1,0 +1,4820 @@
+<meta http-equiv="Content-Type" content="application/vnd.ms-excel; charset=utf-8">
+<table cellspacing="0" cellpadding="0" border="1"> 
+	<tr>
+		<td colspan="4" style="font-size: 16px; text-align: center;height: 50px;font-weight: bold">해운(자가장치장)</td>
+	</tr>
+	<tr>
+        <td bgcolor="#f5f8f9" style="width: 80px;text-align: center">무게</td>
+
+		<td bgcolor="#f5f8f9" style="width: 100px;text-align: center">일반셀러</td>
+		<td bgcolor="#f5f8f9" style="width: 100px;text-align: center">슈퍼셀러</td>
+		<td bgcolor="#f5f8f9" style="width: 100px;text-align: center">협력사</td>
+ 	 </tr>
+	   	<tr>
+		<td style="text-align: center">~ 0.50</td>
+		<td style="text-align: right">5,400</td>
+		<td style="text-align: right">4,860</td>
+		<td style="text-align: right">4,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 1.00</td>
+		<td style="text-align: right">6,200</td>
+		<td style="text-align: right">5,590</td>
+		<td style="text-align: right">5,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 1.50</td>
+		<td style="text-align: right">7,000</td>
+		<td style="text-align: right">6,330</td>
+		<td style="text-align: right">5,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 2.00</td>
+		<td style="text-align: right">7,800</td>
+		<td style="text-align: right">7,060</td>
+		<td style="text-align: right">6,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 2.50</td>
+		<td style="text-align: right">8,600</td>
+		<td style="text-align: right">7,840</td>
+		<td style="text-align: right">7,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 3.00</td>
+		<td style="text-align: right">9,400</td>
+		<td style="text-align: right">8,580</td>
+		<td style="text-align: right">7,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 3.50</td>
+		<td style="text-align: right">10,200</td>
+		<td style="text-align: right">9,310</td>
+		<td style="text-align: right">8,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 4.00</td>
+		<td style="text-align: right">11,000</td>
+		<td style="text-align: right">10,100</td>
+		<td style="text-align: right">9,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 4.50</td>
+		<td style="text-align: right">11,800</td>
+		<td style="text-align: right">10,830</td>
+		<td style="text-align: right">9,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 5.00</td>
+		<td style="text-align: right">12,600</td>
+		<td style="text-align: right">11,570</td>
+		<td style="text-align: right">10,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 5.50</td>
+		<td style="text-align: right">13,400</td>
+		<td style="text-align: right">12,300</td>
+		<td style="text-align: right">11,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 6.00</td>
+		<td style="text-align: right">14,200</td>
+		<td style="text-align: right">13,090</td>
+		<td style="text-align: right">12,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 6.50</td>
+		<td style="text-align: right">15,000</td>
+		<td style="text-align: right">13,820</td>
+		<td style="text-align: right">12,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 7.00</td>
+		<td style="text-align: right">15,800</td>
+		<td style="text-align: right">14,560</td>
+		<td style="text-align: right">13,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 7.50</td>
+		<td style="text-align: right">16,600</td>
+		<td style="text-align: right">15,340</td>
+		<td style="text-align: right">14,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 8.00</td>
+		<td style="text-align: right">17,400</td>
+		<td style="text-align: right">16,080</td>
+		<td style="text-align: right">14,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 8.50</td>
+		<td style="text-align: right">18,200</td>
+		<td style="text-align: right">16,810</td>
+		<td style="text-align: right">15,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 9.00</td>
+		<td style="text-align: right">19,000</td>
+		<td style="text-align: right">17,600</td>
+		<td style="text-align: right">16,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 9.50</td>
+		<td style="text-align: right">19,800</td>
+		<td style="text-align: right">18,330</td>
+		<td style="text-align: right">16,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 10.00</td>
+		<td style="text-align: right">20,600</td>
+		<td style="text-align: right">19,070</td>
+		<td style="text-align: right">17,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 10.50</td>
+		<td style="text-align: right">21,400</td>
+		<td style="text-align: right">19,650</td>
+		<td style="text-align: right">18,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 11.00</td>
+		<td style="text-align: right">22,200</td>
+		<td style="text-align: right">20,290</td>
+		<td style="text-align: right">18,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 11.50</td>
+		<td style="text-align: right">23,000</td>
+		<td style="text-align: right">20,880</td>
+		<td style="text-align: right">19,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 12.00</td>
+		<td style="text-align: right">23,800</td>
+		<td style="text-align: right">21,470</td>
+		<td style="text-align: right">20,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 12.50</td>
+		<td style="text-align: right">24,600</td>
+		<td style="text-align: right">22,050</td>
+		<td style="text-align: right">20,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 13.00</td>
+		<td style="text-align: right">25,400</td>
+		<td style="text-align: right">22,690</td>
+		<td style="text-align: right">21,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 13.50</td>
+		<td style="text-align: right">26,200</td>
+		<td style="text-align: right">23,280</td>
+		<td style="text-align: right">21,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 14.00</td>
+		<td style="text-align: right">27,000</td>
+		<td style="text-align: right">23,870</td>
+		<td style="text-align: right">22,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 14.50</td>
+		<td style="text-align: right">27,800</td>
+		<td style="text-align: right">24,460</td>
+		<td style="text-align: right">22,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 15.00</td>
+		<td style="text-align: right">28,600</td>
+		<td style="text-align: right">25,090</td>
+		<td style="text-align: right">23,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 15.50</td>
+		<td style="text-align: right">29,400</td>
+		<td style="text-align: right">25,680</td>
+		<td style="text-align: right">23,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 16.00</td>
+		<td style="text-align: right">30,200</td>
+		<td style="text-align: right">26,270</td>
+		<td style="text-align: right">24,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 16.50</td>
+		<td style="text-align: right">31,000</td>
+		<td style="text-align: right">26,860</td>
+		<td style="text-align: right">24,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 17.00</td>
+		<td style="text-align: right">31,800</td>
+		<td style="text-align: right">27,490</td>
+		<td style="text-align: right">25,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 17.50</td>
+		<td style="text-align: right">32,600</td>
+		<td style="text-align: right">28,080</td>
+		<td style="text-align: right">26,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 18.00</td>
+		<td style="text-align: right">33,400</td>
+		<td style="text-align: right">28,670</td>
+		<td style="text-align: right">26,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 18.50</td>
+		<td style="text-align: right">34,200</td>
+		<td style="text-align: right">29,260</td>
+		<td style="text-align: right">27,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 19.00</td>
+		<td style="text-align: right">35,000</td>
+		<td style="text-align: right">29,850</td>
+		<td style="text-align: right">27,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 19.50</td>
+		<td style="text-align: right">35,800</td>
+		<td style="text-align: right">30,480</td>
+		<td style="text-align: right">28,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 20.00</td>
+		<td style="text-align: right">36,600</td>
+		<td style="text-align: right">31,070</td>
+		<td style="text-align: right">28,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 20.50</td>
+		<td style="text-align: right">37,400</td>
+		<td style="text-align: right">34,160</td>
+		<td style="text-align: right">31,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 21.00</td>
+		<td style="text-align: right">38,200</td>
+		<td style="text-align: right">34,750</td>
+		<td style="text-align: right">32,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 21.50</td>
+		<td style="text-align: right">39,000</td>
+		<td style="text-align: right">35,380</td>
+		<td style="text-align: right">32,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 22.00</td>
+		<td style="text-align: right">39,800</td>
+		<td style="text-align: right">35,970</td>
+		<td style="text-align: right">33,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 22.50</td>
+		<td style="text-align: right">40,600</td>
+		<td style="text-align: right">36,560</td>
+		<td style="text-align: right">34,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 23.00</td>
+		<td style="text-align: right">41,400</td>
+		<td style="text-align: right">37,150</td>
+		<td style="text-align: right">34,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 23.50</td>
+		<td style="text-align: right">42,200</td>
+		<td style="text-align: right">37,780</td>
+		<td style="text-align: right">35,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 24.00</td>
+		<td style="text-align: right">43,000</td>
+		<td style="text-align: right">38,370</td>
+		<td style="text-align: right">35,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 24.50</td>
+		<td style="text-align: right">43,800</td>
+		<td style="text-align: right">38,960</td>
+		<td style="text-align: right">36,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 25.00</td>
+		<td style="text-align: right">44,600</td>
+		<td style="text-align: right">39,550</td>
+		<td style="text-align: right">36,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 25.50</td>
+		<td style="text-align: right">45,400</td>
+		<td style="text-align: right">40,180</td>
+		<td style="text-align: right">37,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 26.00</td>
+		<td style="text-align: right">46,200</td>
+		<td style="text-align: right">40,770</td>
+		<td style="text-align: right">37,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 26.50</td>
+		<td style="text-align: right">47,000</td>
+		<td style="text-align: right">41,360</td>
+		<td style="text-align: right">38,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 27.00</td>
+		<td style="text-align: right">47,800</td>
+		<td style="text-align: right">41,950</td>
+		<td style="text-align: right">38,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 27.50</td>
+		<td style="text-align: right">48,600</td>
+		<td style="text-align: right">42,590</td>
+		<td style="text-align: right">39,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 28.00</td>
+		<td style="text-align: right">49,400</td>
+		<td style="text-align: right">43,170</td>
+		<td style="text-align: right">40,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 28.50</td>
+		<td style="text-align: right">50,200</td>
+		<td style="text-align: right">43,760</td>
+		<td style="text-align: right">40,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 29.00</td>
+		<td style="text-align: right">51,000</td>
+		<td style="text-align: right">44,350</td>
+		<td style="text-align: right">41,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 29.50</td>
+		<td style="text-align: right">51,800</td>
+		<td style="text-align: right">44,990</td>
+		<td style="text-align: right">41,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 30.00</td>
+		<td style="text-align: right">52,600</td>
+		<td style="text-align: right">45,570</td>
+		<td style="text-align: right">42,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 30.50</td>
+		<td style="text-align: right">53,400</td>
+		<td style="text-align: right">46,160</td>
+		<td style="text-align: right">42,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 31.00</td>
+		<td style="text-align: right">54,200</td>
+		<td style="text-align: right">46,750</td>
+		<td style="text-align: right">43,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 31.50</td>
+		<td style="text-align: right">55,000</td>
+		<td style="text-align: right">47,340</td>
+		<td style="text-align: right">43,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 32.00</td>
+		<td style="text-align: right">55,800</td>
+		<td style="text-align: right">47,980</td>
+		<td style="text-align: right">44,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 32.50</td>
+		<td style="text-align: right">56,600</td>
+		<td style="text-align: right">48,560</td>
+		<td style="text-align: right">45,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 33.00</td>
+		<td style="text-align: right">57,400</td>
+		<td style="text-align: right">49,150</td>
+		<td style="text-align: right">45,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 33.50</td>
+		<td style="text-align: right">58,200</td>
+		<td style="text-align: right">49,740</td>
+		<td style="text-align: right">46,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 34.00</td>
+		<td style="text-align: right">59,000</td>
+		<td style="text-align: right">50,380</td>
+		<td style="text-align: right">46,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 34.50</td>
+		<td style="text-align: right">59,800</td>
+		<td style="text-align: right">50,960</td>
+		<td style="text-align: right">47,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 35.00</td>
+		<td style="text-align: right">60,600</td>
+		<td style="text-align: right">51,550</td>
+		<td style="text-align: right">47,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 35.50</td>
+		<td style="text-align: right">61,400</td>
+		<td style="text-align: right">52,140</td>
+		<td style="text-align: right">48,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 36.00</td>
+		<td style="text-align: right">62,200</td>
+		<td style="text-align: right">52,780</td>
+		<td style="text-align: right">48,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 36.50</td>
+		<td style="text-align: right">63,000</td>
+		<td style="text-align: right">53,370</td>
+		<td style="text-align: right">49,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 37.00</td>
+		<td style="text-align: right">63,800</td>
+		<td style="text-align: right">53,950</td>
+		<td style="text-align: right">49,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 37.50</td>
+		<td style="text-align: right">64,600</td>
+		<td style="text-align: right">54,540</td>
+		<td style="text-align: right">50,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 38.00</td>
+		<td style="text-align: right">65,400</td>
+		<td style="text-align: right">55,180</td>
+		<td style="text-align: right">51,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 38.50</td>
+		<td style="text-align: right">66,200</td>
+		<td style="text-align: right">55,770</td>
+		<td style="text-align: right">51,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 39.00</td>
+		<td style="text-align: right">67,000</td>
+		<td style="text-align: right">56,350</td>
+		<td style="text-align: right">52,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 39.50</td>
+		<td style="text-align: right">67,800</td>
+		<td style="text-align: right">56,940</td>
+		<td style="text-align: right">52,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 40.00</td>
+		<td style="text-align: right">68,600</td>
+		<td style="text-align: right">57,580</td>
+		<td style="text-align: right">53,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 40.50</td>
+		<td style="text-align: right">69,400</td>
+		<td style="text-align: right">58,170</td>
+		<td style="text-align: right">53,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 41.00</td>
+		<td style="text-align: right">70,200</td>
+		<td style="text-align: right">58,760</td>
+		<td style="text-align: right">54,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 41.50</td>
+		<td style="text-align: right">71,000</td>
+		<td style="text-align: right">59,340</td>
+		<td style="text-align: right">54,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 42.00</td>
+		<td style="text-align: right">71,800</td>
+		<td style="text-align: right">59,980</td>
+		<td style="text-align: right">55,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 42.50</td>
+		<td style="text-align: right">72,600</td>
+		<td style="text-align: right">60,570</td>
+		<td style="text-align: right">56,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 43.00</td>
+		<td style="text-align: right">73,400</td>
+		<td style="text-align: right">61,160</td>
+		<td style="text-align: right">56,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 43.50</td>
+		<td style="text-align: right">74,200</td>
+		<td style="text-align: right">61,740</td>
+		<td style="text-align: right">57,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 44.00</td>
+		<td style="text-align: right">75,000</td>
+		<td style="text-align: right">62,330</td>
+		<td style="text-align: right">57,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 44.50</td>
+		<td style="text-align: right">75,800</td>
+		<td style="text-align: right">62,970</td>
+		<td style="text-align: right">58,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 45.00</td>
+		<td style="text-align: right">76,600</td>
+		<td style="text-align: right">63,560</td>
+		<td style="text-align: right">58,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 45.50</td>
+		<td style="text-align: right">77,400</td>
+		<td style="text-align: right">64,150</td>
+		<td style="text-align: right">59,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 46.00</td>
+		<td style="text-align: right">78,200</td>
+		<td style="text-align: right">64,730</td>
+		<td style="text-align: right">59,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 46.50</td>
+		<td style="text-align: right">79,000</td>
+		<td style="text-align: right">65,370</td>
+		<td style="text-align: right">60,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 47.00</td>
+		<td style="text-align: right">79,800</td>
+		<td style="text-align: right">65,960</td>
+		<td style="text-align: right">60,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 47.50</td>
+		<td style="text-align: right">80,600</td>
+		<td style="text-align: right">66,550</td>
+		<td style="text-align: right">61,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 48.00</td>
+		<td style="text-align: right">81,400</td>
+		<td style="text-align: right">67,130</td>
+		<td style="text-align: right">62,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 48.50</td>
+		<td style="text-align: right">82,200</td>
+		<td style="text-align: right">67,770</td>
+		<td style="text-align: right">62,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 49.00</td>
+		<td style="text-align: right">83,000</td>
+		<td style="text-align: right">68,360</td>
+		<td style="text-align: right">63,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 49.50</td>
+		<td style="text-align: right">83,800</td>
+		<td style="text-align: right">68,950</td>
+		<td style="text-align: right">63,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 50.00</td>
+		<td style="text-align: right">84,600</td>
+		<td style="text-align: right">69,540</td>
+		<td style="text-align: right">64,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 50.50</td>
+		<td style="text-align: right">85,400</td>
+		<td style="text-align: right">70,170</td>
+		<td style="text-align: right">64,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 51.00</td>
+		<td style="text-align: right">86,200</td>
+		<td style="text-align: right">70,760</td>
+		<td style="text-align: right">65,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 51.50</td>
+		<td style="text-align: right">87,000</td>
+		<td style="text-align: right">71,350</td>
+		<td style="text-align: right">65,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 52.00</td>
+		<td style="text-align: right">87,800</td>
+		<td style="text-align: right">71,940</td>
+		<td style="text-align: right">66,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 52.50</td>
+		<td style="text-align: right">88,600</td>
+		<td style="text-align: right">72,570</td>
+		<td style="text-align: right">66,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 53.00</td>
+		<td style="text-align: right">89,400</td>
+		<td style="text-align: right">73,160</td>
+		<td style="text-align: right">67,580</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 53.50</td>
+		<td style="text-align: right">90,200</td>
+		<td style="text-align: right">73,750</td>
+		<td style="text-align: right">68,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 54.00</td>
+		<td style="text-align: right">91,000</td>
+		<td style="text-align: right">74,340</td>
+		<td style="text-align: right">68,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 54.50</td>
+		<td style="text-align: right">91,800</td>
+		<td style="text-align: right">74,970</td>
+		<td style="text-align: right">69,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 55.00</td>
+		<td style="text-align: right">92,600</td>
+		<td style="text-align: right">75,560</td>
+		<td style="text-align: right">69,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 55.50</td>
+		<td style="text-align: right">93,400</td>
+		<td style="text-align: right">76,150</td>
+		<td style="text-align: right">70,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 56.00</td>
+		<td style="text-align: right">94,200</td>
+		<td style="text-align: right">76,740</td>
+		<td style="text-align: right">70,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 56.50</td>
+		<td style="text-align: right">95,000</td>
+		<td style="text-align: right">77,330</td>
+		<td style="text-align: right">71,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 57.00</td>
+		<td style="text-align: right">95,800</td>
+		<td style="text-align: right">77,960</td>
+		<td style="text-align: right">71,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 57.50</td>
+		<td style="text-align: right">96,600</td>
+		<td style="text-align: right">78,550</td>
+		<td style="text-align: right">72,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 58.00</td>
+		<td style="text-align: right">97,400</td>
+		<td style="text-align: right">79,140</td>
+		<td style="text-align: right">73,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 58.50</td>
+		<td style="text-align: right">98,200</td>
+		<td style="text-align: right">79,730</td>
+		<td style="text-align: right">73,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 59.00</td>
+		<td style="text-align: right">99,000</td>
+		<td style="text-align: right">80,360</td>
+		<td style="text-align: right">74,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 59.50</td>
+		<td style="text-align: right">99,800</td>
+		<td style="text-align: right">80,950</td>
+		<td style="text-align: right">74,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 60.00</td>
+		<td style="text-align: right">100,600</td>
+		<td style="text-align: right">81,540</td>
+		<td style="text-align: right">75,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 60.50</td>
+		<td style="text-align: right">101,400</td>
+		<td style="text-align: right">82,130</td>
+		<td style="text-align: right">75,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 61.00</td>
+		<td style="text-align: right">102,200</td>
+		<td style="text-align: right">82,770</td>
+		<td style="text-align: right">76,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 61.50</td>
+		<td style="text-align: right">103,000</td>
+		<td style="text-align: right">83,350</td>
+		<td style="text-align: right">76,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 62.00</td>
+		<td style="text-align: right">103,800</td>
+		<td style="text-align: right">83,940</td>
+		<td style="text-align: right">77,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 62.50</td>
+		<td style="text-align: right">104,600</td>
+		<td style="text-align: right">84,530</td>
+		<td style="text-align: right">78,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 63.00</td>
+		<td style="text-align: right">105,400</td>
+		<td style="text-align: right">85,170</td>
+		<td style="text-align: right">78,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 63.50</td>
+		<td style="text-align: right">106,200</td>
+		<td style="text-align: right">85,750</td>
+		<td style="text-align: right">79,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 64.00</td>
+		<td style="text-align: right">107,000</td>
+		<td style="text-align: right">86,340</td>
+		<td style="text-align: right">79,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 64.50</td>
+		<td style="text-align: right">107,800</td>
+		<td style="text-align: right">86,930</td>
+		<td style="text-align: right">80,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 65.00</td>
+		<td style="text-align: right">108,600</td>
+		<td style="text-align: right">87,570</td>
+		<td style="text-align: right">80,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 65.50</td>
+		<td style="text-align: right">109,400</td>
+		<td style="text-align: right">88,160</td>
+		<td style="text-align: right">81,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 66.00</td>
+		<td style="text-align: right">110,200</td>
+		<td style="text-align: right">88,740</td>
+		<td style="text-align: right">81,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 66.50</td>
+		<td style="text-align: right">111,000</td>
+		<td style="text-align: right">89,330</td>
+		<td style="text-align: right">82,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 67.00</td>
+		<td style="text-align: right">111,800</td>
+		<td style="text-align: right">89,970</td>
+		<td style="text-align: right">82,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 67.50</td>
+		<td style="text-align: right">112,600</td>
+		<td style="text-align: right">90,560</td>
+		<td style="text-align: right">83,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 68.00</td>
+		<td style="text-align: right">113,400</td>
+		<td style="text-align: right">91,140</td>
+		<td style="text-align: right">84,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 68.50</td>
+		<td style="text-align: right">114,200</td>
+		<td style="text-align: right">91,730</td>
+		<td style="text-align: right">84,580</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 69.00</td>
+		<td style="text-align: right">115,000</td>
+		<td style="text-align: right">92,320</td>
+		<td style="text-align: right">85,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 69.50</td>
+		<td style="text-align: right">115,800</td>
+		<td style="text-align: right">92,960</td>
+		<td style="text-align: right">85,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 70.00</td>
+		<td style="text-align: right">116,600</td>
+		<td style="text-align: right">93,550</td>
+		<td style="text-align: right">86,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 70.50</td>
+		<td style="text-align: right">117,400</td>
+		<td style="text-align: right">94,130</td>
+		<td style="text-align: right">86,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 71.00</td>
+		<td style="text-align: right">118,200</td>
+		<td style="text-align: right">94,720</td>
+		<td style="text-align: right">87,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 71.50</td>
+		<td style="text-align: right">119,000</td>
+		<td style="text-align: right">95,360</td>
+		<td style="text-align: right">87,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 72.00</td>
+		<td style="text-align: right">119,800</td>
+		<td style="text-align: right">95,950</td>
+		<td style="text-align: right">88,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 72.50</td>
+		<td style="text-align: right">120,600</td>
+		<td style="text-align: right">96,530</td>
+		<td style="text-align: right">88,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 73.00</td>
+		<td style="text-align: right">121,400</td>
+		<td style="text-align: right">97,120</td>
+		<td style="text-align: right">89,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 73.50</td>
+		<td style="text-align: right">122,200</td>
+		<td style="text-align: right">97,760</td>
+		<td style="text-align: right">90,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 74.00</td>
+		<td style="text-align: right">123,000</td>
+		<td style="text-align: right">98,350</td>
+		<td style="text-align: right">90,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 74.50</td>
+		<td style="text-align: right">123,800</td>
+		<td style="text-align: right">98,940</td>
+		<td style="text-align: right">91,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 75.00</td>
+		<td style="text-align: right">124,600</td>
+		<td style="text-align: right">99,520</td>
+		<td style="text-align: right">91,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 75.50</td>
+		<td style="text-align: right">125,400</td>
+		<td style="text-align: right">100,160</td>
+		<td style="text-align: right">92,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 76.00</td>
+		<td style="text-align: right">126,200</td>
+		<td style="text-align: right">100,750</td>
+		<td style="text-align: right">92,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 76.50</td>
+		<td style="text-align: right">127,000</td>
+		<td style="text-align: right">101,340</td>
+		<td style="text-align: right">93,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 77.00</td>
+		<td style="text-align: right">127,800</td>
+		<td style="text-align: right">101,920</td>
+		<td style="text-align: right">93,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 77.50</td>
+		<td style="text-align: right">128,600</td>
+		<td style="text-align: right">102,560</td>
+		<td style="text-align: right">94,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 78.00</td>
+		<td style="text-align: right">129,400</td>
+		<td style="text-align: right">103,150</td>
+		<td style="text-align: right">95,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 78.50</td>
+		<td style="text-align: right">130,200</td>
+		<td style="text-align: right">103,740</td>
+		<td style="text-align: right">95,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 79.00</td>
+		<td style="text-align: right">131,000</td>
+		<td style="text-align: right">104,330</td>
+		<td style="text-align: right">96,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 79.50</td>
+		<td style="text-align: right">131,800</td>
+		<td style="text-align: right">104,960</td>
+		<td style="text-align: right">96,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 80.00</td>
+		<td style="text-align: right">132,600</td>
+		<td style="text-align: right">105,550</td>
+		<td style="text-align: right">97,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 80.50</td>
+		<td style="text-align: right">133,400</td>
+		<td style="text-align: right">106,140</td>
+		<td style="text-align: right">97,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 81.00</td>
+		<td style="text-align: right">134,200</td>
+		<td style="text-align: right">106,730</td>
+		<td style="text-align: right">98,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 81.50</td>
+		<td style="text-align: right">135,000</td>
+		<td style="text-align: right">107,310</td>
+		<td style="text-align: right">98,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 82.00</td>
+		<td style="text-align: right">135,800</td>
+		<td style="text-align: right">107,950</td>
+		<td style="text-align: right">99,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 82.50</td>
+		<td style="text-align: right">136,600</td>
+		<td style="text-align: right">108,540</td>
+		<td style="text-align: right">100,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 83.00</td>
+		<td style="text-align: right">137,400</td>
+		<td style="text-align: right">109,130</td>
+		<td style="text-align: right">100,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 83.50</td>
+		<td style="text-align: right">138,200</td>
+		<td style="text-align: right">109,720</td>
+		<td style="text-align: right">101,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 84.00</td>
+		<td style="text-align: right">139,000</td>
+		<td style="text-align: right">110,350</td>
+		<td style="text-align: right">101,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 84.50</td>
+		<td style="text-align: right">139,800</td>
+		<td style="text-align: right">110,940</td>
+		<td style="text-align: right">102,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 85.00</td>
+		<td style="text-align: right">140,600</td>
+		<td style="text-align: right">111,530</td>
+		<td style="text-align: right">102,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 85.50</td>
+		<td style="text-align: right">141,400</td>
+		<td style="text-align: right">112,120</td>
+		<td style="text-align: right">103,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 86.00</td>
+		<td style="text-align: right">142,200</td>
+		<td style="text-align: right">112,750</td>
+		<td style="text-align: right">103,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 86.50</td>
+		<td style="text-align: right">143,000</td>
+		<td style="text-align: right">113,340</td>
+		<td style="text-align: right">104,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 87.00</td>
+		<td style="text-align: right">143,800</td>
+		<td style="text-align: right">113,930</td>
+		<td style="text-align: right">104,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 87.50</td>
+		<td style="text-align: right">144,600</td>
+		<td style="text-align: right">114,520</td>
+		<td style="text-align: right">105,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 88.00</td>
+		<td style="text-align: right">145,400</td>
+		<td style="text-align: right">115,150</td>
+		<td style="text-align: right">106,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 88.50</td>
+		<td style="text-align: right">146,200</td>
+		<td style="text-align: right">115,740</td>
+		<td style="text-align: right">106,580</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 89.00</td>
+		<td style="text-align: right">147,000</td>
+		<td style="text-align: right">116,330</td>
+		<td style="text-align: right">107,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 89.50</td>
+		<td style="text-align: right">147,800</td>
+		<td style="text-align: right">116,920</td>
+		<td style="text-align: right">107,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 90.00</td>
+		<td style="text-align: right">148,600</td>
+		<td style="text-align: right">117,560</td>
+		<td style="text-align: right">108,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 90.50</td>
+		<td style="text-align: right">149,400</td>
+		<td style="text-align: right">118,140</td>
+		<td style="text-align: right">108,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 91.00</td>
+		<td style="text-align: right">150,200</td>
+		<td style="text-align: right">118,730</td>
+		<td style="text-align: right">109,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 91.50</td>
+		<td style="text-align: right">151,000</td>
+		<td style="text-align: right">119,320</td>
+		<td style="text-align: right">109,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 92.00</td>
+		<td style="text-align: right">151,800</td>
+		<td style="text-align: right">119,960</td>
+		<td style="text-align: right">110,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 92.50</td>
+		<td style="text-align: right">152,600</td>
+		<td style="text-align: right">120,540</td>
+		<td style="text-align: right">110,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 93.00</td>
+		<td style="text-align: right">153,400</td>
+		<td style="text-align: right">121,130</td>
+		<td style="text-align: right">111,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 93.50</td>
+		<td style="text-align: right">154,200</td>
+		<td style="text-align: right">121,720</td>
+		<td style="text-align: right">112,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 94.00</td>
+		<td style="text-align: right">155,000</td>
+		<td style="text-align: right">122,310</td>
+		<td style="text-align: right">112,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 94.50</td>
+		<td style="text-align: right">155,800</td>
+		<td style="text-align: right">122,950</td>
+		<td style="text-align: right">113,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 95.00</td>
+		<td style="text-align: right">156,600</td>
+		<td style="text-align: right">123,530</td>
+		<td style="text-align: right">113,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 95.50</td>
+		<td style="text-align: right">157,400</td>
+		<td style="text-align: right">124,120</td>
+		<td style="text-align: right">114,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 96.00</td>
+		<td style="text-align: right">158,200</td>
+		<td style="text-align: right">124,710</td>
+		<td style="text-align: right">114,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 96.50</td>
+		<td style="text-align: right">159,000</td>
+		<td style="text-align: right">125,350</td>
+		<td style="text-align: right">115,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 97.00</td>
+		<td style="text-align: right">159,800</td>
+		<td style="text-align: right">125,930</td>
+		<td style="text-align: right">115,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 97.50</td>
+		<td style="text-align: right">160,600</td>
+		<td style="text-align: right">126,520</td>
+		<td style="text-align: right">116,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 98.00</td>
+		<td style="text-align: right">161,400</td>
+		<td style="text-align: right">127,110</td>
+		<td style="text-align: right">117,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 98.50</td>
+		<td style="text-align: right">162,200</td>
+		<td style="text-align: right">127,750</td>
+		<td style="text-align: right">117,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 99.00</td>
+		<td style="text-align: right">163,000</td>
+		<td style="text-align: right">128,340</td>
+		<td style="text-align: right">118,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 99.50</td>
+		<td style="text-align: right">163,800</td>
+		<td style="text-align: right">128,920</td>
+		<td style="text-align: right">118,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 100.00</td>
+		<td style="text-align: right">164,600</td>
+		<td style="text-align: right">129,510</td>
+		<td style="text-align: right">119,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 100.50</td>
+		<td style="text-align: right">165,400</td>
+		<td style="text-align: right">130,150</td>
+		<td style="text-align: right">119,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 101.00</td>
+		<td style="text-align: right">166,200</td>
+		<td style="text-align: right">130,740</td>
+		<td style="text-align: right">120,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 101.50</td>
+		<td style="text-align: right">167,000</td>
+		<td style="text-align: right">131,320</td>
+		<td style="text-align: right">120,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 102.00</td>
+		<td style="text-align: right">167,800</td>
+		<td style="text-align: right">131,910</td>
+		<td style="text-align: right">121,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 102.50</td>
+		<td style="text-align: right">168,600</td>
+		<td style="text-align: right">132,550</td>
+		<td style="text-align: right">121,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 103.00</td>
+		<td style="text-align: right">169,400</td>
+		<td style="text-align: right">133,140</td>
+		<td style="text-align: right">122,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 103.50</td>
+		<td style="text-align: right">170,200</td>
+		<td style="text-align: right">133,730</td>
+		<td style="text-align: right">123,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 104.00</td>
+		<td style="text-align: right">171,000</td>
+		<td style="text-align: right">134,310</td>
+		<td style="text-align: right">123,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 104.50</td>
+		<td style="text-align: right">171,800</td>
+		<td style="text-align: right">134,950</td>
+		<td style="text-align: right">124,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 105.00</td>
+		<td style="text-align: right">172,600</td>
+		<td style="text-align: right">135,540</td>
+		<td style="text-align: right">124,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 105.50</td>
+		<td style="text-align: right">173,400</td>
+		<td style="text-align: right">136,130</td>
+		<td style="text-align: right">125,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 106.00</td>
+		<td style="text-align: right">174,200</td>
+		<td style="text-align: right">136,710</td>
+		<td style="text-align: right">125,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 106.50</td>
+		<td style="text-align: right">175,000</td>
+		<td style="text-align: right">137,300</td>
+		<td style="text-align: right">126,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 107.00</td>
+		<td style="text-align: right">175,800</td>
+		<td style="text-align: right">137,940</td>
+		<td style="text-align: right">126,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 107.50</td>
+		<td style="text-align: right">176,600</td>
+		<td style="text-align: right">138,530</td>
+		<td style="text-align: right">127,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 108.00</td>
+		<td style="text-align: right">177,400</td>
+		<td style="text-align: right">139,120</td>
+		<td style="text-align: right">128,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 108.50</td>
+		<td style="text-align: right">178,200</td>
+		<td style="text-align: right">139,700</td>
+		<td style="text-align: right">128,580</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 109.00</td>
+		<td style="text-align: right">179,000</td>
+		<td style="text-align: right">140,340</td>
+		<td style="text-align: right">129,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 109.50</td>
+		<td style="text-align: right">179,800</td>
+		<td style="text-align: right">140,930</td>
+		<td style="text-align: right">129,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 110.00</td>
+		<td style="text-align: right">180,600</td>
+		<td style="text-align: right">141,520</td>
+		<td style="text-align: right">130,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 110.50</td>
+		<td style="text-align: right">181,400</td>
+		<td style="text-align: right">142,100</td>
+		<td style="text-align: right">130,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 111.00</td>
+		<td style="text-align: right">182,200</td>
+		<td style="text-align: right">142,740</td>
+		<td style="text-align: right">131,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 111.50</td>
+		<td style="text-align: right">183,000</td>
+		<td style="text-align: right">143,330</td>
+		<td style="text-align: right">131,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 112.00</td>
+		<td style="text-align: right">183,800</td>
+		<td style="text-align: right">143,920</td>
+		<td style="text-align: right">132,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 112.50</td>
+		<td style="text-align: right">184,600</td>
+		<td style="text-align: right">144,510</td>
+		<td style="text-align: right">132,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 113.00</td>
+		<td style="text-align: right">185,400</td>
+		<td style="text-align: right">145,140</td>
+		<td style="text-align: right">133,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 113.50</td>
+		<td style="text-align: right">186,200</td>
+		<td style="text-align: right">145,730</td>
+		<td style="text-align: right">134,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 114.00</td>
+		<td style="text-align: right">187,000</td>
+		<td style="text-align: right">146,320</td>
+		<td style="text-align: right">134,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 114.50</td>
+		<td style="text-align: right">187,800</td>
+		<td style="text-align: right">146,910</td>
+		<td style="text-align: right">135,200</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 115.00</td>
+		<td style="text-align: right">188,600</td>
+		<td style="text-align: right">147,540</td>
+		<td style="text-align: right">135,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 115.50</td>
+		<td style="text-align: right">189,400</td>
+		<td style="text-align: right">148,130</td>
+		<td style="text-align: right">136,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 116.00</td>
+		<td style="text-align: right">190,200</td>
+		<td style="text-align: right">148,720</td>
+		<td style="text-align: right">136,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 116.50</td>
+		<td style="text-align: right">191,000</td>
+		<td style="text-align: right">149,310</td>
+		<td style="text-align: right">137,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 117.00</td>
+		<td style="text-align: right">191,800</td>
+		<td style="text-align: right">149,940</td>
+		<td style="text-align: right">137,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 117.50</td>
+		<td style="text-align: right">192,600</td>
+		<td style="text-align: right">150,530</td>
+		<td style="text-align: right">138,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 118.00</td>
+		<td style="text-align: right">193,400</td>
+		<td style="text-align: right">151,120</td>
+		<td style="text-align: right">139,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 118.50</td>
+		<td style="text-align: right">194,200</td>
+		<td style="text-align: right">151,710</td>
+		<td style="text-align: right">139,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 119.00</td>
+		<td style="text-align: right">195,000</td>
+		<td style="text-align: right">152,300</td>
+		<td style="text-align: right">140,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 119.50</td>
+		<td style="text-align: right">195,800</td>
+		<td style="text-align: right">152,930</td>
+		<td style="text-align: right">140,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 120.00</td>
+		<td style="text-align: right">196,600</td>
+		<td style="text-align: right">153,520</td>
+		<td style="text-align: right">141,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 120.50</td>
+		<td style="text-align: right">197,400</td>
+		<td style="text-align: right">154,110</td>
+		<td style="text-align: right">141,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 121.00</td>
+		<td style="text-align: right">198,200</td>
+		<td style="text-align: right">154,700</td>
+		<td style="text-align: right">142,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 121.50</td>
+		<td style="text-align: right">199,000</td>
+		<td style="text-align: right">155,330</td>
+		<td style="text-align: right">142,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 122.00</td>
+		<td style="text-align: right">199,800</td>
+		<td style="text-align: right">155,920</td>
+		<td style="text-align: right">143,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 122.50</td>
+		<td style="text-align: right">200,600</td>
+		<td style="text-align: right">156,510</td>
+		<td style="text-align: right">143,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 123.00</td>
+		<td style="text-align: right">201,400</td>
+		<td style="text-align: right">157,100</td>
+		<td style="text-align: right">144,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 123.50</td>
+		<td style="text-align: right">202,200</td>
+		<td style="text-align: right">157,740</td>
+		<td style="text-align: right">145,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 124.00</td>
+		<td style="text-align: right">203,000</td>
+		<td style="text-align: right">158,320</td>
+		<td style="text-align: right">145,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 124.50</td>
+		<td style="text-align: right">203,800</td>
+		<td style="text-align: right">158,910</td>
+		<td style="text-align: right">146,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 125.00</td>
+		<td style="text-align: right">204,600</td>
+		<td style="text-align: right">159,500</td>
+		<td style="text-align: right">146,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 125.50</td>
+		<td style="text-align: right">205,400</td>
+		<td style="text-align: right">160,140</td>
+		<td style="text-align: right">147,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 126.00</td>
+		<td style="text-align: right">206,200</td>
+		<td style="text-align: right">160,720</td>
+		<td style="text-align: right">147,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 126.50</td>
+		<td style="text-align: right">207,000</td>
+		<td style="text-align: right">161,310</td>
+		<td style="text-align: right">148,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 127.00</td>
+		<td style="text-align: right">207,800</td>
+		<td style="text-align: right">161,900</td>
+		<td style="text-align: right">148,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 127.50</td>
+		<td style="text-align: right">208,600</td>
+		<td style="text-align: right">162,540</td>
+		<td style="text-align: right">149,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 128.00</td>
+		<td style="text-align: right">209,400</td>
+		<td style="text-align: right">163,130</td>
+		<td style="text-align: right">150,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 128.50</td>
+		<td style="text-align: right">210,200</td>
+		<td style="text-align: right">163,710</td>
+		<td style="text-align: right">150,580</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 129.00</td>
+		<td style="text-align: right">211,000</td>
+		<td style="text-align: right">164,300</td>
+		<td style="text-align: right">151,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 129.50</td>
+		<td style="text-align: right">211,800</td>
+		<td style="text-align: right">164,940</td>
+		<td style="text-align: right">151,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 130.00</td>
+		<td style="text-align: right">212,600</td>
+		<td style="text-align: right">165,530</td>
+		<td style="text-align: right">152,200</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 130.50</td>
+		<td style="text-align: right">213,400</td>
+		<td style="text-align: right">166,110</td>
+		<td style="text-align: right">152,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 131.00</td>
+		<td style="text-align: right">214,200</td>
+		<td style="text-align: right">166,700</td>
+		<td style="text-align: right">153,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 131.50</td>
+		<td style="text-align: right">215,000</td>
+		<td style="text-align: right">167,290</td>
+		<td style="text-align: right">153,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 132.00</td>
+		<td style="text-align: right">215,800</td>
+		<td style="text-align: right">167,930</td>
+		<td style="text-align: right">154,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 132.50</td>
+		<td style="text-align: right">216,600</td>
+		<td style="text-align: right">168,520</td>
+		<td style="text-align: right">154,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 133.00</td>
+		<td style="text-align: right">217,400</td>
+		<td style="text-align: right">169,100</td>
+		<td style="text-align: right">155,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 133.50</td>
+		<td style="text-align: right">218,200</td>
+		<td style="text-align: right">169,690</td>
+		<td style="text-align: right">156,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 134.00</td>
+		<td style="text-align: right">219,000</td>
+		<td style="text-align: right">170,330</td>
+		<td style="text-align: right">156,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 134.50</td>
+		<td style="text-align: right">219,800</td>
+		<td style="text-align: right">170,920</td>
+		<td style="text-align: right">157,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 135.00</td>
+		<td style="text-align: right">220,600</td>
+		<td style="text-align: right">171,500</td>
+		<td style="text-align: right">157,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 135.50</td>
+		<td style="text-align: right">221,400</td>
+		<td style="text-align: right">172,090</td>
+		<td style="text-align: right">158,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 136.00</td>
+		<td style="text-align: right">222,200</td>
+		<td style="text-align: right">172,730</td>
+		<td style="text-align: right">158,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 136.50</td>
+		<td style="text-align: right">223,000</td>
+		<td style="text-align: right">173,320</td>
+		<td style="text-align: right">159,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 137.00</td>
+		<td style="text-align: right">223,800</td>
+		<td style="text-align: right">173,910</td>
+		<td style="text-align: right">159,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 137.50</td>
+		<td style="text-align: right">224,600</td>
+		<td style="text-align: right">174,490</td>
+		<td style="text-align: right">160,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 138.00</td>
+		<td style="text-align: right">225,400</td>
+		<td style="text-align: right">175,130</td>
+		<td style="text-align: right">161,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 138.50</td>
+		<td style="text-align: right">226,200</td>
+		<td style="text-align: right">175,720</td>
+		<td style="text-align: right">161,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 139.00</td>
+		<td style="text-align: right">227,000</td>
+		<td style="text-align: right">176,310</td>
+		<td style="text-align: right">162,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 139.50</td>
+		<td style="text-align: right">227,800</td>
+		<td style="text-align: right">176,890</td>
+		<td style="text-align: right">162,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 140.00</td>
+		<td style="text-align: right">228,600</td>
+		<td style="text-align: right">177,530</td>
+		<td style="text-align: right">163,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 140.50</td>
+		<td style="text-align: right">229,400</td>
+		<td style="text-align: right">178,120</td>
+		<td style="text-align: right">163,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 141.00</td>
+		<td style="text-align: right">230,200</td>
+		<td style="text-align: right">178,710</td>
+		<td style="text-align: right">164,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 141.50</td>
+		<td style="text-align: right">231,000</td>
+		<td style="text-align: right">179,300</td>
+		<td style="text-align: right">164,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 142.00</td>
+		<td style="text-align: right">231,800</td>
+		<td style="text-align: right">179,930</td>
+		<td style="text-align: right">165,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 142.50</td>
+		<td style="text-align: right">232,600</td>
+		<td style="text-align: right">180,520</td>
+		<td style="text-align: right">165,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 143.00</td>
+		<td style="text-align: right">233,400</td>
+		<td style="text-align: right">181,110</td>
+		<td style="text-align: right">166,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 143.50</td>
+		<td style="text-align: right">234,200</td>
+		<td style="text-align: right">181,700</td>
+		<td style="text-align: right">167,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 144.00</td>
+		<td style="text-align: right">235,000</td>
+		<td style="text-align: right">182,280</td>
+		<td style="text-align: right">167,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 144.50</td>
+		<td style="text-align: right">235,800</td>
+		<td style="text-align: right">182,920</td>
+		<td style="text-align: right">168,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 145.00</td>
+		<td style="text-align: right">236,600</td>
+		<td style="text-align: right">183,510</td>
+		<td style="text-align: right">168,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 145.50</td>
+		<td style="text-align: right">237,400</td>
+		<td style="text-align: right">184,100</td>
+		<td style="text-align: right">169,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 146.00</td>
+		<td style="text-align: right">238,200</td>
+		<td style="text-align: right">184,690</td>
+		<td style="text-align: right">169,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 146.50</td>
+		<td style="text-align: right">239,000</td>
+		<td style="text-align: right">185,320</td>
+		<td style="text-align: right">170,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 147.00</td>
+		<td style="text-align: right">239,800</td>
+		<td style="text-align: right">185,910</td>
+		<td style="text-align: right">170,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 147.50</td>
+		<td style="text-align: right">240,600</td>
+		<td style="text-align: right">186,500</td>
+		<td style="text-align: right">171,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 148.00</td>
+		<td style="text-align: right">241,400</td>
+		<td style="text-align: right">187,090</td>
+		<td style="text-align: right">171,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 148.50</td>
+		<td style="text-align: right">242,200</td>
+		<td style="text-align: right">187,720</td>
+		<td style="text-align: right">172,580</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 149.00</td>
+		<td style="text-align: right">243,000</td>
+		<td style="text-align: right">188,310</td>
+		<td style="text-align: right">173,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 149.50</td>
+		<td style="text-align: right">243,800</td>
+		<td style="text-align: right">188,900</td>
+		<td style="text-align: right">173,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 150.00</td>
+		<td style="text-align: right">244,600</td>
+		<td style="text-align: right">189,490</td>
+		<td style="text-align: right">174,200</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 150.50</td>
+		<td style="text-align: right">245,400</td>
+		<td style="text-align: right">190,120</td>
+		<td style="text-align: right">174,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 151.00</td>
+		<td style="text-align: right">246,200</td>
+		<td style="text-align: right">190,710</td>
+		<td style="text-align: right">175,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 151.50</td>
+		<td style="text-align: right">247,000</td>
+		<td style="text-align: right">191,300</td>
+		<td style="text-align: right">175,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 152.00</td>
+		<td style="text-align: right">247,800</td>
+		<td style="text-align: right">191,890</td>
+		<td style="text-align: right">176,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 152.50</td>
+		<td style="text-align: right">248,600</td>
+		<td style="text-align: right">192,530</td>
+		<td style="text-align: right">176,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 153.00</td>
+		<td style="text-align: right">249,400</td>
+		<td style="text-align: right">193,110</td>
+		<td style="text-align: right">177,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 153.50</td>
+		<td style="text-align: right">250,200</td>
+		<td style="text-align: right">193,700</td>
+		<td style="text-align: right">178,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 154.00</td>
+		<td style="text-align: right">251,000</td>
+		<td style="text-align: right">194,290</td>
+		<td style="text-align: right">178,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 154.50</td>
+		<td style="text-align: right">251,800</td>
+		<td style="text-align: right">194,930</td>
+		<td style="text-align: right">179,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 155.00</td>
+		<td style="text-align: right">252,600</td>
+		<td style="text-align: right">195,510</td>
+		<td style="text-align: right">179,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 155.50</td>
+		<td style="text-align: right">253,400</td>
+		<td style="text-align: right">196,100</td>
+		<td style="text-align: right">180,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 156.00</td>
+		<td style="text-align: right">254,200</td>
+		<td style="text-align: right">196,690</td>
+		<td style="text-align: right">180,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 156.50</td>
+		<td style="text-align: right">255,000</td>
+		<td style="text-align: right">197,280</td>
+		<td style="text-align: right">181,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 157.00</td>
+		<td style="text-align: right">255,800</td>
+		<td style="text-align: right">197,920</td>
+		<td style="text-align: right">181,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 157.50</td>
+		<td style="text-align: right">256,600</td>
+		<td style="text-align: right">198,500</td>
+		<td style="text-align: right">182,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 158.00</td>
+		<td style="text-align: right">257,400</td>
+		<td style="text-align: right">199,090</td>
+		<td style="text-align: right">183,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 158.50</td>
+		<td style="text-align: right">258,200</td>
+		<td style="text-align: right">199,680</td>
+		<td style="text-align: right">183,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 159.00</td>
+		<td style="text-align: right">259,000</td>
+		<td style="text-align: right">200,320</td>
+		<td style="text-align: right">184,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 159.50</td>
+		<td style="text-align: right">259,800</td>
+		<td style="text-align: right">200,900</td>
+		<td style="text-align: right">184,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 160.00</td>
+		<td style="text-align: right">260,600</td>
+		<td style="text-align: right">201,490</td>
+		<td style="text-align: right">185,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 160.50</td>
+		<td style="text-align: right">261,400</td>
+		<td style="text-align: right">202,080</td>
+		<td style="text-align: right">185,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 161.00</td>
+		<td style="text-align: right">262,200</td>
+		<td style="text-align: right">202,720</td>
+		<td style="text-align: right">186,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 161.50</td>
+		<td style="text-align: right">263,000</td>
+		<td style="text-align: right">203,310</td>
+		<td style="text-align: right">186,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 162.00</td>
+		<td style="text-align: right">263,800</td>
+		<td style="text-align: right">203,890</td>
+		<td style="text-align: right">187,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 162.50</td>
+		<td style="text-align: right">264,600</td>
+		<td style="text-align: right">204,480</td>
+		<td style="text-align: right">187,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 163.00</td>
+		<td style="text-align: right">265,400</td>
+		<td style="text-align: right">205,120</td>
+		<td style="text-align: right">188,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 163.50</td>
+		<td style="text-align: right">266,200</td>
+		<td style="text-align: right">205,710</td>
+		<td style="text-align: right">189,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 164.00</td>
+		<td style="text-align: right">267,000</td>
+		<td style="text-align: right">206,290</td>
+		<td style="text-align: right">189,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 164.50</td>
+		<td style="text-align: right">267,800</td>
+		<td style="text-align: right">206,880</td>
+		<td style="text-align: right">190,170</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 165.00</td>
+		<td style="text-align: right">268,600</td>
+		<td style="text-align: right">207,520</td>
+		<td style="text-align: right">190,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 165.50</td>
+		<td style="text-align: right">269,400</td>
+		<td style="text-align: right">208,110</td>
+		<td style="text-align: right">191,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 166.00</td>
+		<td style="text-align: right">270,200</td>
+		<td style="text-align: right">208,700</td>
+		<td style="text-align: right">191,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 166.50</td>
+		<td style="text-align: right">271,000</td>
+		<td style="text-align: right">209,280</td>
+		<td style="text-align: right">192,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 167.00</td>
+		<td style="text-align: right">271,800</td>
+		<td style="text-align: right">209,920</td>
+		<td style="text-align: right">192,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 167.50</td>
+		<td style="text-align: right">272,600</td>
+		<td style="text-align: right">210,510</td>
+		<td style="text-align: right">193,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 168.00</td>
+		<td style="text-align: right">273,400</td>
+		<td style="text-align: right">211,100</td>
+		<td style="text-align: right">194,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 168.50</td>
+		<td style="text-align: right">274,200</td>
+		<td style="text-align: right">211,680</td>
+		<td style="text-align: right">194,530</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 169.00</td>
+		<td style="text-align: right">275,000</td>
+		<td style="text-align: right">212,270</td>
+		<td style="text-align: right">195,120</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 169.50</td>
+		<td style="text-align: right">275,800</td>
+		<td style="text-align: right">212,910</td>
+		<td style="text-align: right">195,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 170.00</td>
+		<td style="text-align: right">276,600</td>
+		<td style="text-align: right">213,500</td>
+		<td style="text-align: right">196,200</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 170.50</td>
+		<td style="text-align: right">277,400</td>
+		<td style="text-align: right">214,090</td>
+		<td style="text-align: right">196,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 171.00</td>
+		<td style="text-align: right">278,200</td>
+		<td style="text-align: right">214,670</td>
+		<td style="text-align: right">197,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 171.50</td>
+		<td style="text-align: right">279,000</td>
+		<td style="text-align: right">215,310</td>
+		<td style="text-align: right">197,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 172.00</td>
+		<td style="text-align: right">279,800</td>
+		<td style="text-align: right">215,900</td>
+		<td style="text-align: right">198,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 172.50</td>
+		<td style="text-align: right">280,600</td>
+		<td style="text-align: right">216,490</td>
+		<td style="text-align: right">198,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 173.00</td>
+		<td style="text-align: right">281,400</td>
+		<td style="text-align: right">217,070</td>
+		<td style="text-align: right">199,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 173.50</td>
+		<td style="text-align: right">282,200</td>
+		<td style="text-align: right">217,710</td>
+		<td style="text-align: right">200,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 174.00</td>
+		<td style="text-align: right">283,000</td>
+		<td style="text-align: right">218,300</td>
+		<td style="text-align: right">200,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 174.50</td>
+		<td style="text-align: right">283,800</td>
+		<td style="text-align: right">218,890</td>
+		<td style="text-align: right">201,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 175.00</td>
+		<td style="text-align: right">284,600</td>
+		<td style="text-align: right">219,480</td>
+		<td style="text-align: right">201,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 175.50</td>
+		<td style="text-align: right">285,400</td>
+		<td style="text-align: right">220,110</td>
+		<td style="text-align: right">202,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 176.00</td>
+		<td style="text-align: right">286,200</td>
+		<td style="text-align: right">220,700</td>
+		<td style="text-align: right">202,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 176.50</td>
+		<td style="text-align: right">287,000</td>
+		<td style="text-align: right">221,290</td>
+		<td style="text-align: right">203,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 177.00</td>
+		<td style="text-align: right">287,800</td>
+		<td style="text-align: right">221,880</td>
+		<td style="text-align: right">203,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 177.50</td>
+		<td style="text-align: right">288,600</td>
+		<td style="text-align: right">222,510</td>
+		<td style="text-align: right">204,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 178.00</td>
+		<td style="text-align: right">289,400</td>
+		<td style="text-align: right">223,100</td>
+		<td style="text-align: right">205,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 178.50</td>
+		<td style="text-align: right">290,200</td>
+		<td style="text-align: right">223,690</td>
+		<td style="text-align: right">205,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 179.00</td>
+		<td style="text-align: right">291,000</td>
+		<td style="text-align: right">224,280</td>
+		<td style="text-align: right">206,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 179.50</td>
+		<td style="text-align: right">291,800</td>
+		<td style="text-align: right">224,910</td>
+		<td style="text-align: right">206,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 180.00</td>
+		<td style="text-align: right">292,600</td>
+		<td style="text-align: right">225,500</td>
+		<td style="text-align: right">207,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 180.50</td>
+		<td style="text-align: right">293,400</td>
+		<td style="text-align: right">226,090</td>
+		<td style="text-align: right">207,760</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 181.00</td>
+		<td style="text-align: right">294,200</td>
+		<td style="text-align: right">226,680</td>
+		<td style="text-align: right">208,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 181.50</td>
+		<td style="text-align: right">295,000</td>
+		<td style="text-align: right">227,270</td>
+		<td style="text-align: right">208,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 182.00</td>
+		<td style="text-align: right">295,800</td>
+		<td style="text-align: right">227,900</td>
+		<td style="text-align: right">209,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 182.50</td>
+		<td style="text-align: right">296,600</td>
+		<td style="text-align: right">228,490</td>
+		<td style="text-align: right">209,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 183.00</td>
+		<td style="text-align: right">297,400</td>
+		<td style="text-align: right">229,080</td>
+		<td style="text-align: right">210,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 183.50</td>
+		<td style="text-align: right">298,200</td>
+		<td style="text-align: right">229,670</td>
+		<td style="text-align: right">211,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 184.00</td>
+		<td style="text-align: right">299,000</td>
+		<td style="text-align: right">230,300</td>
+		<td style="text-align: right">211,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 184.50</td>
+		<td style="text-align: right">299,800</td>
+		<td style="text-align: right">230,890</td>
+		<td style="text-align: right">212,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 185.00</td>
+		<td style="text-align: right">300,600</td>
+		<td style="text-align: right">231,480</td>
+		<td style="text-align: right">212,710</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 185.50</td>
+		<td style="text-align: right">301,400</td>
+		<td style="text-align: right">232,070</td>
+		<td style="text-align: right">213,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 186.00</td>
+		<td style="text-align: right">302,200</td>
+		<td style="text-align: right">232,710</td>
+		<td style="text-align: right">213,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 186.50</td>
+		<td style="text-align: right">303,000</td>
+		<td style="text-align: right">233,290</td>
+		<td style="text-align: right">214,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 187.00</td>
+		<td style="text-align: right">303,800</td>
+		<td style="text-align: right">233,880</td>
+		<td style="text-align: right">214,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 187.50</td>
+		<td style="text-align: right">304,600</td>
+		<td style="text-align: right">234,470</td>
+		<td style="text-align: right">215,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 188.00</td>
+		<td style="text-align: right">305,400</td>
+		<td style="text-align: right">235,110</td>
+		<td style="text-align: right">216,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 188.50</td>
+		<td style="text-align: right">306,200</td>
+		<td style="text-align: right">235,690</td>
+		<td style="text-align: right">216,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 189.00</td>
+		<td style="text-align: right">307,000</td>
+		<td style="text-align: right">236,280</td>
+		<td style="text-align: right">217,070</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 189.50</td>
+		<td style="text-align: right">307,800</td>
+		<td style="text-align: right">236,870</td>
+		<td style="text-align: right">217,660</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 190.00</td>
+		<td style="text-align: right">308,600</td>
+		<td style="text-align: right">237,510</td>
+		<td style="text-align: right">218,200</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 190.50</td>
+		<td style="text-align: right">309,400</td>
+		<td style="text-align: right">238,100</td>
+		<td style="text-align: right">218,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 191.00</td>
+		<td style="text-align: right">310,200</td>
+		<td style="text-align: right">238,680</td>
+		<td style="text-align: right">219,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 191.50</td>
+		<td style="text-align: right">311,000</td>
+		<td style="text-align: right">239,270</td>
+		<td style="text-align: right">219,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 192.00</td>
+		<td style="text-align: right">311,800</td>
+		<td style="text-align: right">239,910</td>
+		<td style="text-align: right">220,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 192.50</td>
+		<td style="text-align: right">312,600</td>
+		<td style="text-align: right">240,500</td>
+		<td style="text-align: right">220,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 193.00</td>
+		<td style="text-align: right">313,400</td>
+		<td style="text-align: right">241,080</td>
+		<td style="text-align: right">221,480</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 193.50</td>
+		<td style="text-align: right">314,200</td>
+		<td style="text-align: right">241,670</td>
+		<td style="text-align: right">222,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 194.00</td>
+		<td style="text-align: right">315,000</td>
+		<td style="text-align: right">242,260</td>
+		<td style="text-align: right">222,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 194.50</td>
+		<td style="text-align: right">315,800</td>
+		<td style="text-align: right">242,900</td>
+		<td style="text-align: right">223,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 195.00</td>
+		<td style="text-align: right">316,600</td>
+		<td style="text-align: right">243,490</td>
+		<td style="text-align: right">223,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 195.50</td>
+		<td style="text-align: right">317,400</td>
+		<td style="text-align: right">244,070</td>
+		<td style="text-align: right">224,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 196.00</td>
+		<td style="text-align: right">318,200</td>
+		<td style="text-align: right">244,660</td>
+		<td style="text-align: right">224,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 196.50</td>
+		<td style="text-align: right">319,000</td>
+		<td style="text-align: right">245,300</td>
+		<td style="text-align: right">225,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 197.00</td>
+		<td style="text-align: right">319,800</td>
+		<td style="text-align: right">245,890</td>
+		<td style="text-align: right">225,890</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 197.50</td>
+		<td style="text-align: right">320,600</td>
+		<td style="text-align: right">246,470</td>
+		<td style="text-align: right">226,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 198.00</td>
+		<td style="text-align: right">321,400</td>
+		<td style="text-align: right">247,060</td>
+		<td style="text-align: right">226,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 198.50</td>
+		<td style="text-align: right">322,200</td>
+		<td style="text-align: right">247,700</td>
+		<td style="text-align: right">227,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 199.00</td>
+		<td style="text-align: right">323,000</td>
+		<td style="text-align: right">248,290</td>
+		<td style="text-align: right">228,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 199.50</td>
+		<td style="text-align: right">323,800</td>
+		<td style="text-align: right">248,880</td>
+		<td style="text-align: right">228,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 200.00</td>
+		<td style="text-align: right">324,600</td>
+		<td style="text-align: right">249,460</td>
+		<td style="text-align: right">229,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 200.50</td>
+		<td style="text-align: right">325,400</td>
+		<td style="text-align: right">250,100</td>
+		<td style="text-align: right">229,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 201.00</td>
+		<td style="text-align: right">326,200</td>
+		<td style="text-align: right">250,690</td>
+		<td style="text-align: right">230,300</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 201.50</td>
+		<td style="text-align: right">327,000</td>
+		<td style="text-align: right">251,280</td>
+		<td style="text-align: right">230,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 202.00</td>
+		<td style="text-align: right">327,800</td>
+		<td style="text-align: right">251,860</td>
+		<td style="text-align: right">231,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 202.50</td>
+		<td style="text-align: right">328,600</td>
+		<td style="text-align: right">252,500</td>
+		<td style="text-align: right">231,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 203.00</td>
+		<td style="text-align: right">329,400</td>
+		<td style="text-align: right">253,090</td>
+		<td style="text-align: right">232,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 203.50</td>
+		<td style="text-align: right">330,200</td>
+		<td style="text-align: right">253,680</td>
+		<td style="text-align: right">233,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 204.00</td>
+		<td style="text-align: right">331,000</td>
+		<td style="text-align: right">254,270</td>
+		<td style="text-align: right">233,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 204.50</td>
+		<td style="text-align: right">331,800</td>
+		<td style="text-align: right">254,900</td>
+		<td style="text-align: right">234,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 205.00</td>
+		<td style="text-align: right">332,600</td>
+		<td style="text-align: right">255,490</td>
+		<td style="text-align: right">234,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 205.50</td>
+		<td style="text-align: right">333,400</td>
+		<td style="text-align: right">256,080</td>
+		<td style="text-align: right">235,250</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 206.00</td>
+		<td style="text-align: right">334,200</td>
+		<td style="text-align: right">256,670</td>
+		<td style="text-align: right">235,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 206.50</td>
+		<td style="text-align: right">335,000</td>
+		<td style="text-align: right">257,250</td>
+		<td style="text-align: right">236,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 207.00</td>
+		<td style="text-align: right">335,800</td>
+		<td style="text-align: right">257,890</td>
+		<td style="text-align: right">236,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 207.50</td>
+		<td style="text-align: right">336,600</td>
+		<td style="text-align: right">258,480</td>
+		<td style="text-align: right">237,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 208.00</td>
+		<td style="text-align: right">337,400</td>
+		<td style="text-align: right">259,070</td>
+		<td style="text-align: right">238,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 208.50</td>
+		<td style="text-align: right">338,200</td>
+		<td style="text-align: right">259,660</td>
+		<td style="text-align: right">238,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 209.00</td>
+		<td style="text-align: right">339,000</td>
+		<td style="text-align: right">260,290</td>
+		<td style="text-align: right">239,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 209.50</td>
+		<td style="text-align: right">339,800</td>
+		<td style="text-align: right">260,880</td>
+		<td style="text-align: right">239,610</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 210.00</td>
+		<td style="text-align: right">340,600</td>
+		<td style="text-align: right">261,470</td>
+		<td style="text-align: right">240,200</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 210.50</td>
+		<td style="text-align: right">341,400</td>
+		<td style="text-align: right">262,060</td>
+		<td style="text-align: right">240,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 211.00</td>
+		<td style="text-align: right">342,200</td>
+		<td style="text-align: right">262,690</td>
+		<td style="text-align: right">241,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 211.50</td>
+		<td style="text-align: right">343,000</td>
+		<td style="text-align: right">263,280</td>
+		<td style="text-align: right">241,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 212.00</td>
+		<td style="text-align: right">343,800</td>
+		<td style="text-align: right">263,870</td>
+		<td style="text-align: right">242,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 212.50</td>
+		<td style="text-align: right">344,600</td>
+		<td style="text-align: right">264,460</td>
+		<td style="text-align: right">242,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 213.00</td>
+		<td style="text-align: right">345,400</td>
+		<td style="text-align: right">265,090</td>
+		<td style="text-align: right">243,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 213.50</td>
+		<td style="text-align: right">346,200</td>
+		<td style="text-align: right">265,680</td>
+		<td style="text-align: right">244,020</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 214.00</td>
+		<td style="text-align: right">347,000</td>
+		<td style="text-align: right">266,270</td>
+		<td style="text-align: right">244,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 214.50</td>
+		<td style="text-align: right">347,800</td>
+		<td style="text-align: right">266,860</td>
+		<td style="text-align: right">245,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 215.00</td>
+		<td style="text-align: right">348,600</td>
+		<td style="text-align: right">267,500</td>
+		<td style="text-align: right">245,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 215.50</td>
+		<td style="text-align: right">349,400</td>
+		<td style="text-align: right">268,080</td>
+		<td style="text-align: right">246,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 216.00</td>
+		<td style="text-align: right">350,200</td>
+		<td style="text-align: right">268,670</td>
+		<td style="text-align: right">246,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 216.50</td>
+		<td style="text-align: right">351,000</td>
+		<td style="text-align: right">269,260</td>
+		<td style="text-align: right">247,310</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 217.00</td>
+		<td style="text-align: right">351,800</td>
+		<td style="text-align: right">269,900</td>
+		<td style="text-align: right">247,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 217.50</td>
+		<td style="text-align: right">352,600</td>
+		<td style="text-align: right">270,480</td>
+		<td style="text-align: right">248,430</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 218.00</td>
+		<td style="text-align: right">353,400</td>
+		<td style="text-align: right">271,070</td>
+		<td style="text-align: right">248,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 218.50</td>
+		<td style="text-align: right">354,200</td>
+		<td style="text-align: right">271,660</td>
+		<td style="text-align: right">249,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 219.00</td>
+		<td style="text-align: right">355,000</td>
+		<td style="text-align: right">272,250</td>
+		<td style="text-align: right">250,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 219.50</td>
+		<td style="text-align: right">355,800</td>
+		<td style="text-align: right">272,890</td>
+		<td style="text-align: right">250,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 220.00</td>
+		<td style="text-align: right">356,600</td>
+		<td style="text-align: right">273,470</td>
+		<td style="text-align: right">251,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 220.50</td>
+		<td style="text-align: right">357,400</td>
+		<td style="text-align: right">274,060</td>
+		<td style="text-align: right">251,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 221.00</td>
+		<td style="text-align: right">358,200</td>
+		<td style="text-align: right">274,650</td>
+		<td style="text-align: right">252,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 221.50</td>
+		<td style="text-align: right">359,000</td>
+		<td style="text-align: right">275,290</td>
+		<td style="text-align: right">252,840</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 222.00</td>
+		<td style="text-align: right">359,800</td>
+		<td style="text-align: right">275,870</td>
+		<td style="text-align: right">253,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 222.50</td>
+		<td style="text-align: right">360,600</td>
+		<td style="text-align: right">276,460</td>
+		<td style="text-align: right">253,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 223.00</td>
+		<td style="text-align: right">361,400</td>
+		<td style="text-align: right">277,050</td>
+		<td style="text-align: right">254,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 223.50</td>
+		<td style="text-align: right">362,200</td>
+		<td style="text-align: right">277,690</td>
+		<td style="text-align: right">255,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 224.00</td>
+		<td style="text-align: right">363,000</td>
+		<td style="text-align: right">278,280</td>
+		<td style="text-align: right">255,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 224.50</td>
+		<td style="text-align: right">363,800</td>
+		<td style="text-align: right">278,860</td>
+		<td style="text-align: right">256,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 225.00</td>
+		<td style="text-align: right">364,600</td>
+		<td style="text-align: right">279,450</td>
+		<td style="text-align: right">256,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 225.50</td>
+		<td style="text-align: right">365,400</td>
+		<td style="text-align: right">280,090</td>
+		<td style="text-align: right">257,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 226.00</td>
+		<td style="text-align: right">366,200</td>
+		<td style="text-align: right">280,680</td>
+		<td style="text-align: right">257,790</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 226.50</td>
+		<td style="text-align: right">367,000</td>
+		<td style="text-align: right">281,260</td>
+		<td style="text-align: right">258,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 227.00</td>
+		<td style="text-align: right">367,800</td>
+		<td style="text-align: right">281,850</td>
+		<td style="text-align: right">258,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 227.50</td>
+		<td style="text-align: right">368,600</td>
+		<td style="text-align: right">282,490</td>
+		<td style="text-align: right">259,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 228.00</td>
+		<td style="text-align: right">369,400</td>
+		<td style="text-align: right">283,080</td>
+		<td style="text-align: right">260,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 228.50</td>
+		<td style="text-align: right">370,200</td>
+		<td style="text-align: right">283,670</td>
+		<td style="text-align: right">260,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 229.00</td>
+		<td style="text-align: right">371,000</td>
+		<td style="text-align: right">284,250</td>
+		<td style="text-align: right">261,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 229.50</td>
+		<td style="text-align: right">371,800</td>
+		<td style="text-align: right">284,890</td>
+		<td style="text-align: right">261,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 230.00</td>
+		<td style="text-align: right">372,600</td>
+		<td style="text-align: right">285,480</td>
+		<td style="text-align: right">262,150</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 230.50</td>
+		<td style="text-align: right">373,400</td>
+		<td style="text-align: right">286,070</td>
+		<td style="text-align: right">262,740</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 231.00</td>
+		<td style="text-align: right">374,200</td>
+		<td style="text-align: right">286,650</td>
+		<td style="text-align: right">263,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 231.50</td>
+		<td style="text-align: right">375,000</td>
+		<td style="text-align: right">287,240</td>
+		<td style="text-align: right">263,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 232.00</td>
+		<td style="text-align: right">375,800</td>
+		<td style="text-align: right">287,880</td>
+		<td style="text-align: right">264,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 232.50</td>
+		<td style="text-align: right">376,600</td>
+		<td style="text-align: right">288,470</td>
+		<td style="text-align: right">264,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 233.00</td>
+		<td style="text-align: right">377,400</td>
+		<td style="text-align: right">289,060</td>
+		<td style="text-align: right">265,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 233.50</td>
+		<td style="text-align: right">378,200</td>
+		<td style="text-align: right">289,640</td>
+		<td style="text-align: right">266,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 234.00</td>
+		<td style="text-align: right">379,000</td>
+		<td style="text-align: right">290,280</td>
+		<td style="text-align: right">266,560</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 234.50</td>
+		<td style="text-align: right">379,800</td>
+		<td style="text-align: right">290,870</td>
+		<td style="text-align: right">267,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 235.00</td>
+		<td style="text-align: right">380,600</td>
+		<td style="text-align: right">291,460</td>
+		<td style="text-align: right">267,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 235.50</td>
+		<td style="text-align: right">381,400</td>
+		<td style="text-align: right">292,040</td>
+		<td style="text-align: right">268,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 236.00</td>
+		<td style="text-align: right">382,200</td>
+		<td style="text-align: right">292,680</td>
+		<td style="text-align: right">268,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 236.50</td>
+		<td style="text-align: right">383,000</td>
+		<td style="text-align: right">293,270</td>
+		<td style="text-align: right">269,310</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 237.00</td>
+		<td style="text-align: right">383,800</td>
+		<td style="text-align: right">293,860</td>
+		<td style="text-align: right">269,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 237.50</td>
+		<td style="text-align: right">384,600</td>
+		<td style="text-align: right">294,450</td>
+		<td style="text-align: right">270,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 238.00</td>
+		<td style="text-align: right">385,400</td>
+		<td style="text-align: right">295,080</td>
+		<td style="text-align: right">270,970</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 238.50</td>
+		<td style="text-align: right">386,200</td>
+		<td style="text-align: right">295,670</td>
+		<td style="text-align: right">271,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 239.00</td>
+		<td style="text-align: right">387,000</td>
+		<td style="text-align: right">296,260</td>
+		<td style="text-align: right">272,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 239.50</td>
+		<td style="text-align: right">387,800</td>
+		<td style="text-align: right">296,850</td>
+		<td style="text-align: right">272,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 240.00</td>
+		<td style="text-align: right">388,600</td>
+		<td style="text-align: right">297,480</td>
+		<td style="text-align: right">273,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 240.50</td>
+		<td style="text-align: right">389,400</td>
+		<td style="text-align: right">298,070</td>
+		<td style="text-align: right">273,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 241.00</td>
+		<td style="text-align: right">390,200</td>
+		<td style="text-align: right">298,660</td>
+		<td style="text-align: right">274,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 241.50</td>
+		<td style="text-align: right">391,000</td>
+		<td style="text-align: right">299,250</td>
+		<td style="text-align: right">274,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 242.00</td>
+		<td style="text-align: right">391,800</td>
+		<td style="text-align: right">299,880</td>
+		<td style="text-align: right">275,380</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 242.50</td>
+		<td style="text-align: right">392,600</td>
+		<td style="text-align: right">300,470</td>
+		<td style="text-align: right">275,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 243.00</td>
+		<td style="text-align: right">393,400</td>
+		<td style="text-align: right">301,060</td>
+		<td style="text-align: right">276,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 243.50</td>
+		<td style="text-align: right">394,200</td>
+		<td style="text-align: right">301,650</td>
+		<td style="text-align: right">277,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 244.00</td>
+		<td style="text-align: right">395,000</td>
+		<td style="text-align: right">302,240</td>
+		<td style="text-align: right">277,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 244.50</td>
+		<td style="text-align: right">395,800</td>
+		<td style="text-align: right">302,870</td>
+		<td style="text-align: right">278,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 245.00</td>
+		<td style="text-align: right">396,600</td>
+		<td style="text-align: right">303,460</td>
+		<td style="text-align: right">278,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 245.50</td>
+		<td style="text-align: right">397,400</td>
+		<td style="text-align: right">304,050</td>
+		<td style="text-align: right">279,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 246.00</td>
+		<td style="text-align: right">398,200</td>
+		<td style="text-align: right">304,640</td>
+		<td style="text-align: right">279,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 246.50</td>
+		<td style="text-align: right">399,000</td>
+		<td style="text-align: right">305,270</td>
+		<td style="text-align: right">280,330</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 247.00</td>
+		<td style="text-align: right">399,800</td>
+		<td style="text-align: right">305,860</td>
+		<td style="text-align: right">280,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 247.50</td>
+		<td style="text-align: right">400,600</td>
+		<td style="text-align: right">306,450</td>
+		<td style="text-align: right">281,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 248.00</td>
+		<td style="text-align: right">401,400</td>
+		<td style="text-align: right">307,040</td>
+		<td style="text-align: right">281,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 248.50</td>
+		<td style="text-align: right">402,200</td>
+		<td style="text-align: right">307,680</td>
+		<td style="text-align: right">282,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 249.00</td>
+		<td style="text-align: right">403,000</td>
+		<td style="text-align: right">308,260</td>
+		<td style="text-align: right">283,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 249.50</td>
+		<td style="text-align: right">403,800</td>
+		<td style="text-align: right">308,850</td>
+		<td style="text-align: right">283,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 250.00</td>
+		<td style="text-align: right">404,600</td>
+		<td style="text-align: right">309,440</td>
+		<td style="text-align: right">284,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 250.50</td>
+		<td style="text-align: right">405,400</td>
+		<td style="text-align: right">310,080</td>
+		<td style="text-align: right">284,690</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 251.00</td>
+		<td style="text-align: right">406,200</td>
+		<td style="text-align: right">310,660</td>
+		<td style="text-align: right">285,280</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 251.50</td>
+		<td style="text-align: right">407,000</td>
+		<td style="text-align: right">311,250</td>
+		<td style="text-align: right">285,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 252.00</td>
+		<td style="text-align: right">407,800</td>
+		<td style="text-align: right">311,840</td>
+		<td style="text-align: right">286,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 252.50</td>
+		<td style="text-align: right">408,600</td>
+		<td style="text-align: right">312,480</td>
+		<td style="text-align: right">286,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 253.00</td>
+		<td style="text-align: right">409,400</td>
+		<td style="text-align: right">313,070</td>
+		<td style="text-align: right">287,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 253.50</td>
+		<td style="text-align: right">410,200</td>
+		<td style="text-align: right">313,650</td>
+		<td style="text-align: right">288,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 254.00</td>
+		<td style="text-align: right">411,000</td>
+		<td style="text-align: right">314,240</td>
+		<td style="text-align: right">288,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 254.50</td>
+		<td style="text-align: right">411,800</td>
+		<td style="text-align: right">314,880</td>
+		<td style="text-align: right">289,100</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 255.00</td>
+		<td style="text-align: right">412,600</td>
+		<td style="text-align: right">315,470</td>
+		<td style="text-align: right">289,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 255.50</td>
+		<td style="text-align: right">413,400</td>
+		<td style="text-align: right">316,050</td>
+		<td style="text-align: right">290,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 256.00</td>
+		<td style="text-align: right">414,200</td>
+		<td style="text-align: right">316,640</td>
+		<td style="text-align: right">290,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 256.50</td>
+		<td style="text-align: right">415,000</td>
+		<td style="text-align: right">317,230</td>
+		<td style="text-align: right">291,310</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 257.00</td>
+		<td style="text-align: right">415,800</td>
+		<td style="text-align: right">317,870</td>
+		<td style="text-align: right">291,850</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 257.50</td>
+		<td style="text-align: right">416,600</td>
+		<td style="text-align: right">318,460</td>
+		<td style="text-align: right">292,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 258.00</td>
+		<td style="text-align: right">417,400</td>
+		<td style="text-align: right">319,040</td>
+		<td style="text-align: right">292,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 258.50</td>
+		<td style="text-align: right">418,200</td>
+		<td style="text-align: right">319,630</td>
+		<td style="text-align: right">293,510</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 259.00</td>
+		<td style="text-align: right">419,000</td>
+		<td style="text-align: right">320,270</td>
+		<td style="text-align: right">294,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 259.50</td>
+		<td style="text-align: right">419,800</td>
+		<td style="text-align: right">320,860</td>
+		<td style="text-align: right">294,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 260.00</td>
+		<td style="text-align: right">420,600</td>
+		<td style="text-align: right">321,440</td>
+		<td style="text-align: right">295,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 260.50</td>
+		<td style="text-align: right">421,400</td>
+		<td style="text-align: right">322,030</td>
+		<td style="text-align: right">295,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 261.00</td>
+		<td style="text-align: right">422,200</td>
+		<td style="text-align: right">322,670</td>
+		<td style="text-align: right">296,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 261.50</td>
+		<td style="text-align: right">423,000</td>
+		<td style="text-align: right">323,260</td>
+		<td style="text-align: right">296,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 262.00</td>
+		<td style="text-align: right">423,800</td>
+		<td style="text-align: right">323,850</td>
+		<td style="text-align: right">297,390</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 262.50</td>
+		<td style="text-align: right">424,600</td>
+		<td style="text-align: right">324,430</td>
+		<td style="text-align: right">297,920</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 263.00</td>
+		<td style="text-align: right">425,400</td>
+		<td style="text-align: right">325,070</td>
+		<td style="text-align: right">298,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 263.50</td>
+		<td style="text-align: right">426,200</td>
+		<td style="text-align: right">325,660</td>
+		<td style="text-align: right">299,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 264.00</td>
+		<td style="text-align: right">427,000</td>
+		<td style="text-align: right">326,250</td>
+		<td style="text-align: right">299,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 264.50</td>
+		<td style="text-align: right">427,800</td>
+		<td style="text-align: right">326,830</td>
+		<td style="text-align: right">300,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 265.00</td>
+		<td style="text-align: right">428,600</td>
+		<td style="text-align: right">327,470</td>
+		<td style="text-align: right">300,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 265.50</td>
+		<td style="text-align: right">429,400</td>
+		<td style="text-align: right">328,060</td>
+		<td style="text-align: right">301,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 266.00</td>
+		<td style="text-align: right">430,200</td>
+		<td style="text-align: right">328,650</td>
+		<td style="text-align: right">301,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 266.50</td>
+		<td style="text-align: right">431,000</td>
+		<td style="text-align: right">329,240</td>
+		<td style="text-align: right">302,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 267.00</td>
+		<td style="text-align: right">431,800</td>
+		<td style="text-align: right">329,870</td>
+		<td style="text-align: right">302,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 267.50</td>
+		<td style="text-align: right">432,600</td>
+		<td style="text-align: right">330,460</td>
+		<td style="text-align: right">303,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 268.00</td>
+		<td style="text-align: right">433,400</td>
+		<td style="text-align: right">331,050</td>
+		<td style="text-align: right">303,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 268.50</td>
+		<td style="text-align: right">434,200</td>
+		<td style="text-align: right">331,640</td>
+		<td style="text-align: right">304,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 269.00</td>
+		<td style="text-align: right">435,000</td>
+		<td style="text-align: right">332,220</td>
+		<td style="text-align: right">305,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 269.50</td>
+		<td style="text-align: right">435,800</td>
+		<td style="text-align: right">332,860</td>
+		<td style="text-align: right">305,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 270.00</td>
+		<td style="text-align: right">436,600</td>
+		<td style="text-align: right">333,450</td>
+		<td style="text-align: right">306,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 270.50</td>
+		<td style="text-align: right">437,400</td>
+		<td style="text-align: right">334,040</td>
+		<td style="text-align: right">306,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 271.00</td>
+		<td style="text-align: right">438,200</td>
+		<td style="text-align: right">334,630</td>
+		<td style="text-align: right">307,230</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 271.50</td>
+		<td style="text-align: right">439,000</td>
+		<td style="text-align: right">335,260</td>
+		<td style="text-align: right">307,820</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 272.00</td>
+		<td style="text-align: right">439,800</td>
+		<td style="text-align: right">335,850</td>
+		<td style="text-align: right">308,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 272.50</td>
+		<td style="text-align: right">440,600</td>
+		<td style="text-align: right">336,440</td>
+		<td style="text-align: right">308,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 273.00</td>
+		<td style="text-align: right">441,400</td>
+		<td style="text-align: right">337,030</td>
+		<td style="text-align: right">309,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 273.50</td>
+		<td style="text-align: right">442,200</td>
+		<td style="text-align: right">337,660</td>
+		<td style="text-align: right">310,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 274.00</td>
+		<td style="text-align: right">443,000</td>
+		<td style="text-align: right">338,250</td>
+		<td style="text-align: right">310,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 274.50</td>
+		<td style="text-align: right">443,800</td>
+		<td style="text-align: right">338,840</td>
+		<td style="text-align: right">311,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 275.00</td>
+		<td style="text-align: right">444,600</td>
+		<td style="text-align: right">339,430</td>
+		<td style="text-align: right">311,640</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 275.50</td>
+		<td style="text-align: right">445,400</td>
+		<td style="text-align: right">340,060</td>
+		<td style="text-align: right">312,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 276.00</td>
+		<td style="text-align: right">446,200</td>
+		<td style="text-align: right">340,650</td>
+		<td style="text-align: right">312,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 276.50</td>
+		<td style="text-align: right">447,000</td>
+		<td style="text-align: right">341,240</td>
+		<td style="text-align: right">313,310</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 277.00</td>
+		<td style="text-align: right">447,800</td>
+		<td style="text-align: right">341,830</td>
+		<td style="text-align: right">313,850</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 277.50</td>
+		<td style="text-align: right">448,600</td>
+		<td style="text-align: right">342,470</td>
+		<td style="text-align: right">314,390</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 278.00</td>
+		<td style="text-align: right">449,400</td>
+		<td style="text-align: right">343,050</td>
+		<td style="text-align: right">314,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 278.50</td>
+		<td style="text-align: right">450,200</td>
+		<td style="text-align: right">343,640</td>
+		<td style="text-align: right">315,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 279.00</td>
+		<td style="text-align: right">451,000</td>
+		<td style="text-align: right">344,230</td>
+		<td style="text-align: right">316,050</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 279.50</td>
+		<td style="text-align: right">451,800</td>
+		<td style="text-align: right">344,870</td>
+		<td style="text-align: right">316,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 280.00</td>
+		<td style="text-align: right">452,600</td>
+		<td style="text-align: right">345,450</td>
+		<td style="text-align: right">317,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 280.50</td>
+		<td style="text-align: right">453,400</td>
+		<td style="text-align: right">346,040</td>
+		<td style="text-align: right">317,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 281.00</td>
+		<td style="text-align: right">454,200</td>
+		<td style="text-align: right">346,630</td>
+		<td style="text-align: right">318,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 281.50</td>
+		<td style="text-align: right">455,000</td>
+		<td style="text-align: right">347,220</td>
+		<td style="text-align: right">318,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 282.00</td>
+		<td style="text-align: right">455,800</td>
+		<td style="text-align: right">347,860</td>
+		<td style="text-align: right">319,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 282.50</td>
+		<td style="text-align: right">456,600</td>
+		<td style="text-align: right">348,440</td>
+		<td style="text-align: right">319,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 283.00</td>
+		<td style="text-align: right">457,400</td>
+		<td style="text-align: right">349,030</td>
+		<td style="text-align: right">320,460</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 283.50</td>
+		<td style="text-align: right">458,200</td>
+		<td style="text-align: right">349,620</td>
+		<td style="text-align: right">321,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 284.00</td>
+		<td style="text-align: right">459,000</td>
+		<td style="text-align: right">350,260</td>
+		<td style="text-align: right">321,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 284.50</td>
+		<td style="text-align: right">459,800</td>
+		<td style="text-align: right">350,840</td>
+		<td style="text-align: right">322,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 285.00</td>
+		<td style="text-align: right">460,600</td>
+		<td style="text-align: right">351,430</td>
+		<td style="text-align: right">322,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 285.50</td>
+		<td style="text-align: right">461,400</td>
+		<td style="text-align: right">352,020</td>
+		<td style="text-align: right">323,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 286.00</td>
+		<td style="text-align: right">462,200</td>
+		<td style="text-align: right">352,660</td>
+		<td style="text-align: right">323,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 286.50</td>
+		<td style="text-align: right">463,000</td>
+		<td style="text-align: right">353,250</td>
+		<td style="text-align: right">324,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 287.00</td>
+		<td style="text-align: right">463,800</td>
+		<td style="text-align: right">353,830</td>
+		<td style="text-align: right">324,870</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 287.50</td>
+		<td style="text-align: right">464,600</td>
+		<td style="text-align: right">354,420</td>
+		<td style="text-align: right">325,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 288.00</td>
+		<td style="text-align: right">465,400</td>
+		<td style="text-align: right">355,060</td>
+		<td style="text-align: right">325,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 288.50</td>
+		<td style="text-align: right">466,200</td>
+		<td style="text-align: right">355,650</td>
+		<td style="text-align: right">326,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 289.00</td>
+		<td style="text-align: right">467,000</td>
+		<td style="text-align: right">356,230</td>
+		<td style="text-align: right">327,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 289.50</td>
+		<td style="text-align: right">467,800</td>
+		<td style="text-align: right">356,820</td>
+		<td style="text-align: right">327,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 290.00</td>
+		<td style="text-align: right">468,600</td>
+		<td style="text-align: right">357,460</td>
+		<td style="text-align: right">328,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 290.50</td>
+		<td style="text-align: right">469,400</td>
+		<td style="text-align: right">358,050</td>
+		<td style="text-align: right">328,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 291.00</td>
+		<td style="text-align: right">470,200</td>
+		<td style="text-align: right">358,640</td>
+		<td style="text-align: right">329,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 291.50</td>
+		<td style="text-align: right">471,000</td>
+		<td style="text-align: right">359,220</td>
+		<td style="text-align: right">329,770</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 292.00</td>
+		<td style="text-align: right">471,800</td>
+		<td style="text-align: right">359,860</td>
+		<td style="text-align: right">330,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 292.50</td>
+		<td style="text-align: right">472,600</td>
+		<td style="text-align: right">360,450</td>
+		<td style="text-align: right">330,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 293.00</td>
+		<td style="text-align: right">473,400</td>
+		<td style="text-align: right">361,040</td>
+		<td style="text-align: right">331,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 293.50</td>
+		<td style="text-align: right">474,200</td>
+		<td style="text-align: right">361,620</td>
+		<td style="text-align: right">331,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 294.00</td>
+		<td style="text-align: right">475,000</td>
+		<td style="text-align: right">362,210</td>
+		<td style="text-align: right">332,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 294.50</td>
+		<td style="text-align: right">475,800</td>
+		<td style="text-align: right">362,850</td>
+		<td style="text-align: right">333,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 295.00</td>
+		<td style="text-align: right">476,600</td>
+		<td style="text-align: right">363,440</td>
+		<td style="text-align: right">333,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 295.50</td>
+		<td style="text-align: right">477,400</td>
+		<td style="text-align: right">364,030</td>
+		<td style="text-align: right">334,180</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 296.00</td>
+		<td style="text-align: right">478,200</td>
+		<td style="text-align: right">364,610</td>
+		<td style="text-align: right">334,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 296.50</td>
+		<td style="text-align: right">479,000</td>
+		<td style="text-align: right">365,250</td>
+		<td style="text-align: right">335,310</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 297.00</td>
+		<td style="text-align: right">479,800</td>
+		<td style="text-align: right">365,840</td>
+		<td style="text-align: right">335,850</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 297.50</td>
+		<td style="text-align: right">480,600</td>
+		<td style="text-align: right">366,430</td>
+		<td style="text-align: right">336,390</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 298.00</td>
+		<td style="text-align: right">481,400</td>
+		<td style="text-align: right">367,010</td>
+		<td style="text-align: right">336,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 298.50</td>
+		<td style="text-align: right">482,200</td>
+		<td style="text-align: right">367,650</td>
+		<td style="text-align: right">337,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 299.00</td>
+		<td style="text-align: right">483,000</td>
+		<td style="text-align: right">368,240</td>
+		<td style="text-align: right">338,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 299.50</td>
+		<td style="text-align: right">483,800</td>
+		<td style="text-align: right">368,830</td>
+		<td style="text-align: right">338,590</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 300.00</td>
+		<td style="text-align: right">484,600</td>
+		<td style="text-align: right">369,420</td>
+		<td style="text-align: right">339,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 300.50</td>
+		<td style="text-align: right">485,400</td>
+		<td style="text-align: right">370,050</td>
+		<td style="text-align: right">339,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 301.00</td>
+		<td style="text-align: right">486,200</td>
+		<td style="text-align: right">370,640</td>
+		<td style="text-align: right">340,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 301.50</td>
+		<td style="text-align: right">487,000</td>
+		<td style="text-align: right">371,230</td>
+		<td style="text-align: right">340,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 302.00</td>
+		<td style="text-align: right">487,800</td>
+		<td style="text-align: right">371,820</td>
+		<td style="text-align: right">341,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 302.50</td>
+		<td style="text-align: right">488,600</td>
+		<td style="text-align: right">372,450</td>
+		<td style="text-align: right">341,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 303.00</td>
+		<td style="text-align: right">489,400</td>
+		<td style="text-align: right">373,040</td>
+		<td style="text-align: right">342,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 303.50</td>
+		<td style="text-align: right">490,200</td>
+		<td style="text-align: right">373,630</td>
+		<td style="text-align: right">343,000</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 304.00</td>
+		<td style="text-align: right">491,000</td>
+		<td style="text-align: right">374,220</td>
+		<td style="text-align: right">343,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 304.50</td>
+		<td style="text-align: right">491,800</td>
+		<td style="text-align: right">374,850</td>
+		<td style="text-align: right">344,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 305.00</td>
+		<td style="text-align: right">492,600</td>
+		<td style="text-align: right">375,440</td>
+		<td style="text-align: right">344,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 305.50</td>
+		<td style="text-align: right">493,400</td>
+		<td style="text-align: right">376,030</td>
+		<td style="text-align: right">345,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 306.00</td>
+		<td style="text-align: right">494,200</td>
+		<td style="text-align: right">376,620</td>
+		<td style="text-align: right">345,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 306.50</td>
+		<td style="text-align: right">495,000</td>
+		<td style="text-align: right">377,210</td>
+		<td style="text-align: right">346,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 307.00</td>
+		<td style="text-align: right">495,800</td>
+		<td style="text-align: right">377,840</td>
+		<td style="text-align: right">346,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 307.50</td>
+		<td style="text-align: right">496,600</td>
+		<td style="text-align: right">378,430</td>
+		<td style="text-align: right">347,410</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 308.00</td>
+		<td style="text-align: right">497,400</td>
+		<td style="text-align: right">379,020</td>
+		<td style="text-align: right">347,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 308.50</td>
+		<td style="text-align: right">498,200</td>
+		<td style="text-align: right">379,610</td>
+		<td style="text-align: right">348,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 309.00</td>
+		<td style="text-align: right">499,000</td>
+		<td style="text-align: right">380,240</td>
+		<td style="text-align: right">349,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 309.50</td>
+		<td style="text-align: right">499,800</td>
+		<td style="text-align: right">380,830</td>
+		<td style="text-align: right">349,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 310.00</td>
+		<td style="text-align: right">500,600</td>
+		<td style="text-align: right">381,420</td>
+		<td style="text-align: right">350,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 310.50</td>
+		<td style="text-align: right">501,400</td>
+		<td style="text-align: right">382,010</td>
+		<td style="text-align: right">350,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 311.00</td>
+		<td style="text-align: right">502,200</td>
+		<td style="text-align: right">382,650</td>
+		<td style="text-align: right">351,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 311.50</td>
+		<td style="text-align: right">503,000</td>
+		<td style="text-align: right">383,230</td>
+		<td style="text-align: right">351,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 312.00</td>
+		<td style="text-align: right">503,800</td>
+		<td style="text-align: right">383,820</td>
+		<td style="text-align: right">352,360</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 312.50</td>
+		<td style="text-align: right">504,600</td>
+		<td style="text-align: right">384,410</td>
+		<td style="text-align: right">352,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 313.00</td>
+		<td style="text-align: right">505,400</td>
+		<td style="text-align: right">385,050</td>
+		<td style="text-align: right">353,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 313.50</td>
+		<td style="text-align: right">506,200</td>
+		<td style="text-align: right">385,630</td>
+		<td style="text-align: right">353,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 314.00</td>
+		<td style="text-align: right">507,000</td>
+		<td style="text-align: right">386,220</td>
+		<td style="text-align: right">354,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 314.50</td>
+		<td style="text-align: right">507,800</td>
+		<td style="text-align: right">386,810</td>
+		<td style="text-align: right">355,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 315.00</td>
+		<td style="text-align: right">508,600</td>
+		<td style="text-align: right">387,450</td>
+		<td style="text-align: right">355,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 315.50</td>
+		<td style="text-align: right">509,400</td>
+		<td style="text-align: right">388,040</td>
+		<td style="text-align: right">356,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 316.00</td>
+		<td style="text-align: right">510,200</td>
+		<td style="text-align: right">388,620</td>
+		<td style="text-align: right">356,720</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 316.50</td>
+		<td style="text-align: right">511,000</td>
+		<td style="text-align: right">389,210</td>
+		<td style="text-align: right">357,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 317.00</td>
+		<td style="text-align: right">511,800</td>
+		<td style="text-align: right">389,850</td>
+		<td style="text-align: right">357,850</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 317.50</td>
+		<td style="text-align: right">512,600</td>
+		<td style="text-align: right">390,440</td>
+		<td style="text-align: right">358,390</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 318.00</td>
+		<td style="text-align: right">513,400</td>
+		<td style="text-align: right">391,020</td>
+		<td style="text-align: right">358,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 318.50</td>
+		<td style="text-align: right">514,200</td>
+		<td style="text-align: right">391,610</td>
+		<td style="text-align: right">359,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 319.00</td>
+		<td style="text-align: right">515,000</td>
+		<td style="text-align: right">392,200</td>
+		<td style="text-align: right">360,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 319.50</td>
+		<td style="text-align: right">515,800</td>
+		<td style="text-align: right">392,840</td>
+		<td style="text-align: right">360,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 320.00</td>
+		<td style="text-align: right">516,600</td>
+		<td style="text-align: right">393,430</td>
+		<td style="text-align: right">361,130</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 320.50</td>
+		<td style="text-align: right">517,400</td>
+		<td style="text-align: right">394,010</td>
+		<td style="text-align: right">361,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 321.00</td>
+		<td style="text-align: right">518,200</td>
+		<td style="text-align: right">394,600</td>
+		<td style="text-align: right">362,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 321.50</td>
+		<td style="text-align: right">519,000</td>
+		<td style="text-align: right">395,240</td>
+		<td style="text-align: right">362,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 322.00</td>
+		<td style="text-align: right">519,800</td>
+		<td style="text-align: right">395,830</td>
+		<td style="text-align: right">363,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 322.50</td>
+		<td style="text-align: right">520,600</td>
+		<td style="text-align: right">396,410</td>
+		<td style="text-align: right">363,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 323.00</td>
+		<td style="text-align: right">521,400</td>
+		<td style="text-align: right">397,000</td>
+		<td style="text-align: right">364,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 323.50</td>
+		<td style="text-align: right">522,200</td>
+		<td style="text-align: right">397,640</td>
+		<td style="text-align: right">365,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 324.00</td>
+		<td style="text-align: right">523,000</td>
+		<td style="text-align: right">398,230</td>
+		<td style="text-align: right">365,540</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 324.50</td>
+		<td style="text-align: right">523,800</td>
+		<td style="text-align: right">398,820</td>
+		<td style="text-align: right">366,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 325.00</td>
+		<td style="text-align: right">524,600</td>
+		<td style="text-align: right">399,400</td>
+		<td style="text-align: right">366,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 325.50</td>
+		<td style="text-align: right">525,400</td>
+		<td style="text-align: right">400,040</td>
+		<td style="text-align: right">367,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 326.00</td>
+		<td style="text-align: right">526,200</td>
+		<td style="text-align: right">400,630</td>
+		<td style="text-align: right">367,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 326.50</td>
+		<td style="text-align: right">527,000</td>
+		<td style="text-align: right">401,220</td>
+		<td style="text-align: right">368,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 327.00</td>
+		<td style="text-align: right">527,800</td>
+		<td style="text-align: right">401,800</td>
+		<td style="text-align: right">368,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 327.50</td>
+		<td style="text-align: right">528,600</td>
+		<td style="text-align: right">402,440</td>
+		<td style="text-align: right">369,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 328.00</td>
+		<td style="text-align: right">529,400</td>
+		<td style="text-align: right">403,030</td>
+		<td style="text-align: right">369,950</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 328.50</td>
+		<td style="text-align: right">530,200</td>
+		<td style="text-align: right">403,620</td>
+		<td style="text-align: right">370,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 329.00</td>
+		<td style="text-align: right">531,000</td>
+		<td style="text-align: right">404,210</td>
+		<td style="text-align: right">371,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 329.50</td>
+		<td style="text-align: right">531,800</td>
+		<td style="text-align: right">404,840</td>
+		<td style="text-align: right">371,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 330.00</td>
+		<td style="text-align: right">532,600</td>
+		<td style="text-align: right">405,430</td>
+		<td style="text-align: right">372,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 330.50</td>
+		<td style="text-align: right">533,400</td>
+		<td style="text-align: right">406,020</td>
+		<td style="text-align: right">372,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 331.00</td>
+		<td style="text-align: right">534,200</td>
+		<td style="text-align: right">406,610</td>
+		<td style="text-align: right">373,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 331.50</td>
+		<td style="text-align: right">535,000</td>
+		<td style="text-align: right">407,190</td>
+		<td style="text-align: right">373,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 332.00</td>
+		<td style="text-align: right">535,800</td>
+		<td style="text-align: right">407,830</td>
+		<td style="text-align: right">374,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 332.50</td>
+		<td style="text-align: right">536,600</td>
+		<td style="text-align: right">408,420</td>
+		<td style="text-align: right">374,900</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 333.00</td>
+		<td style="text-align: right">537,400</td>
+		<td style="text-align: right">409,010</td>
+		<td style="text-align: right">375,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 333.50</td>
+		<td style="text-align: right">538,200</td>
+		<td style="text-align: right">409,600</td>
+		<td style="text-align: right">375,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 334.00</td>
+		<td style="text-align: right">539,000</td>
+		<td style="text-align: right">410,230</td>
+		<td style="text-align: right">376,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 334.50</td>
+		<td style="text-align: right">539,800</td>
+		<td style="text-align: right">410,820</td>
+		<td style="text-align: right">377,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 335.00</td>
+		<td style="text-align: right">540,600</td>
+		<td style="text-align: right">411,410</td>
+		<td style="text-align: right">377,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 335.50</td>
+		<td style="text-align: right">541,400</td>
+		<td style="text-align: right">412,000</td>
+		<td style="text-align: right">378,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 336.00</td>
+		<td style="text-align: right">542,200</td>
+		<td style="text-align: right">412,630</td>
+		<td style="text-align: right">378,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 336.50</td>
+		<td style="text-align: right">543,000</td>
+		<td style="text-align: right">413,220</td>
+		<td style="text-align: right">379,260</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 337.00</td>
+		<td style="text-align: right">543,800</td>
+		<td style="text-align: right">413,810</td>
+		<td style="text-align: right">379,850</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 337.50</td>
+		<td style="text-align: right">544,600</td>
+		<td style="text-align: right">414,400</td>
+		<td style="text-align: right">380,390</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 338.00</td>
+		<td style="text-align: right">545,400</td>
+		<td style="text-align: right">415,030</td>
+		<td style="text-align: right">380,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 338.50</td>
+		<td style="text-align: right">546,200</td>
+		<td style="text-align: right">415,620</td>
+		<td style="text-align: right">381,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 339.00</td>
+		<td style="text-align: right">547,000</td>
+		<td style="text-align: right">416,210</td>
+		<td style="text-align: right">382,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 339.50</td>
+		<td style="text-align: right">547,800</td>
+		<td style="text-align: right">416,800</td>
+		<td style="text-align: right">382,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 340.00</td>
+		<td style="text-align: right">548,600</td>
+		<td style="text-align: right">417,440</td>
+		<td style="text-align: right">383,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 340.50</td>
+		<td style="text-align: right">549,400</td>
+		<td style="text-align: right">418,020</td>
+		<td style="text-align: right">383,670</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 341.00</td>
+		<td style="text-align: right">550,200</td>
+		<td style="text-align: right">418,610</td>
+		<td style="text-align: right">384,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 341.50</td>
+		<td style="text-align: right">551,000</td>
+		<td style="text-align: right">419,200</td>
+		<td style="text-align: right">384,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 342.00</td>
+		<td style="text-align: right">551,800</td>
+		<td style="text-align: right">419,840</td>
+		<td style="text-align: right">385,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 342.50</td>
+		<td style="text-align: right">552,600</td>
+		<td style="text-align: right">420,420</td>
+		<td style="text-align: right">385,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 343.00</td>
+		<td style="text-align: right">553,400</td>
+		<td style="text-align: right">421,010</td>
+		<td style="text-align: right">386,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 343.50</td>
+		<td style="text-align: right">554,200</td>
+		<td style="text-align: right">421,600</td>
+		<td style="text-align: right">386,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 344.00</td>
+		<td style="text-align: right">555,000</td>
+		<td style="text-align: right">422,190</td>
+		<td style="text-align: right">387,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 344.50</td>
+		<td style="text-align: right">555,800</td>
+		<td style="text-align: right">422,830</td>
+		<td style="text-align: right">388,080</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 345.00</td>
+		<td style="text-align: right">556,600</td>
+		<td style="text-align: right">423,410</td>
+		<td style="text-align: right">388,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 345.50</td>
+		<td style="text-align: right">557,400</td>
+		<td style="text-align: right">424,000</td>
+		<td style="text-align: right">389,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 346.00</td>
+		<td style="text-align: right">558,200</td>
+		<td style="text-align: right">424,590</td>
+		<td style="text-align: right">389,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 346.50</td>
+		<td style="text-align: right">559,000</td>
+		<td style="text-align: right">425,230</td>
+		<td style="text-align: right">390,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 347.00</td>
+		<td style="text-align: right">559,800</td>
+		<td style="text-align: right">425,810</td>
+		<td style="text-align: right">390,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 347.50</td>
+		<td style="text-align: right">560,600</td>
+		<td style="text-align: right">426,400</td>
+		<td style="text-align: right">391,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 348.00</td>
+		<td style="text-align: right">561,400</td>
+		<td style="text-align: right">426,990</td>
+		<td style="text-align: right">391,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 348.50</td>
+		<td style="text-align: right">562,200</td>
+		<td style="text-align: right">427,630</td>
+		<td style="text-align: right">392,490</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 349.00</td>
+		<td style="text-align: right">563,000</td>
+		<td style="text-align: right">428,220</td>
+		<td style="text-align: right">393,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 349.50</td>
+		<td style="text-align: right">563,800</td>
+		<td style="text-align: right">428,800</td>
+		<td style="text-align: right">393,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 350.00</td>
+		<td style="text-align: right">564,600</td>
+		<td style="text-align: right">429,390</td>
+		<td style="text-align: right">394,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 350.50</td>
+		<td style="text-align: right">565,400</td>
+		<td style="text-align: right">430,030</td>
+		<td style="text-align: right">394,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 351.00</td>
+		<td style="text-align: right">566,200</td>
+		<td style="text-align: right">430,620</td>
+		<td style="text-align: right">395,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 351.50</td>
+		<td style="text-align: right">567,000</td>
+		<td style="text-align: right">431,200</td>
+		<td style="text-align: right">395,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 352.00</td>
+		<td style="text-align: right">567,800</td>
+		<td style="text-align: right">431,790</td>
+		<td style="text-align: right">396,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 352.50</td>
+		<td style="text-align: right">568,600</td>
+		<td style="text-align: right">432,430</td>
+		<td style="text-align: right">396,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 353.00</td>
+		<td style="text-align: right">569,400</td>
+		<td style="text-align: right">433,020</td>
+		<td style="text-align: right">397,440</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 353.50</td>
+		<td style="text-align: right">570,200</td>
+		<td style="text-align: right">433,610</td>
+		<td style="text-align: right">397,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 354.00</td>
+		<td style="text-align: right">571,000</td>
+		<td style="text-align: right">434,190</td>
+		<td style="text-align: right">398,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 354.50</td>
+		<td style="text-align: right">571,800</td>
+		<td style="text-align: right">434,830</td>
+		<td style="text-align: right">399,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 355.00</td>
+		<td style="text-align: right">572,600</td>
+		<td style="text-align: right">435,420</td>
+		<td style="text-align: right">399,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 355.50</td>
+		<td style="text-align: right">573,400</td>
+		<td style="text-align: right">436,010</td>
+		<td style="text-align: right">400,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 356.00</td>
+		<td style="text-align: right">574,200</td>
+		<td style="text-align: right">436,590</td>
+		<td style="text-align: right">400,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 356.50</td>
+		<td style="text-align: right">575,000</td>
+		<td style="text-align: right">437,180</td>
+		<td style="text-align: right">401,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 357.00</td>
+		<td style="text-align: right">575,800</td>
+		<td style="text-align: right">437,820</td>
+		<td style="text-align: right">401,800</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 357.50</td>
+		<td style="text-align: right">576,600</td>
+		<td style="text-align: right">438,410</td>
+		<td style="text-align: right">402,390</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 358.00</td>
+		<td style="text-align: right">577,400</td>
+		<td style="text-align: right">439,000</td>
+		<td style="text-align: right">402,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 358.50</td>
+		<td style="text-align: right">578,200</td>
+		<td style="text-align: right">439,580</td>
+		<td style="text-align: right">403,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 359.00</td>
+		<td style="text-align: right">579,000</td>
+		<td style="text-align: right">440,220</td>
+		<td style="text-align: right">404,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 359.50</td>
+		<td style="text-align: right">579,800</td>
+		<td style="text-align: right">440,810</td>
+		<td style="text-align: right">404,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 360.00</td>
+		<td style="text-align: right">580,600</td>
+		<td style="text-align: right">441,400</td>
+		<td style="text-align: right">405,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 360.50</td>
+		<td style="text-align: right">581,400</td>
+		<td style="text-align: right">441,980</td>
+		<td style="text-align: right">405,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 361.00</td>
+		<td style="text-align: right">582,200</td>
+		<td style="text-align: right">442,620</td>
+		<td style="text-align: right">406,210</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 361.50</td>
+		<td style="text-align: right">583,000</td>
+		<td style="text-align: right">443,210</td>
+		<td style="text-align: right">406,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 362.00</td>
+		<td style="text-align: right">583,800</td>
+		<td style="text-align: right">443,800</td>
+		<td style="text-align: right">407,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 362.50</td>
+		<td style="text-align: right">584,600</td>
+		<td style="text-align: right">444,390</td>
+		<td style="text-align: right">407,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 363.00</td>
+		<td style="text-align: right">585,400</td>
+		<td style="text-align: right">445,020</td>
+		<td style="text-align: right">408,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 363.50</td>
+		<td style="text-align: right">586,200</td>
+		<td style="text-align: right">445,610</td>
+		<td style="text-align: right">408,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 364.00</td>
+		<td style="text-align: right">587,000</td>
+		<td style="text-align: right">446,200</td>
+		<td style="text-align: right">409,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 364.50</td>
+		<td style="text-align: right">587,800</td>
+		<td style="text-align: right">446,790</td>
+		<td style="text-align: right">410,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 365.00</td>
+		<td style="text-align: right">588,600</td>
+		<td style="text-align: right">447,420</td>
+		<td style="text-align: right">410,620</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 365.50</td>
+		<td style="text-align: right">589,400</td>
+		<td style="text-align: right">448,010</td>
+		<td style="text-align: right">411,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 366.00</td>
+		<td style="text-align: right">590,200</td>
+		<td style="text-align: right">448,600</td>
+		<td style="text-align: right">411,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 366.50</td>
+		<td style="text-align: right">591,000</td>
+		<td style="text-align: right">449,190</td>
+		<td style="text-align: right">412,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 367.00</td>
+		<td style="text-align: right">591,800</td>
+		<td style="text-align: right">449,820</td>
+		<td style="text-align: right">412,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 367.50</td>
+		<td style="text-align: right">592,600</td>
+		<td style="text-align: right">450,410</td>
+		<td style="text-align: right">413,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 368.00</td>
+		<td style="text-align: right">593,400</td>
+		<td style="text-align: right">451,000</td>
+		<td style="text-align: right">413,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 368.50</td>
+		<td style="text-align: right">594,200</td>
+		<td style="text-align: right">451,590</td>
+		<td style="text-align: right">414,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 369.00</td>
+		<td style="text-align: right">595,000</td>
+		<td style="text-align: right">452,180</td>
+		<td style="text-align: right">415,030</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 369.50</td>
+		<td style="text-align: right">595,800</td>
+		<td style="text-align: right">452,810</td>
+		<td style="text-align: right">415,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 370.00</td>
+		<td style="text-align: right">596,600</td>
+		<td style="text-align: right">453,400</td>
+		<td style="text-align: right">416,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 370.50</td>
+		<td style="text-align: right">597,400</td>
+		<td style="text-align: right">453,990</td>
+		<td style="text-align: right">416,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 371.00</td>
+		<td style="text-align: right">598,200</td>
+		<td style="text-align: right">454,580</td>
+		<td style="text-align: right">417,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 371.50</td>
+		<td style="text-align: right">599,000</td>
+		<td style="text-align: right">455,210</td>
+		<td style="text-align: right">417,780</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 372.00</td>
+		<td style="text-align: right">599,800</td>
+		<td style="text-align: right">455,800</td>
+		<td style="text-align: right">418,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 372.50</td>
+		<td style="text-align: right">600,600</td>
+		<td style="text-align: right">456,390</td>
+		<td style="text-align: right">418,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 373.00</td>
+		<td style="text-align: right">601,400</td>
+		<td style="text-align: right">456,980</td>
+		<td style="text-align: right">419,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 373.50</td>
+		<td style="text-align: right">602,200</td>
+		<td style="text-align: right">457,620</td>
+		<td style="text-align: right">419,980</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 374.00</td>
+		<td style="text-align: right">603,000</td>
+		<td style="text-align: right">458,200</td>
+		<td style="text-align: right">420,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 374.50</td>
+		<td style="text-align: right">603,800</td>
+		<td style="text-align: right">458,790</td>
+		<td style="text-align: right">421,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 375.00</td>
+		<td style="text-align: right">604,600</td>
+		<td style="text-align: right">459,380</td>
+		<td style="text-align: right">421,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 375.50</td>
+		<td style="text-align: right">605,400</td>
+		<td style="text-align: right">460,020</td>
+		<td style="text-align: right">422,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 376.00</td>
+		<td style="text-align: right">606,200</td>
+		<td style="text-align: right">460,600</td>
+		<td style="text-align: right">422,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 376.50</td>
+		<td style="text-align: right">607,000</td>
+		<td style="text-align: right">461,190</td>
+		<td style="text-align: right">423,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 377.00</td>
+		<td style="text-align: right">607,800</td>
+		<td style="text-align: right">461,780</td>
+		<td style="text-align: right">423,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 377.50</td>
+		<td style="text-align: right">608,600</td>
+		<td style="text-align: right">462,420</td>
+		<td style="text-align: right">424,340</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 378.00</td>
+		<td style="text-align: right">609,400</td>
+		<td style="text-align: right">463,010</td>
+		<td style="text-align: right">424,930</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 378.50</td>
+		<td style="text-align: right">610,200</td>
+		<td style="text-align: right">463,590</td>
+		<td style="text-align: right">425,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 379.00</td>
+		<td style="text-align: right">611,000</td>
+		<td style="text-align: right">464,180</td>
+		<td style="text-align: right">426,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 379.50</td>
+		<td style="text-align: right">611,800</td>
+		<td style="text-align: right">464,820</td>
+		<td style="text-align: right">426,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 380.00</td>
+		<td style="text-align: right">612,600</td>
+		<td style="text-align: right">465,410</td>
+		<td style="text-align: right">427,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 380.50</td>
+		<td style="text-align: right">613,400</td>
+		<td style="text-align: right">465,990</td>
+		<td style="text-align: right">427,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 381.00</td>
+		<td style="text-align: right">614,200</td>
+		<td style="text-align: right">466,580</td>
+		<td style="text-align: right">428,220</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 381.50</td>
+		<td style="text-align: right">615,000</td>
+		<td style="text-align: right">467,170</td>
+		<td style="text-align: right">428,750</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 382.00</td>
+		<td style="text-align: right">615,800</td>
+		<td style="text-align: right">467,810</td>
+		<td style="text-align: right">429,290</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 382.50</td>
+		<td style="text-align: right">616,600</td>
+		<td style="text-align: right">468,400</td>
+		<td style="text-align: right">429,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 383.00</td>
+		<td style="text-align: right">617,400</td>
+		<td style="text-align: right">468,980</td>
+		<td style="text-align: right">430,420</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 383.50</td>
+		<td style="text-align: right">618,200</td>
+		<td style="text-align: right">469,570</td>
+		<td style="text-align: right">430,960</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 384.00</td>
+		<td style="text-align: right">619,000</td>
+		<td style="text-align: right">470,210</td>
+		<td style="text-align: right">431,500</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 384.50</td>
+		<td style="text-align: right">619,800</td>
+		<td style="text-align: right">470,800</td>
+		<td style="text-align: right">432,040</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 385.00</td>
+		<td style="text-align: right">620,600</td>
+		<td style="text-align: right">471,380</td>
+		<td style="text-align: right">432,630</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 385.50</td>
+		<td style="text-align: right">621,400</td>
+		<td style="text-align: right">471,970</td>
+		<td style="text-align: right">433,160</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 386.00</td>
+		<td style="text-align: right">622,200</td>
+		<td style="text-align: right">472,610</td>
+		<td style="text-align: right">433,700</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 386.50</td>
+		<td style="text-align: right">623,000</td>
+		<td style="text-align: right">473,200</td>
+		<td style="text-align: right">434,240</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 387.00</td>
+		<td style="text-align: right">623,800</td>
+		<td style="text-align: right">473,790</td>
+		<td style="text-align: right">434,830</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 387.50</td>
+		<td style="text-align: right">624,600</td>
+		<td style="text-align: right">474,370</td>
+		<td style="text-align: right">435,370</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 388.00</td>
+		<td style="text-align: right">625,400</td>
+		<td style="text-align: right">475,010</td>
+		<td style="text-align: right">435,910</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 388.50</td>
+		<td style="text-align: right">626,200</td>
+		<td style="text-align: right">475,600</td>
+		<td style="text-align: right">436,450</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 389.00</td>
+		<td style="text-align: right">627,000</td>
+		<td style="text-align: right">476,190</td>
+		<td style="text-align: right">436,990</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 389.50</td>
+		<td style="text-align: right">627,800</td>
+		<td style="text-align: right">476,770</td>
+		<td style="text-align: right">437,570</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 390.00</td>
+		<td style="text-align: right">628,600</td>
+		<td style="text-align: right">477,410</td>
+		<td style="text-align: right">438,110</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 390.50</td>
+		<td style="text-align: right">629,400</td>
+		<td style="text-align: right">478,000</td>
+		<td style="text-align: right">438,650</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 391.00</td>
+		<td style="text-align: right">630,200</td>
+		<td style="text-align: right">478,590</td>
+		<td style="text-align: right">439,190</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 391.50</td>
+		<td style="text-align: right">631,000</td>
+		<td style="text-align: right">479,180</td>
+		<td style="text-align: right">439,730</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 392.00</td>
+		<td style="text-align: right">631,800</td>
+		<td style="text-align: right">479,810</td>
+		<td style="text-align: right">440,320</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 392.50</td>
+		<td style="text-align: right">632,600</td>
+		<td style="text-align: right">480,400</td>
+		<td style="text-align: right">440,860</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 393.00</td>
+		<td style="text-align: right">633,400</td>
+		<td style="text-align: right">480,990</td>
+		<td style="text-align: right">441,400</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 393.50</td>
+		<td style="text-align: right">634,200</td>
+		<td style="text-align: right">481,580</td>
+		<td style="text-align: right">441,940</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 394.00</td>
+		<td style="text-align: right">635,000</td>
+		<td style="text-align: right">482,160</td>
+		<td style="text-align: right">442,520</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 394.50</td>
+		<td style="text-align: right">635,800</td>
+		<td style="text-align: right">482,800</td>
+		<td style="text-align: right">443,060</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 395.00</td>
+		<td style="text-align: right">636,600</td>
+		<td style="text-align: right">483,390</td>
+		<td style="text-align: right">443,600</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 395.50</td>
+		<td style="text-align: right">637,400</td>
+		<td style="text-align: right">483,980</td>
+		<td style="text-align: right">444,140</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 396.00</td>
+		<td style="text-align: right">638,200</td>
+		<td style="text-align: right">484,570</td>
+		<td style="text-align: right">444,680</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 396.50</td>
+		<td style="text-align: right">639,000</td>
+		<td style="text-align: right">485,200</td>
+		<td style="text-align: right">445,270</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 397.00</td>
+		<td style="text-align: right">639,800</td>
+		<td style="text-align: right">485,790</td>
+		<td style="text-align: right">445,810</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 397.50</td>
+		<td style="text-align: right">640,600</td>
+		<td style="text-align: right">486,380</td>
+		<td style="text-align: right">446,350</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 398.00</td>
+		<td style="text-align: right">641,400</td>
+		<td style="text-align: right">486,970</td>
+		<td style="text-align: right">446,880</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 398.50</td>
+		<td style="text-align: right">642,200</td>
+		<td style="text-align: right">487,600</td>
+		<td style="text-align: right">447,470</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 399.00</td>
+		<td style="text-align: right">643,000</td>
+		<td style="text-align: right">488,190</td>
+		<td style="text-align: right">448,010</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 399.50</td>
+		<td style="text-align: right">643,800</td>
+		<td style="text-align: right">488,780</td>
+		<td style="text-align: right">448,550</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 400.00</td>
+		<td style="text-align: right">644,600</td>
+		<td style="text-align: right">489,370</td>
+		<td style="text-align: right">449,090</td>
+	</tr> 
+   	<tr>
+		<td style="text-align: center">~ 400.50</td>
+		<td style="text-align: right">645,400</td>
+		<td style="text-align: right">490,000</td>
+		<td style="text-align: right">449,630</td>
+	</tr> 
+     
+</table>

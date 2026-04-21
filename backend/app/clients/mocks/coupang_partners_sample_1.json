@@ -1,0 +1,51 @@
+{
+  "rCode": "0",
+  "rMessage": "",
+  "data": {
+    "landingUrl": "https://link.coupang.com/re/SEARCH?q=휴대용선풍기",
+    "productData": [
+      {
+        "productId": 770001234,
+        "productName": "휴대용 USB 미니 선풍기 핸디 탁상형",
+        "productPrice": 14900,
+        "productImage": "https://coupangcdn.com/image/770001234.jpg",
+        "productUrl": "https://link.coupang.com/re/AFF?lptag=AF001&pageKey=770001234",
+        "categoryName": "가전디지털>계절가전>선풍기>휴대용선풍기",
+        "isRocket": true,
+        "isFreeShipping": true,
+        "rating": 4.6,
+        "ratingCount": 12843,
+        "keyword": "휴대용선풍기",
+        "rank": 1
+      },
+      {
+        "productId": 770001235,
+        "productName": "넥밴드 목걸이 선풍기 무선 충전식",
+        "productPrice": 22500,
+        "productImage": "https://coupangcdn.com/image/770001235.jpg",
+        "productUrl": "https://link.coupang.com/re/AFF?lptag=AF001&pageKey=770001235",
+        "categoryName": "가전디지털>계절가전>선풍기>넥밴드선풍기",
+        "isRocket": true,
+        "isFreeShipping": true,
+        "rating": 4.3,
+        "ratingCount": 3271,
+        "keyword": "휴대용선풍기",
+        "rank": 2
+      },
+      {
+        "productId": 770001236,
+        "productName": "접이식 휴대용 선풍기 2024 신상",
+        "productPrice": 9900,
+        "productImage": "https://coupangcdn.com/image/770001236.jpg",
+        "productUrl": "https://link.coupang.com/re/AFF?lptag=AF001&pageKey=770001236",
+        "categoryName": "가전디지털>계절가전>선풍기>휴대용선풍기",
+        "isRocket": false,
+        "isFreeShipping": true,
+        "rating": 4.1,
+        "ratingCount": 421,
+        "keyword": "휴대용선풍기",
+        "rank": 3
+      }
+    ]
+  }
+}

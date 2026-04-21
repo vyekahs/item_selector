@@ -1,0 +1,43 @@
+{
+  "header": {
+    "resultCode": "00",
+    "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+    "items": [
+      {
+        "hsSgn": "8414510000",
+        "statCd": "CN",
+        "statKor": "중국",
+        "year": "2025",
+        "statMonth": "202501",
+        "expWgt": "0",
+        "expDlr": "0",
+        "impWgt": "421350",
+        "impDlr": "3812400"
+      },
+      {
+        "hsSgn": "8414510000",
+        "statCd": "CN",
+        "statKor": "중국",
+        "year": "2025",
+        "statMonth": "202502",
+        "expWgt": "0",
+        "expDlr": "0",
+        "impWgt": "489120",
+        "impDlr": "4230900"
+      },
+      {
+        "hsSgn": "8414510000",
+        "statCd": "CN",
+        "statKor": "중국",
+        "year": "2025",
+        "statMonth": "202503",
+        "expWgt": "0",
+        "expDlr": "0",
+        "impWgt": "612800",
+        "impDlr": "5470300"
+      }
+    ]
+  }
+}

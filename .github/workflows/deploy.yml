@@ -1,0 +1,35 @@
+name: Deploy to Home Server
+
+on:
+  push:
+    branches: [main]
+  # Allow manual re-deploys without an empty commit.
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-home-server
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Only run after CI passes on the same commit — prevents shipping a
+    # broken build. Comment out ``needs`` if you want deploy-on-push.
+    needs: []
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          # The heavy xlsx imports on first boot can run ~2 min, so give
+          # compose plenty of time before SSH session timeout.
+          command_timeout: 15m
+          script: |
+            set -e
+            cd ${{ secrets.DEPLOY_PATH }}
+            git pull
+            docker compose up -d --build
+            docker compose ps

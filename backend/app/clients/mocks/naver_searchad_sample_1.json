@@ -1,0 +1,48 @@
+{
+  "keywordList": [
+    {
+      "relKeyword": "휴대용선풍기",
+      "monthlyPcQcCnt": 8900,
+      "monthlyMobileQcCnt": 95300,
+      "monthlyAvePcClkCnt": 42.1,
+      "monthlyAveMobileClkCnt": 510.4,
+      "monthlyAvePcCtr": 0.47,
+      "monthlyAveMobileCtr": 0.54,
+      "plAvgDepth": 12,
+      "compIdx": "높음"
+    },
+    {
+      "relKeyword": "넥밴드선풍기",
+      "monthlyPcQcCnt": 2100,
+      "monthlyMobileQcCnt": 18700,
+      "monthlyAvePcClkCnt": 8.3,
+      "monthlyAveMobileClkCnt": 92.5,
+      "monthlyAvePcCtr": 0.39,
+      "monthlyAveMobileCtr": 0.51,
+      "plAvgDepth": 9,
+      "compIdx": "중간"
+    },
+    {
+      "relKeyword": "미니선풍기",
+      "monthlyPcQcCnt": 15400,
+      "monthlyMobileQcCnt": 142000,
+      "monthlyAvePcClkCnt": 71.9,
+      "monthlyAveMobileClkCnt": 780.1,
+      "monthlyAvePcCtr": 0.46,
+      "monthlyAveMobileCtr": 0.55,
+      "plAvgDepth": 14,
+      "compIdx": "높음"
+    },
+    {
+      "relKeyword": "usb선풍기",
+      "monthlyPcQcCnt": 4300,
+      "monthlyMobileQcCnt": 31200,
+      "monthlyAvePcClkCnt": 17.4,
+      "monthlyAveMobileClkCnt": 151.2,
+      "monthlyAvePcCtr": 0.40,
+      "monthlyAveMobileCtr": 0.48,
+      "plAvgDepth": 11,
+      "compIdx": "중간"
+    }
+  ]
+}

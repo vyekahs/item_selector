@@ -1,0 +1,28 @@
+[
+  {
+    "result": 1,
+    "cur_unit": "CNH",
+    "cur_nm": "중국 위안화",
+    "ttb": "189.45",
+    "tts": "193.21",
+    "deal_bas_r": "191.33",
+    "bkpr": "191",
+    "yy_efee_r": "0",
+    "ten_dd_efee_r": "0",
+    "kftc_bkpr": "191",
+    "kftc_deal_bas_r": "191.33"
+  },
+  {
+    "result": 1,
+    "cur_unit": "USD",
+    "cur_nm": "미국 달러",
+    "ttb": "1370.20",
+    "tts": "1397.80",
+    "deal_bas_r": "1384.00",
+    "bkpr": "1384",
+    "yy_efee_r": "0",
+    "ten_dd_efee_r": "0",
+    "kftc_bkpr": "1384",
+    "kftc_deal_bas_r": "1384.00"
+  }
+]

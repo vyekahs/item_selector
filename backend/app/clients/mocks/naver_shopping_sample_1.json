@@ -1,0 +1,56 @@
+{
+  "lastBuildDate": "Fri, 18 Apr 2026 10:00:00 +0900",
+  "total": 48321,
+  "start": 1,
+  "display": 10,
+  "items": [
+    {
+      "title": "휴대용 선풍기 USB 미니 탁상용",
+      "link": "https://smartstore.naver.com/example/products/111",
+      "image": "https://shopping-phinf.pstatic.net/main_111/111.jpg",
+      "lprice": "12900",
+      "hprice": "19800",
+      "mallName": "샘플스토어",
+      "productId": "11110001",
+      "productType": "1",
+      "brand": "샘플브랜드",
+      "maker": "",
+      "category1": "디지털/가전",
+      "category2": "계절가전",
+      "category3": "선풍기",
+      "category4": "휴대용선풍기"
+    },
+    {
+      "title": "넥밴드 선풍기 목걸이 휴대용",
+      "link": "https://smartstore.naver.com/example/products/112",
+      "image": "https://shopping-phinf.pstatic.net/main_112/112.jpg",
+      "lprice": "18500",
+      "hprice": "29900",
+      "mallName": "샘플스토어2",
+      "productId": "11110002",
+      "productType": "1",
+      "brand": "브랜드B",
+      "maker": "",
+      "category1": "디지털/가전",
+      "category2": "계절가전",
+      "category3": "선풍기",
+      "category4": "넥밴드선풍기"
+    },
+    {
+      "title": "접이식 휴대용 선풍기 핸디 탁상 겸용",
+      "link": "https://smartstore.naver.com/example/products/113",
+      "image": "https://shopping-phinf.pstatic.net/main_113/113.jpg",
+      "lprice": "9900",
+      "hprice": "14900",
+      "mallName": "샘플스토어3",
+      "productId": "11110003",
+      "productType": "1",
+      "brand": "",
+      "maker": "",
+      "category1": "디지털/가전",
+      "category2": "계절가전",
+      "category3": "선풍기",
+      "category4": "휴대용선풍기"
+    }
+  ]
+}

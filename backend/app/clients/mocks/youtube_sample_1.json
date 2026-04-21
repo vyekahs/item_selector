@@ -1,0 +1,48 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "mock-etag",
+  "pageInfo": {
+    "totalResults": 7820,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mockVid0001"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-22T08:12:00Z",
+        "channelId": "UCmockChannel1",
+        "title": "휴대용 선풍기 2026 신상 리뷰 TOP 5",
+        "description": "올 여름 사야 할 휴대용 선풍기 비교",
+        "channelTitle": "테크리뷰어"
+      },
+      "statistics": {
+        "viewCount": "184203",
+        "likeCount": "4210",
+        "commentCount": "218"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "mockVid0002"
+      },
+      "snippet": {
+        "publishedAt": "2026-03-29T09:00:00Z",
+        "channelId": "UCmockChannel2",
+        "title": "넥밴드 선풍기 3종 솔직비교",
+        "description": "쿨링 성능, 소음, 배터리 수명까지",
+        "channelTitle": "여름템리뷰"
+      },
+      "statistics": {
+        "viewCount": "54821",
+        "likeCount": "1120",
+        "commentCount": "74"
+      }
+    }
+  ]
+}

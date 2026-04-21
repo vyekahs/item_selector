@@ -1,0 +1,24 @@
+{
+  "lastBuildDate": "Fri, 18 Apr 2026 10:00:00 +0900",
+  "total": 8427,
+  "start": 1,
+  "display": 10,
+  "items": [
+    {
+      "title": "<b>휴대용 선풍기</b> 추천 BEST 5",
+      "link": "https://blog.example.com/post/1001",
+      "description": "올 여름 <b>휴대용 선풍기</b> 제품별 리뷰 모음...",
+      "bloggername": "reviewblogger1",
+      "bloggerlink": "https://blog.example.com/reviewblogger1",
+      "postdate": "20260415"
+    },
+    {
+      "title": "<b>휴대용 선풍기</b> USB 타입 장단점",
+      "link": "https://blog.example.com/post/1002",
+      "description": "<b>휴대용 선풍기</b> 구매 전 꼭 알아야 할 것들...",
+      "bloggername": "reviewblogger2",
+      "bloggerlink": "https://blog.example.com/reviewblogger2",
+      "postdate": "20260412"
+    }
+  ]
+}

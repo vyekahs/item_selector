@@ -1,0 +1,56 @@
+# Development overrides.
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+#
+# Notes:
+#   * api and web expose their ports directly for debugging (8000, 3000)
+#   * api mounts source with --reload for hot-reload
+#   * web falls back to `pnpm dev` with a bind mount
+
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: builder  # include uv + dev tooling
+    command: >
+      uvicorn app.main:app
+      --host 0.0.0.0
+      --port 8000
+      --reload
+      --reload-dir /app/app
+    environment:
+      API_LOG_LEVEL: debug
+      USE_MOCK_CLIENTS: "true"
+    volumes:
+      - ./backend/app:/app/app
+      - ./backend/tests:/app/tests
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: deps  # stop before the production build
+    command: sh -c "pnpm install --no-frozen-lockfile && pnpm dev"
+    working_dir: /app
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000
+      INTERNAL_API_BASE_URL: http://api:8000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+
+  postgres:
+    ports:
+      - "5432:5432"
+
+  redis:
+    ports:
+      - "6379:6379"

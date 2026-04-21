@@ -1,0 +1,22 @@
+{
+  "header": {
+    "resultCode": "00",
+    "resultMsg": "NORMAL SERVICE."
+  },
+  "body": {
+    "items": [
+      {
+        "hsSgn": "8414510000",
+        "korHsnm": "선풍기 (모터 정격출력 125와트 이하인 탁상용, 바닥용, 벽걸이용, 창문용, 천장용, 지붕용)",
+        "engHsnm": "Table, floor, wall, window, ceiling or roof fans, with a self-contained electric motor of an output not exceeding 125 W",
+        "parentHsSgn": "84145100"
+      },
+      {
+        "hsSgn": "8414599000",
+        "korHsnm": "기타 송풍기 (모터 정격출력 125와트 이하)",
+        "engHsnm": "Other fans (motor output not exceeding 125W)",
+        "parentHsSgn": "84145900"
+      }
+    ]
+  }
+}
