@@ -96,30 +96,47 @@ class CollectMetricsJob(ScheduledJob):
         api_calls = 0
         failures: list[str] = []
 
-        async def _safe(fn, *args, **kwargs):
-            """Call an async API client, swallow errors, return (result, ok).
+        # --- DataLab: batch up to 5 keyword-groups per request ----------
+        # Each keyword becomes its own single-term group so the returned
+        # trend lines up 1:1 with the keyword list.
+        DATALAB_BATCH = 5
+        trend_by_term: dict[str, Any] = {}
+        for i in range(0, len(keywords), DATALAB_BATCH):
+            batch = keywords[i : i + DATALAB_BATCH]
+            try:
+                rows = await datalab.fetch([[k.term] for k in batch])
+                api_calls += 1
+                for dto in rows:
+                    trend_by_term[dto.term] = dto
+            except Exception as exc:  # noqa: BLE001
+                terms = ",".join(k.term for k in batch)
+                failures.append(f"datalab_batch[{terms}]: {type(exc).__name__}")
+            # DataLab rate-limit buffer — 1s between batches stays safely
+            # under the documented per-minute quota.
+            await asyncio.sleep(1.0)
 
-            Per-source isolation means a single 429 on DataLab no longer
-            loses the searchad/shopping/blog data we successfully fetched
-            for the same keyword.
-            """
+        async def _safe(fn, *args, label: str = "", **kwargs):
+            """Call an async API client, swallow errors, return (result, ok)."""
             try:
                 return (await fn(*args, **kwargs), True)
             except Exception as exc:  # noqa: BLE001
-                failures.append(f"{kw.term}[{fn.__self__.__class__.__name__}]: {type(exc).__name__}")
+                failures.append(f"{label}: {type(exc).__name__}")
                 return (None, False)
 
         for kw in keywords:
-            trend_rows, ok_trend = await _safe(datalab.fetch, [[kw.term]])
-            api_calls += 1 if ok_trend else 0
-            # Brief pause after datalab to stay under the per-second burst cap.
-            await asyncio.sleep(0.4)
-            shopping_dto, ok_shop = await _safe(shopping.fetch, kw.term)
+            trend = trend_by_term.get(kw.term)
+            ok_trend = trend is not None
+            shopping_dto, ok_shop = await _safe(
+                shopping.fetch, kw.term, label=f"{kw.term}[shopping]"
+            )
             api_calls += 1 if ok_shop else 0
-            blogcafe_dto, ok_blog = await _safe(blogcafe.fetch, kw.term)
+            blogcafe_dto, ok_blog = await _safe(
+                blogcafe.fetch, kw.term, label=f"{kw.term}[blogcafe]"
+            )
             api_calls += 1 if ok_blog else 0
-            # keywordstool for exact monthly volume + competition index.
-            volume_rows, ok_vol = await _safe(searchad.fetch, [kw.term])
+            volume_rows, ok_vol = await _safe(
+                searchad.fetch, [kw.term], label=f"{kw.term}[searchad]"
+            )
             api_calls += 1 if ok_vol else 0
 
             # If *every* source failed we have nothing worth persisting.
@@ -127,7 +144,6 @@ class CollectMetricsJob(ScheduledJob):
                 continue
 
             volume_rows = volume_rows or []
-            trend = trend_rows[0] if trend_rows else None
 
             stripped = "".join(kw.term.split()).lower()
             volume_row = next(

@@ -139,13 +139,15 @@ def test_collect_metrics_isolates_per_keyword_failures(db_session):
     _seed_keyword(db_session, "kw1")
     _seed_keyword(db_session, "kw2")
 
-    # Shopping always fails — every keyword should land in failures
-    # but the job must still complete.
+    # Shopping always fails. Per-source isolation: trend/searchad/blog
+    # still succeed so the row is written (with NULL shopping fields)
+    # and the job records the shopping failure for observability.
     job = _make_job(shopping_client=_ShoppingFailingStub())
     metrics = asyncio.run(job.run(db_session))
 
-    assert metrics["metrics_written"] == 0
-    assert len(metrics["failures"]) == 2
+    assert metrics["metrics_written"] == 2
+    # One failure entry per keyword (shopping call), no datalab failures.
+    assert any("shopping" in f for f in metrics["failures"])
 
 
 def test_collect_metrics_skips_excluded_and_deprecated(db_session):
