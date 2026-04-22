@@ -14,17 +14,19 @@ from pydantic import BaseModel, Field
 from sqlalchemy import select
 
 from app.deps import DbSession
-from app.models import CoupangFee, ExchangeRate
+from app.models import CoupangFee, CustomsDutyRate, ExchangeRate, HsCode
 from app.scoring import (
     RevenueInputs,
     calculate_coupang_revenue,
     calculate_smartstore_revenue,
     compute_cost_breakdown,
+    suggest_hs_codes,
 )
 from app.schemas.responses.product import (
     ChannelProfitResponse,
     CostBreakdownResponse,
 )
+from app.services.categorize import infer_category_name
 from app.services.product_service import _lookup_intl_shipping_krw
 
 router = APIRouter(prefix="/calculator", tags=["calculator"])
@@ -78,6 +80,73 @@ def _coupang_fee_pct(db, category_name: str) -> Decimal:
         .limit(1)
     ).scalar_one_or_none()
     return Decimal(str(fee)) / 100 if fee is not None else Decimal("0.108")
+
+
+class LookupRequest(BaseModel):
+    term: str = Field(..., min_length=1, max_length=100)
+
+
+class LookupResponse(BaseModel):
+    term: str
+    category_name: str
+    hs_code: str | None = Field(None, description="6-digit HS code (prefix match)")
+    hs_name_ko: str | None = None
+    base_duty_pct: float | None = Field(None, description="기본 관세율 (decimal)")
+    kcfta_duty_pct: float | None = Field(None, description="한-중 FTA 세율 (decimal)")
+
+
+def _lookup_duty_for_term(
+    db, category_name: str, term: str
+) -> tuple[str | None, str | None, float | None, float | None]:
+    """Return ``(hs_code, hs_name_ko, base_duty_pct, kcfta_duty_pct)``.
+
+    Uses the static HS suggestion map keyed by (category, keyword), picks
+    the first candidate, prefix-matches customs_duty_rates by its 6 leading
+    digits. Returns None-tuple when nothing matches.
+    """
+    suggestions = suggest_hs_codes(category_name, term)
+    if not suggestions:
+        return (None, None, None, None)
+    hs6 = "".join(c for c in suggestions[0] if c.isdigit())[:6]
+    if len(hs6) != 6:
+        return (None, None, None, None)
+    rate_row = db.execute(
+        select(CustomsDutyRate.hs_code, CustomsDutyRate.base_duty_pct, CustomsDutyRate.kcfta_duty_pct)
+        .where(CustomsDutyRate.hs_code.like(f"{hs6}%"))
+        .order_by(CustomsDutyRate.hs_code.asc())
+        .limit(1)
+    ).first()
+    name_ko = db.execute(
+        select(HsCode.name_ko).where(HsCode.code.like(f"{hs6}%")).limit(1)
+    ).scalar_one_or_none()
+    if rate_row is None:
+        return (hs6, name_ko, None, None)
+    full_hs, base, fta = rate_row
+    return (
+        full_hs,
+        name_ko,
+        float(base) if base is not None else None,
+        float(fta) if fta is not None else None,
+    )
+
+
+@router.post(
+    "/lookup",
+    response_model=LookupResponse,
+    summary="Auto-detect category + HS code + duty rate from a keyword",
+)
+async def lookup(request: LookupRequest, db: DbSession) -> LookupResponse:
+    term = request.term.strip()
+    category_name = await infer_category_name(term)
+    hs_code, name_ko, base, fta = _lookup_duty_for_term(db, category_name, term)
+    return LookupResponse(
+        term=term,
+        category_name=category_name,
+        hs_code=hs_code,
+        hs_name_ko=name_ko,
+        base_duty_pct=base,
+        kcfta_duty_pct=fta,
+    )
 
 
 @router.post(

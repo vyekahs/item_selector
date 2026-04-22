@@ -35,8 +35,20 @@ const CATEGORY_DEFAULT_DUTY_PCT: Record<string, number> = {
   기타: 8,
 };
 
+interface LookupResult {
+  term: string;
+  category_name: string;
+  hs_code: string | null;
+  hs_name_ko: string | null;
+  base_duty_pct: number | null;
+  kcfta_duty_pct: number | null;
+}
+
 export default function CalculatorPage() {
   const categoriesQuery = useCategories();
+  const [lookupTerm, setLookupTerm] = useState('');
+  const [lookupInfo, setLookupInfo] = useState<LookupResult | null>(null);
+  const [lookupLoading, setLookupLoading] = useState(false);
   const [cnyPrice, setCnyPrice] = useState('');
   const [moq, setMoq] = useState('100');
   const [sellPrice, setSellPrice] = useState('');
@@ -50,6 +62,31 @@ export default function CalculatorPage() {
     const duty = CATEGORY_DEFAULT_DUTY_PCT[name];
     if (duty !== undefined) {
       setDutyPct(String(duty));
+    }
+  };
+
+  const handleLookup = async () => {
+    const term = lookupTerm.trim();
+    if (!term) return;
+    setLookupLoading(true);
+    setError(null);
+    try {
+      const res = await apiRequest<LookupResult>('/calculator/lookup', {
+        method: 'POST',
+        body: { term },
+      });
+      setLookupInfo(res);
+      setCategoryNameState(res.category_name);
+      if (res.base_duty_pct != null) {
+        setDutyPct(String((res.base_duty_pct * 100).toFixed(1)));
+      } else {
+        const fallback = CATEGORY_DEFAULT_DUTY_PCT[res.category_name];
+        if (fallback !== undefined) setDutyPct(String(fallback));
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setLookupLoading(false);
     }
   };
   const [adPct, setAdPct] = useState('10');
@@ -104,6 +141,49 @@ export default function CalculatorPage() {
           리스트에 없는 키워드도 자유롭게 시뮬레이션 가능.
         </p>
       </header>
+
+      <section className="card flex flex-col gap-2">
+        <label className="text-sm font-medium text-slate-700">
+          키워드로 카테고리 + 관세율 자동 조회
+        </label>
+        <div className="flex gap-2">
+          <input
+            className="input flex-1"
+            placeholder="예: 머리끈, 고양이 텐트, 에어프라이어"
+            value={lookupTerm}
+            onChange={(e) => setLookupTerm(e.target.value)}
+          />
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={handleLookup}
+            disabled={lookupLoading || !lookupTerm.trim()}
+          >
+            {lookupLoading ? '조회 중…' : '🔍 조회'}
+          </button>
+        </div>
+        {lookupInfo && (
+          <p className="rounded-md bg-slate-50 px-3 py-2 text-xs text-slate-600">
+            카테고리: <strong>{lookupInfo.category_name}</strong>
+            {lookupInfo.hs_code && (
+              <>
+                {' '}· HS {lookupInfo.hs_code}
+                {lookupInfo.hs_name_ko ? ` (${lookupInfo.hs_name_ko})` : ''}
+              </>
+            )}
+            {lookupInfo.base_duty_pct != null && (
+              <>
+                {' '}· 기본 관세 {(lookupInfo.base_duty_pct * 100).toFixed(1)}%
+              </>
+            )}
+            {lookupInfo.kcfta_duty_pct != null && (
+              <>
+                {' '}· 한-중 FTA {(lookupInfo.kcfta_duty_pct * 100).toFixed(1)}%
+              </>
+            )}
+          </p>
+        )}
+      </section>
 
       <form onSubmit={handleSubmit} className="card flex flex-col gap-3">
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
