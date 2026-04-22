@@ -65,8 +65,8 @@ class CalculatorResponse(BaseModel):
 def _latest_cny_krw(db) -> Decimal:
     rate = db.execute(
         select(ExchangeRate.rate)
-        .where(ExchangeRate.pair == "CNY/KRW")
-        .order_by(ExchangeRate.observed_at.desc())
+        .where(ExchangeRate.currency_pair == "CNY/KRW")
+        .order_by(ExchangeRate.fetched_at.desc())
         .limit(1)
     ).scalar_one_or_none()
     return Decimal(str(rate)) if rate is not None else Decimal("195")
