@@ -58,12 +58,12 @@ services:
     # public access is gated by Caddy basic-auth at 443.
     ports:
       - "${API_HOST_PORT:-8001}:8000"
+    # Pull every variable from the project's .env so Naver / Coupang /
+    # Customs / YouTube / Google Translate API keys land inside the
+    # container without having to enumerate them here.
+    env_file:
+      - .env
     environment:
-      DATABASE_URL: ${DATABASE_URL}
-      REDIS_URL: ${REDIS_URL}
-      API_LOG_LEVEL: ${API_LOG_LEVEL:-info}
-      API_CORS_ORIGINS: ${API_CORS_ORIGINS:-http://localhost}
-      USE_MOCK_CLIENTS: ${USE_MOCK_CLIENTS:-true}
       TZ: "Asia/Seoul"
     depends_on:
       postgres:
@@ -87,11 +87,9 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     command: ["python", "-m", "app.scheduler.main"]
+    env_file:
+      - .env
     environment:
-      DATABASE_URL: ${DATABASE_URL}
-      REDIS_URL: ${REDIS_URL}
-      SCHEDULER_LOG_LEVEL: ${SCHEDULER_LOG_LEVEL:-INFO}
-      USE_MOCK_CLIENTS: ${USE_MOCK_CLIENTS:-true}
       # api service handles migrations + data bootstrap. Scheduler just
       # runs ``alembic upgrade head`` (no-op when already at head) and
       # skips the heavy xlsx imports.
