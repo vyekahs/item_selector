@@ -38,6 +38,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 </li>
                 <li>
                   <Link
+                    href="/calculator"
+                    className="rounded px-3 py-1.5 text-slate-700 hover:bg-slate-100"
+                  >
+                    계산기
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/history"
                     className="rounded px-3 py-1.5 text-slate-700 hover:bg-slate-100"
                   >

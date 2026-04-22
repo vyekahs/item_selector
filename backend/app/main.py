@@ -11,7 +11,15 @@ from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.routers import admin, categories, feedback, keywords, opportunities, products
+from app.routers import (
+    admin,
+    calculator,
+    categories,
+    feedback,
+    keywords,
+    opportunities,
+    products,
+)
 from app.schemas.responses.error import ErrorResponse
 from app.services.feedback_service import FeedbackProductNotFoundError
 from app.services.product_service import (
@@ -112,6 +120,7 @@ app.include_router(feedback.router)
 app.include_router(categories.router)
 app.include_router(keywords.router)
 app.include_router(admin.router)
+app.include_router(calculator.router)
 
 
 # ---------------------------------------------------------------------
