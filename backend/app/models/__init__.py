@@ -22,6 +22,7 @@ from .keyword_metric import KeywordMetric
 from .opportunity_score import OpportunityScore
 from .product import Product
 from .product_score import ProductScore, Recommendation
+from .seed_candidate import SeedCandidate
 
 __all__ = [
     "ApiCache",
@@ -43,4 +44,5 @@ __all__ = [
     "Product",
     "ProductScore",
     "Recommendation",
+    "SeedCandidate",
 ]

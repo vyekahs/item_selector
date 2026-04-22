@@ -97,3 +97,26 @@ export function useExpandAndRecalculate() {
       }),
   });
 }
+
+export function useDiscoverSeeds() {
+  return useMutation({
+    mutationFn: () =>
+      apiRequest<{ status: string; message: string }>('/admin/discover-seeds', {
+        method: 'POST',
+      }),
+  });
+}
+
+export function useApproveCandidates() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (ids: number[]) =>
+      apiRequest<{ promoted: number; requested: number }>(
+        '/admin/seed-candidates/approve',
+        { method: 'POST', body: { ids } },
+      ),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['seed-candidates'] });
+    },
+  });
+}

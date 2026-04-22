@@ -63,6 +63,28 @@ export function useProduct(productId: number | null | undefined) {
   });
 }
 
+export interface SeedCandidate {
+  id: number;
+  term: string;
+  hs_code: string | null;
+  import_value_krw_3m: number | null;
+  import_growth_3m_pct: number | null;
+  avg_unit_price_krw: number | null;
+  monthly_search_volume: number | null;
+  combined_score: number;
+  is_approved: boolean;
+}
+
+export function useSeedCandidates(limit: number = 30) {
+  return useQuery<SeedCandidate[]>({
+    queryKey: ['seed-candidates', { limit }],
+    queryFn: () =>
+      apiRequest<SeedCandidate[]>('/admin/seed-candidates', {
+        query: { limit },
+      }),
+  });
+}
+
 export interface UseProductListParams {
   limit?: number;
   offset?: number;

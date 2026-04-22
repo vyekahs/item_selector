@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { AdminPanel } from '@/components/AdminPanel';
 import { KeywordFilterBar } from '@/components/KeywordFilterBar';
 import { OpportunityRow } from '@/components/OpportunityRow';
+import { SeedCandidatesPanel } from '@/components/SeedCandidatesPanel';
 import { useCategories, useOpportunities } from '@/lib/api/queries';
 
 export default function HomePage() {
@@ -35,6 +36,8 @@ export default function HomePage() {
       </header>
 
       <AdminPanel />
+
+      <SeedCandidatesPanel />
 
       <KeywordFilterBar
         categories={categoriesQuery.data?.roots ?? []}

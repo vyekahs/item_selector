@@ -22,6 +22,7 @@ EXPECTED_TABLES = {
     "api_cache",
     "customs_duty_rates",
     "international_shipping_rates",
+    "seed_candidates",
 }
 
 
