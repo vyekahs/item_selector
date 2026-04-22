@@ -64,6 +64,7 @@ services:
       API_LOG_LEVEL: ${API_LOG_LEVEL:-info}
       API_CORS_ORIGINS: ${API_CORS_ORIGINS:-http://localhost}
       USE_MOCK_CLIENTS: ${USE_MOCK_CLIENTS:-true}
+      TZ: "Asia/Seoul"
     depends_on:
       postgres:
         condition: service_healthy
@@ -95,6 +96,10 @@ services:
       # runs ``alembic upgrade head`` (no-op when already at head) and
       # skips the heavy xlsx imports.
       BOOTSTRAP_DATA: "false"
+      # CronTrigger uses the process timezone; default UTC would shift
+      # "02:00" to 11:00 KST. Pin to Asia/Seoul so daily jobs hit the
+      # actual early-morning window we want.
+      TZ: "Asia/Seoul"
     depends_on:
       postgres:
         condition: service_healthy

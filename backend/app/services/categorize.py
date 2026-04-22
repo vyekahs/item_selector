@@ -6,25 +6,29 @@ up the fee by name directly — no bridge table.
 
 Policy
 ------
-1. Query Naver shopping for the seed term.
-2. Tally category1 across the top-10 results. Pet products get a bump:
-   if any item's category2 is ``반려동물``, return ``반려동물`` regardless
-   of category1 — the Coupang pet fee (10.8%) is high enough that
-   mis-classification would distort the margin materially.
-3. Fall back to the most common category1, mapped through
-   ``NAVER_TO_INTERNAL`` (absorbs Naver's category1 ↔ our Coupang-
-   aligned names).
-4. If shopping returns nothing, default to ``기타``.
+1. Query Naver shopping for the seed term (fetch 40 items for a fuller
+   sample — sort=sim puts sponsored/ads at the top which can skew
+   category1 majority on small windows).
+2. Filter items whose ``title`` contains every query token. This
+   excludes off-topic sponsored results (e.g. "스마트 LED 텐트" for
+   the query "고양이 텐트") that inflate an unrelated category1.
+3. Tally the full category path (``c1 > c2``) across filtered items.
+   When any path contains ``반려동물``, return ``반려동물`` — Coupang's
+   pet fee (10.8%) diverges enough from the 생활용품 default (7.8%)
+   that the override pays for itself in margin accuracy.
+4. Else map the top ``category1`` via ``NAVER_TO_INTERNAL``.
+5. Empty / exception → ``기타``.
 """
 from __future__ import annotations
 
+import re
 from collections import Counter
 from typing import TYPE_CHECKING
 
 from app.clients import get_naver_shopping_client
 
 if TYPE_CHECKING:
-    from app.contracts.dto import ShoppingResultDTO
+    from app.contracts.dto import ShoppingItem, ShoppingResultDTO
 
 # Naver category1 → internal category name (matches CoupangFee rows).
 NAVER_TO_INTERNAL: dict[str, str] = {
@@ -43,20 +47,41 @@ NAVER_TO_INTERNAL: dict[str, str] = {
 DEFAULT_CATEGORY = "기타"
 PET_CATEGORY = "반려동물"
 
+_TOKEN_RE = re.compile(r"[가-힣a-zA-Z0-9]+")
+
+
+def _tokens(text: str) -> list[str]:
+    return [t for t in _TOKEN_RE.findall(text.lower()) if t]
+
+
+def _item_matches_query(item: "ShoppingItem", query_tokens: list[str]) -> bool:
+    """True when ``item.title`` contains every query token (substring match).
+
+    Substring (not full-word) so "고양이텐트" matches "캠핑용고양이텐트".
+    """
+    if not query_tokens:
+        return True
+    title = (item.title or "").lower()
+    return all(tok in title for tok in query_tokens)
+
 
 async def infer_category_name(term: str) -> str:
     """Return the best-guess internal category name for ``term``."""
     client = get_naver_shopping_client()
     try:
-        result: "ShoppingResultDTO" = await client.fetch(term, display=10)
+        result: "ShoppingResultDTO" = await client.fetch(term, display=40)
     except Exception:
         return DEFAULT_CATEGORY
 
-    items = result.items[:10]
+    query_tokens = _tokens(term)
+    filtered = [it for it in result.items if _item_matches_query(it, query_tokens)]
+    # Fall back to the raw result set when the title filter is too strict
+    # (e.g. mall-specific phrasing that drops every result).
+    items = filtered or list(result.items)
     if not items:
         return DEFAULT_CATEGORY
 
-    # Pet override: any result with category2 == '반려동물' wins.
+    # Pet override: any filtered result with category2 == '반려동물' wins.
     if any((it.category2 or "") == PET_CATEGORY for it in items):
         return PET_CATEGORY
 
