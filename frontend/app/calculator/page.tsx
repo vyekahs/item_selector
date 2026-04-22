@@ -18,16 +18,40 @@ interface CalculatorResult {
   recommended_channel: Channel | null;
 }
 
+// 카테고리별 대표 기본 관세율 (%). 한국 HS 대분류 통상 관세율 기준. 사용자는
+// 필요 시 수동으로 덮어쓸 수 있습니다.
+const CATEGORY_DEFAULT_DUTY_PCT: Record<string, number> = {
+  반려동물: 8,
+  생활용품: 8,
+  주방용품: 8,
+  '가전 소형': 8,
+  디지털: 8,
+  패션잡화: 13,
+  스포츠: 8,
+  '화장품/미용': 6.5,
+  식품: 8,
+  '출산/육아': 8,
+  도서: 0,
+  기타: 8,
+};
+
 export default function CalculatorPage() {
   const categoriesQuery = useCategories();
   const [cnyPrice, setCnyPrice] = useState('');
   const [moq, setMoq] = useState('100');
   const [sellPrice, setSellPrice] = useState('');
-  const [categoryName, setCategoryName] = useState('반려동물');
+  const [categoryName, setCategoryNameState] = useState('반려동물');
   const [chinaShippingKrw, setChinaShippingKrw] = useState('0');
   const [unitWeight, setUnitWeight] = useState('');
   const [intlShipping, setIntlShipping] = useState('');
   const [dutyPct, setDutyPct] = useState('8');
+  const setCategoryName = (name: string) => {
+    setCategoryNameState(name);
+    const duty = CATEGORY_DEFAULT_DUTY_PCT[name];
+    if (duty !== undefined) {
+      setDutyPct(String(duty));
+    }
+  };
   const [adPct, setAdPct] = useState('10');
   const [result, setResult] = useState<CalculatorResult | null>(null);
   const [error, setError] = useState<string | null>(null);
