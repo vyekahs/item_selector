@@ -227,57 +227,65 @@ def _latest_cny_krw(session: Session) -> Decimal:
     return Decimal(str(rate))
 
 
-def _auto_pick_method(total_weight_kg: Decimal) -> str:
-    """Default method selection: ≤40kg → LCL, else 해운(자가)."""
-    return "lcl" if total_weight_kg <= Decimal("40") else "sea_self"
-
-
-def _lookup_intl_shipping_krw(
+def _lookup_one_rate(
     session: Session,
     method: str,
     total_weight_kg: Decimal,
-    tier: str = "partner",
-) -> tuple[int | None, str | None]:
-    """Return ``(price_krw, applied_method)`` or ``(None, None)``.
-
-    If the weight exceeds the LCL range (>40kg), LCL lookup falls
-    through to sea_self automatically.
-    """
+    tier: str,
+) -> int | None:
     from app.models import InternationalShippingRate
 
-    chosen = method
     row = session.execute(
         select(InternationalShippingRate)
         .where(
-            InternationalShippingRate.method == chosen,
+            InternationalShippingRate.method == method,
             InternationalShippingRate.max_weight_kg >= total_weight_kg,
         )
         .order_by(InternationalShippingRate.max_weight_kg.asc())
         .limit(1)
     ).scalar_one_or_none()
-
-    if row is None and chosen == "lcl":
-        # 무게가 LCL 상한 초과 → 자동 승격.
-        chosen = "sea_self"
-        row = session.execute(
-            select(InternationalShippingRate)
-            .where(
-                InternationalShippingRate.method == chosen,
-                InternationalShippingRate.max_weight_kg >= total_weight_kg,
-            )
-            .order_by(InternationalShippingRate.max_weight_kg.asc())
-            .limit(1)
-        ).scalar_one_or_none()
-
     if row is None:
-        return (None, None)
-
+        return None
     column = {
         "general": row.general_seller_krw,
         "super": row.super_seller_krw,
         "partner": row.partner_krw,
     }.get(tier, row.partner_krw)
-    return (int(column), chosen)
+    return int(column)
+
+
+def _lookup_intl_shipping_krw(
+    session: Session,
+    method: str | None,
+    total_weight_kg: Decimal,
+    tier: str = "partner",
+) -> tuple[int | None, str | None]:
+    """Return ``(price_krw, applied_method)`` or ``(None, None)``.
+
+    When ``method`` is None, pick whichever tier tier is cheaper at this
+    weight. LCL and 해운(자가) rate tables are unevenly priced — LCL is
+    often per-kg air-freight-style, 자가 is container-shared (cheaper for
+    most weights). An explicit user-chosen method always wins.
+    """
+    if method in ("lcl", "sea_self"):
+        price = _lookup_one_rate(session, method, total_weight_kg, tier)
+        if price is not None:
+            return (price, method)
+        # Explicit choice out of range → fall back to the other.
+        other = "sea_self" if method == "lcl" else "lcl"
+        price = _lookup_one_rate(session, other, total_weight_kg, tier)
+        return (price, other) if price is not None else (None, None)
+
+    # Auto-pick: compare both methods, return the cheaper one.
+    lcl_price = _lookup_one_rate(session, "lcl", total_weight_kg, tier)
+    sea_price = _lookup_one_rate(session, "sea_self", total_weight_kg, tier)
+    candidates = [
+        (p, m) for p, m in [(lcl_price, "lcl"), (sea_price, "sea_self")] if p is not None
+    ]
+    if not candidates:
+        return (None, None)
+    price, chosen = min(candidates, key=lambda x: x[0])
+    return (price, chosen)
 
 
 def _resolve_intl_shipping(
@@ -292,7 +300,9 @@ def _resolve_intl_shipping(
     # Priority: weight-based auto lookup (if both fields present) > explicit override.
     if product.unit_weight_kg is not None and product.unit_weight_kg > 0:
         total = Decimal(str(product.unit_weight_kg)) * Decimal(product.moq)
-        method = product.shipping_method or _auto_pick_method(total)
+        # Empty ``shipping_method`` → auto-pick whichever tier is cheaper
+        # at this weight (see _lookup_intl_shipping_krw).
+        method = product.shipping_method or None
         price, applied = _lookup_intl_shipping_krw(session, method, total)
         if price is not None:
             return (price, applied, total)
