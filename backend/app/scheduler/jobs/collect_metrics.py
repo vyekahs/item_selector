@@ -13,6 +13,7 @@ perfectly valid score from the previous day.
 """
 from __future__ import annotations
 
+import asyncio
 from datetime import date
 from typing import Any
 
@@ -95,24 +96,37 @@ class CollectMetricsJob(ScheduledJob):
         api_calls = 0
         failures: list[str] = []
 
-        for kw in keywords:
+        async def _safe(fn, *args, **kwargs):
+            """Call an async API client, swallow errors, return (result, ok).
+
+            Per-source isolation means a single 429 on DataLab no longer
+            loses the searchad/shopping/blog data we successfully fetched
+            for the same keyword.
+            """
             try:
-                trend_rows = await datalab.fetch([[kw.term]])
-                api_calls += 1
-                shopping_dto = await shopping.fetch(kw.term)
-                api_calls += 1
-                blogcafe_dto = await blogcafe.fetch(kw.term)
-                api_calls += 1
-                # keywordstool for exact monthly volume + competition
-                # index. Picks the row whose ``term`` matches the keyword
-                # (the endpoint also returns related keywords which we
-                # ignore here — they're persisted by CollectKeywordsJob).
-                volume_rows = await searchad.fetch([kw.term])
-                api_calls += 1
-            except Exception as exc:  # noqa: BLE001 — per-keyword isolation
-                failures.append(f"{kw.term}: {type(exc).__name__}")
+                return (await fn(*args, **kwargs), True)
+            except Exception as exc:  # noqa: BLE001
+                failures.append(f"{kw.term}[{fn.__self__.__class__.__name__}]: {type(exc).__name__}")
+                return (None, False)
+
+        for kw in keywords:
+            trend_rows, ok_trend = await _safe(datalab.fetch, [[kw.term]])
+            api_calls += 1 if ok_trend else 0
+            # Brief pause after datalab to stay under the per-second burst cap.
+            await asyncio.sleep(0.4)
+            shopping_dto, ok_shop = await _safe(shopping.fetch, kw.term)
+            api_calls += 1 if ok_shop else 0
+            blogcafe_dto, ok_blog = await _safe(blogcafe.fetch, kw.term)
+            api_calls += 1 if ok_blog else 0
+            # keywordstool for exact monthly volume + competition index.
+            volume_rows, ok_vol = await _safe(searchad.fetch, [kw.term])
+            api_calls += 1 if ok_vol else 0
+
+            # If *every* source failed we have nothing worth persisting.
+            if not any([ok_trend, ok_shop, ok_blog, ok_vol]):
                 continue
 
+            volume_rows = volume_rows or []
             trend = trend_rows[0] if trend_rows else None
 
             stripped = "".join(kw.term.split()).lower()
@@ -136,10 +150,17 @@ class CollectMetricsJob(ScheduledJob):
                     if volume_row is not None
                     else None
                 ),
-                "naver_shopping_count": shopping_dto.total_count,
-                "shopping_avg_price_krw": shopping_dto.avg_price or None,
-                "blog_post_count": blogcafe_dto.blog_post_count
-                + blogcafe_dto.cafe_post_count,
+                "naver_shopping_count": (
+                    shopping_dto.total_count if shopping_dto else None
+                ),
+                "shopping_avg_price_krw": (
+                    (shopping_dto.avg_price or None) if shopping_dto else None
+                ),
+                "blog_post_count": (
+                    blogcafe_dto.blog_post_count + blogcafe_dto.cafe_post_count
+                    if blogcafe_dto
+                    else None
+                ),
                 "youtube_video_count": None,
                 # DataLab growth rates are percentages (e.g. 5.0 = +5%).
                 # The DB column is Numeric(7,4) — decimal form works too
