@@ -175,6 +175,29 @@ def _fetch_top_hs(
     return rows[:TOP_HS_LIMIT]
 
 
+def _subsume_shorter_ngrams(counter: Counter[str]) -> Counter[str]:
+    """Drop a shorter token when a longer one contains it with identical freq.
+
+    e.g. "두부틀그릇" appears N times → counter["두부"] == counter["두부틀"] == N.
+    Here "두부" is a fragment that never appears outside "두부틀" within the
+    sampled titles, so keep only the more specific "두부틀" and drop "두부".
+
+    Tokens whose short form also shows up in *other* contexts will have a
+    strictly higher count than any single longer form → they survive
+    (e.g. "고양이" appears across 고양이사료 + 고양이장난감 + ...).
+    """
+    kept: dict[str, int] = dict(counter)
+    longer_by_len = sorted(counter.keys(), key=len, reverse=True)
+    for tok, count in counter.items():
+        for other in longer_by_len:
+            if other == tok or len(other) <= len(tok):
+                break
+            if tok in other and counter[other] == count:
+                kept.pop(tok, None)
+                break
+    return Counter(kept)
+
+
 async def _mine_tokens_for_hs(
     hs_code: str, name_ko: str
 ) -> list[tuple[str, int]]:
@@ -189,6 +212,7 @@ async def _mine_tokens_for_hs(
     for item in result.items:
         for tok in _extract_ngrams(item.title or ""):
             counter[tok] += 1
+    counter = _subsume_shorter_ngrams(counter)
     return [(t, c) for t, c in counter.most_common(TOKENS_PER_HS) if c >= MIN_TOKEN_FREQ]
 
 
