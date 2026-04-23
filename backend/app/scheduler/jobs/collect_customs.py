@@ -36,7 +36,7 @@ class CollectCustomsJob(ScheduledJob):
         customs_client: CustomsClientProtocol | None = None,
         country_code: str = DEFAULT_COUNTRY,
         months: int = 12,
-        max_codes: int = 200,
+        max_codes: int = 3000,
     ):
         super().__init__()
         self._customs = customs_client
@@ -50,9 +50,17 @@ class CollectCustomsJob(ScheduledJob):
     async def run(self, session: Session) -> dict[str, Any]:
         client = self._client()
 
+        # Random order so repeated runs cover different HS prefixes
+        # rather than repeatedly hitting the first 200 alphabetically
+        # (which are all in 01-24 = 동물/식품 and excluded from seed
+        # discovery anyway).
+        from sqlalchemy import func as _func
+
         codes: list[str] = list(
             session.execute(
-                select(HsCode.code).order_by(HsCode.code).limit(self._max_codes)
+                select(HsCode.code)
+                .order_by(_func.random())
+                .limit(self._max_codes)
             ).scalars()
         )
         if not codes:
