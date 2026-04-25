@@ -3,8 +3,13 @@ import { apiRequest } from './client';
 import {
   CategoryResponse,
   CategoryResponseSchema,
+  DetailPageDetail,
+  DetailPageDetailSchema,
+  DetailPageStatus,
   OpportunityListSchema,
   OpportunityResponse,
+  PaginatedDetailPagesResponse,
+  PaginatedDetailPagesResponseSchema,
   PaginatedProductsResponse,
   PaginatedProductsResponseSchema,
   ProductDetailResponse,
@@ -104,6 +109,51 @@ export function useProductList(params: UseProductListParams = {}) {
           ...(keyword_id != null ? { keyword_id } : {}),
         },
         schema: PaginatedProductsResponseSchema,
+      }),
+  });
+}
+
+// --- Detail pages -------------------------------------------------------
+
+export interface UseDetailPagesParams {
+  limit?: number;
+  offset?: number;
+  status?: DetailPageStatus | null;
+}
+
+export function useDetailPages(params: UseDetailPagesParams = {}) {
+  const { limit = 20, offset = 0, status = null } = params;
+  return useQuery({
+    queryKey: ['detail-pages', { limit, offset, status }],
+    placeholderData: keepPreviousData,
+    queryFn: () =>
+      apiRequest<PaginatedDetailPagesResponse>('/detail-pages', {
+        query: {
+          limit,
+          offset,
+          ...(status ? { status } : {}),
+        },
+        schema: PaginatedDetailPagesResponseSchema,
+      }),
+  });
+}
+
+export function useDetailPage(detailPageId: number | null | undefined) {
+  return useQuery({
+    queryKey: ['detail-page', detailPageId],
+    enabled: typeof detailPageId === 'number' && detailPageId > 0,
+    // Poll while the pipeline is still running so the UI auto-refreshes
+    // when the renderer finishes (typically 1-2 minutes).
+    refetchInterval: (query) => {
+      const data = query.state.data as DetailPageDetail | undefined;
+      if (!data) return false;
+      return data.status === 'pending' || data.status === 'processing'
+        ? 5000
+        : false;
+    },
+    queryFn: () =>
+      apiRequest<DetailPageDetail>(`/detail-pages/${detailPageId}`, {
+        schema: DetailPageDetailSchema,
       }),
   });
 }

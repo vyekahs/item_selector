@@ -1,6 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { apiRequest } from './client';
 import {
+  DetailPageIngestAccepted,
+  DetailPageIngestAcceptedSchema,
   FeedbackCreateRequest,
   FeedbackResponse,
   FeedbackResponseSchema,
@@ -117,6 +119,47 @@ export function useApproveCandidates() {
       ),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['seed-candidates'] });
+    },
+  });
+}
+
+// --- Detail pages -------------------------------------------------------
+
+/**
+ * POST /detail-pages/ingest. The body shape mirrors backend ``IngestRequest``
+ * but is kept loose here (`Record<string, unknown>`) so callers can build
+ * payloads incrementally without a duplicate Zod definition — the backend
+ * is the source of truth for validation and will reject malformed bodies.
+ */
+export function useIngestDetailPage() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (body: Record<string, unknown>) =>
+      apiRequest<DetailPageIngestAccepted>('/detail-pages/ingest', {
+        method: 'POST',
+        body,
+        schema: DetailPageIngestAcceptedSchema,
+      }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ['detail-pages'] });
+    },
+  });
+}
+
+export function useRegenerateDetailPage() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (detailPageId: number) =>
+      apiRequest<DetailPageIngestAccepted>(
+        `/detail-pages/${detailPageId}/regenerate`,
+        {
+          method: 'POST',
+          schema: DetailPageIngestAcceptedSchema,
+        },
+      ),
+    onSuccess: (_data, detailPageId) => {
+      qc.invalidateQueries({ queryKey: ['detail-pages'] });
+      qc.invalidateQueries({ queryKey: ['detail-page', detailPageId] });
     },
   });
 }

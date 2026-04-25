@@ -206,3 +206,49 @@ export const FeedbackResponseSchema = z.object({
   recorded_at: z.string(),
 });
 export type FeedbackResponse = z.infer<typeof FeedbackResponseSchema>;
+
+// --- Detail pages -------------------------------------------------------
+
+export const DetailPageStatusSchema = z.enum([
+  'pending',
+  'processing',
+  'done',
+  'failed',
+]);
+export type DetailPageStatus = z.infer<typeof DetailPageStatusSchema>;
+
+export const DetailPageSummarySchema = z.object({
+  id: z.number().int(),
+  status: DetailPageStatusSchema,
+  title_ko: z.string().nullable().optional().default(null),
+  image_path: z.string().nullable().optional().default(null),
+  source_url: z.string(),
+  source_platform: z.string(),
+  created_at: z.string(),
+});
+export type DetailPageSummary = z.infer<typeof DetailPageSummarySchema>;
+
+export const DetailPageDetailSchema = DetailPageSummarySchema.extend({
+  props: z.record(z.any()).nullable().optional().default(null),
+  failure_reason: z.string().nullable().optional().default(null),
+});
+export type DetailPageDetail = z.infer<typeof DetailPageDetailSchema>;
+
+export const PaginatedDetailPagesResponseSchema = z.object({
+  items: z.array(DetailPageSummarySchema),
+  total: z.number().int().min(0),
+  limit: z.number().int().min(1).max(200),
+  offset: z.number().int().min(0),
+});
+export type PaginatedDetailPagesResponse = z.infer<
+  typeof PaginatedDetailPagesResponseSchema
+>;
+
+export const DetailPageIngestAcceptedSchema = z.object({
+  id: z.number().int(),
+  status: z.string(),
+  message: z.string(),
+});
+export type DetailPageIngestAccepted = z.infer<
+  typeof DetailPageIngestAcceptedSchema
+>;
