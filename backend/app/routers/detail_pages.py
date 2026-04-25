@@ -68,6 +68,19 @@ async def ingest(payload: IngestRequest, db: DbSession) -> IngestAcceptedRespons
     the existing source row but always creates a fresh ``DetailPage``
     so each generation attempt is independently trackable.
     """
+    if not payload.main_images:
+        # Without at least one image we'd render an empty hero with a
+        # broken-image icon — useless detail page. Reject early so the
+        # extension can prompt the user to scroll/refresh and retry.
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=(
+                "main_images가 비어있습니다. 1688 페이지를 끝까지 스크롤해서 "
+                "lazy-load 이미지가 노출된 뒤 다시 시도하거나, 프론트의 "
+                "수동 입력 폼으로 이미지 URL을 직접 추가하세요."
+            ),
+        )
+
     source_url = str(payload.source_url)
 
     source = db.execute(

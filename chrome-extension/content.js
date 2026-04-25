@@ -41,6 +41,27 @@
     }
   }
 
+  /** 페이지를 천천히 스크롤해 lazy-load `<img>`를 viewport에 노출시킨다. */
+  function sleep(ms) {
+    return new Promise((r) => setTimeout(r, ms));
+  }
+
+  async function triggerLazyLoad() {
+    const STEP = Math.floor(window.innerHeight * 0.8);
+    const total = document.documentElement.scrollHeight;
+    let y = 0;
+    while (y < total) {
+      window.scrollTo({ top: y, behavior: 'auto' });
+      y += STEP;
+      await sleep(200);
+    }
+    // 끝까지 한 번 더 + 이미지 fetch 시간 확보.
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'auto' });
+    await sleep(800);
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    await sleep(200);
+  }
+
   /** Schemeless (//img...) URL을 https:로 변환하고, 1688 60x60 썸네일을 원본으로 업그레이드. */
   function normalizeImageUrl(raw) {
     if (!raw || typeof raw !== 'string') return null;
@@ -427,6 +448,13 @@
     btn.addEventListener('click', async () => {
       btn.disabled = true;
       const original = btn.textContent;
+      btn.textContent = '⏳ 스크롤…';
+      setStatus('지연 로드 이미지 트리거 중…', 'info');
+
+      // 1688/타오바오는 상세 이미지를 lazy-load 한다. 천천히 페이지 끝까지
+      // 스크롤하면 viewport 진입 트리거로 src가 채워진다. 끝나면 맨 위로.
+      await triggerLazyLoad();
+
       btn.textContent = '⏳ 전송 중…';
       setStatus('페이지를 파싱하는 중…', 'info');
 
