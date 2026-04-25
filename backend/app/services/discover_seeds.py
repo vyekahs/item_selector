@@ -38,6 +38,7 @@ from app.clients import (
 )
 from app.clients.base import ApiError
 from app.models import HsCode, ImportStat, SeedCandidate
+from app.services.categorize import infer_category_name
 
 logger = logging.getLogger(__name__)
 
@@ -49,8 +50,9 @@ MIN_IMPORT_GROWTH_PCT: float = 50.0           # 최근 3개월 +50%↑ 급증만
 MIN_UNIT_PRICE_KRW: int = 5_000               # 박리 상품 제외
 MAX_UNIT_PRICE_KRW: int = 100_000             # 초보 자본 부담 제외
 TOKENS_PER_HS: int = 5                        # HS당 추출 후보 토큰 수
-NGRAM_SIZES: tuple[int, ...] = (2, 3, 4, 5, 6)
-MIN_TOKEN_FREQ: int = 2                       # 전체 제목에서 최소 n회 나와야
+MIN_TOKEN_LEN: int = 2
+MAX_TOKEN_LEN: int = 10                        # 10자 초과는 brand/설명 덩어리 가능성
+MIN_TOKEN_FREQ: int = 3                        # 최소 3개 제목에 나와야 (노이즈 필터)
 TOP_CANDIDATES_BY_HS: int = 3                 # HS 내 상위 몇 개까지 searchad로 검증
 MIN_MONTHLY_VOLUME: int = 500                 # 월 검색량 최소치
 SEARCHAD_DELAY_SEC: float = 1.0
@@ -66,23 +68,31 @@ _EXCLUDE_HS_PREFIXES: tuple[str, ...] = (
     "9018", "9019", "9020", "9021", "9022",
 )
 
-_KOREAN_RUN_RE = re.compile(r"[가-힣]+")
+# 한글·영숫자 단위 토큰화. 구두점·공백이 경계 — "고양이자동급식기"처럼
+# 공백 없는 compound는 그 자체로 한 덩어리 토큰, "두부 티셔츠"는 "두부"와
+# "티셔츠"로 분리. char-ngram 방식은 "고양이자동급" 같은 의미 없는 잘린
+# 조각을 양산했기 때문에 폐기.
+_WORD_RE = re.compile(r"[가-힣a-zA-Z0-9]+")
+
 # 너무 일반적인 토큰은 사전 제외 — 포함돼봐야 시드로 무의미.
 _STOP_TOKENS: set[str] = {
     "상품", "제품", "용품", "신상", "인기", "추천", "무료", "배송", "정품",
     "판매", "특가", "할인", "세일", "증정", "사은품", "본사", "직영",
-    "당일발송", "무배", "빠른배송", "국내산", "수입",
+    "당일발송", "무배", "빠른배송", "국내산", "수입", "세트", "패키지",
+    "남성", "여성", "남녀", "공용", "성인", "아동",
 }
 
 
-def _extract_ngrams(text: str) -> list[str]:
+def _extract_tokens(text: str) -> list[str]:
+    """단어 단위 토큰: 공백·구두점이 경계, 길이 제한 + stop-token 필터."""
     out: list[str] = []
-    for chunk in _KOREAN_RUN_RE.findall(text):
-        for n in NGRAM_SIZES:
-            for i in range(len(chunk) - n + 1):
-                tok = chunk[i : i + n]
-                if tok not in _STOP_TOKENS:
-                    out.append(tok)
+    for word in _WORD_RE.findall(text or ""):
+        low = word.lower()
+        if not (MIN_TOKEN_LEN <= len(word) <= MAX_TOKEN_LEN):
+            continue
+        if low in _STOP_TOKENS:
+            continue
+        out.append(word)
     return out
 
 
@@ -175,29 +185,6 @@ def _fetch_top_hs(
     return rows[:TOP_HS_LIMIT]
 
 
-def _subsume_shorter_ngrams(counter: Counter[str]) -> Counter[str]:
-    """Drop a shorter token when a longer one contains it with identical freq.
-
-    e.g. "두부틀그릇" appears N times → counter["두부"] == counter["두부틀"] == N.
-    Here "두부" is a fragment that never appears outside "두부틀" within the
-    sampled titles, so keep only the more specific "두부틀" and drop "두부".
-
-    Tokens whose short form also shows up in *other* contexts will have a
-    strictly higher count than any single longer form → they survive
-    (e.g. "고양이" appears across 고양이사료 + 고양이장난감 + ...).
-    """
-    kept: dict[str, int] = dict(counter)
-    longer_by_len = sorted(counter.keys(), key=len, reverse=True)
-    for tok, count in counter.items():
-        for other in longer_by_len:
-            if other == tok or len(other) <= len(tok):
-                break
-            if tok in other and counter[other] == count:
-                kept.pop(tok, None)
-                break
-    return Counter(kept)
-
-
 async def _mine_tokens_for_hs(
     hs_code: str, name_ko: str
 ) -> list[tuple[str, int]]:
@@ -208,12 +195,16 @@ async def _mine_tokens_for_hs(
     except Exception:
         logger.exception("shopping fetch failed for hs=%s", hs_code)
         return []
+    # Count each token at most once per title (so a brand repeating
+    # itself in a single title doesn't skew frequency).
     counter: Counter[str] = Counter()
     for item in result.items:
-        for tok in _extract_ngrams(item.title or ""):
+        for tok in set(_extract_tokens(item.title or "")):
             counter[tok] += 1
-    counter = _subsume_shorter_ngrams(counter)
-    return [(t, c) for t, c in counter.most_common(TOKENS_PER_HS) if c >= MIN_TOKEN_FREQ]
+    return [
+        (t, c) for t, c in counter.most_common(TOKENS_PER_HS)
+        if c >= MIN_TOKEN_FREQ
+    ]
 
 
 async def _fetch_search_volume(term: str) -> tuple[int, float | None] | None:
