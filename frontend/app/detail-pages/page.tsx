@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { FormEvent, useMemo, useRef, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 
 import { API_BASE_URL } from '@/lib/api/client';
-import { useDetailPages } from '@/lib/api/queries';
+import { useDetailPages, useDetailPageTemplates } from '@/lib/api/queries';
 import { useIngestDetailPage } from '@/lib/api/mutations';
 import type { DetailPageStatus } from '@/lib/api/types';
 
@@ -76,11 +76,29 @@ export default function DetailPagesListPage() {
   const [mainImagesText, setMainImagesText] = useState('');
   const [detailImagesText, setDetailImagesText] = useState('');
   const [specsText, setSpecsText] = useState('');
+  const [templateName, setTemplateName] = useState<string>('');
   const [flash, setFlash] = useState<{ kind: 'ok' | 'err'; msg: string } | null>(
     null,
   );
 
   const ingest = useIngestDetailPage();
+  const templatesQuery = useDetailPageTemplates();
+  const templates = useMemo(() => templatesQuery.data ?? [], [templatesQuery.data]);
+
+  // Default the picker to the first option once templates load.
+  useEffect(() => {
+    if (templates.length > 0 && templateName === '') {
+      setTemplateName(templates[0].name);
+    }
+  }, [templates, templateName]);
+
+  const templateLabelByName = useMemo(() => {
+    const map: Record<string, string> = {};
+    for (const t of templates) map[t.name] = t.label;
+    return map;
+  }, [templates]);
+
+  const selectedTemplate = templates.find((t) => t.name === templateName);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -114,6 +132,9 @@ export default function DetailPagesListPage() {
     const priceNum = Number(priceCny);
     if (priceCny.trim() && Number.isFinite(priceNum) && priceNum >= 0) {
       body.price_cny = priceNum;
+    }
+    if (templateName) {
+      body.template_name = templateName;
     }
 
     try {
@@ -247,6 +268,29 @@ export default function DetailPagesListPage() {
                   placeholder="무게: 0.5kg&#10;사이즈: M/L"
                 />
               </label>
+              <label className="flex flex-col gap-1 text-sm sm:col-span-2">
+                <span className="text-xs text-slate-500">템플릿</span>
+                <select
+                  className="input"
+                  value={templateName}
+                  onChange={(e) => setTemplateName(e.target.value)}
+                  disabled={templates.length === 0}
+                >
+                  {templates.length === 0 && (
+                    <option value="">불러오는 중…</option>
+                  )}
+                  {templates.map((t) => (
+                    <option key={t.name} value={t.name}>
+                      {t.label}
+                    </option>
+                  ))}
+                </select>
+                {selectedTemplate && (
+                  <small className="text-xs text-slate-400">
+                    {selectedTemplate.description}
+                  </small>
+                )}
+              </label>
             </div>
 
             <div className="flex justify-end">
@@ -300,6 +344,7 @@ export default function DetailPagesListPage() {
                   <th className="py-2">미리보기</th>
                   <th className="py-2">제목 (KO)</th>
                   <th className="py-2">상태</th>
+                  <th className="py-2">템플릿</th>
                   <th className="py-2">원본</th>
                   <th className="py-2">생성 시각</th>
                   <th className="py-2"></th>
@@ -342,6 +387,9 @@ export default function DetailPagesListPage() {
                       </td>
                       <td className="py-2 pr-2">
                         <StatusBadge status={dp.status} />
+                      </td>
+                      <td className="py-2 pr-2 text-xs text-slate-600">
+                        {templateLabelByName[dp.template_name] ?? dp.template_name}
                       </td>
                       <td className="py-2 pr-2">
                         <a

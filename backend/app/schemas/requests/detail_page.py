@@ -11,7 +11,9 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl, field_validator
+
+from app.services.detail_pages.templates import TEMPLATE_NAMES
 
 
 class OptionImage(BaseModel):
@@ -67,3 +69,24 @@ class IngestRequest(BaseModel):
         default_factory=list,
         description="옵션/변형 썸네일 (색상, 사이즈 등).",
     )
+    template_name: str | None = Field(
+        default=None,
+        description=(
+            "사용할 상세페이지 템플릿 파일명 (예: 'detail_page_v2_minimal.html'). "
+            "생략 시 모델 default가 적용됩니다. 허용 목록은 "
+            "GET /detail-pages/templates 에서 조회하세요."
+        ),
+    )
+
+    @field_validator("template_name")
+    @classmethod
+    def _validate_template(cls, value: str | None) -> str | None:
+        # ``None`` is allowed → fall through to the model default.
+        if value is None:
+            return None
+        if value not in TEMPLATE_NAMES:
+            raise ValueError(
+                f"Unknown template_name {value!r}. "
+                f"Allowed: {sorted(TEMPLATE_NAMES)}"
+            )
+        return value

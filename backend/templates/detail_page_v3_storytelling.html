@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+{#
+  detail_page_v3_storytelling.html — narrative-focused 860px detail page.
+
+  Shares the EXACT same Jinja2 props contract as detail_page_v1.html:
+
+    title_ko        : str — H1 hero title (Korean), shown overlaid on hero
+    highlight       : str | None — single hook line under the title
+    main_image_url  : str — URL of the hero image (full 860x860)
+    aida            : dict with optional keys:
+                        attention | interest | desire | action  (str)
+    spec_table      : list[{label: str, value: str}]
+    options         : list[{name: str, image_url: str}]
+    gallery         : list[str]   (URLs of detail/gallery images)
+
+  Style brief:
+    - Narrative / editorial. Hero is full 860x860 with title overlay
+      (gradient scrim for legibility).
+    - AIDA blocks alternate left/right with big circled section
+      numbers ① ② ③ ④. Each block is a half-width text + half-width
+      empty bleed for breathing room.
+    - Spec collapsed into ONE horizontal summary card (no scroll —
+      uses flex-wrap on overflow so the screenshot stays clean).
+    - Gallery is a 2-column grid (not stacked full-width).
+#}
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title_ko }}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    body {
+      font-family: 'Pretendard', 'Noto Serif KR', 'Apple SD Gothic Neo', serif;
+      color: #1c1917;
+      background: #fafaf9;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+    }
+
+    .page {
+      width: 860px;
+      margin: 0 auto;
+      background: #fafaf9;
+    }
+
+    /* ---------- Hero: full 860x860 with title overlay ---------- */
+    .hero {
+      position: relative;
+      width: 860px;
+      height: 860px;
+      overflow: hidden;
+    }
+    .hero__image {
+      width: 860px;
+      height: 860px;
+      object-fit: cover;
+      background: #d6d3d1;
+    }
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) 50%,
+        rgba(0,0,0,0.65) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 64px 56px;
+      color: #ffffff;
+    }
+    .hero__title {
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 16px 0;
+      line-height: 1.25;
+      color: #ffffff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    .hero__highlight {
+      font-size: 18px;
+      font-weight: 400;
+      color: #fef3c7;
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- AIDA: alternating left/right with section numbers ---------- */
+    .aida {
+      padding: 0;
+    }
+    .aida__block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 72px 56px;
+      gap: 48px;
+    }
+    .aida__block--right {
+      direction: rtl;
+    }
+    .aida__block--right > * {
+      direction: ltr;
+    }
+    .aida__num {
+      font-size: 96px;
+      font-weight: 700;
+      color: #d97706;
+      line-height: 1;
+      font-family: 'Georgia', serif;
+      opacity: 0.85;
+    }
+    .aida__text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .aida__label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      color: #92400e;
+      text-transform: uppercase;
+    }
+    .aida__body {
+      font-size: 18px;
+      color: #292524;
+      margin: 0;
+      white-space: pre-line;
+      line-height: 1.7;
+    }
+    .aida__block + .aida__block {
+      border-top: 1px solid #e7e5e4;
+    }
+
+    /* ---------- Options: horizontal feel, 2-col preserved ---------- */
+    .options {
+      padding: 64px 56px;
+      background: #f5f5f4;
+    }
+    .options__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1c1917;
+      margin: 0 0 32px 0;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+    .options__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .option-card {
+      background: #ffffff;
+      overflow: hidden;
+    }
+    .option-card__image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+    .option-card__name {
+      padding: 14px 18px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #1c1917;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- Spec: single horizontal summary card ---------- */
+    .spec {
+      padding: 64px 56px;
+    }
+    .spec__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1c1917;
+      margin: 0 0 28px 0;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+    .spec__card {
+      background: #ffffff;
+      border: 1px solid #e7e5e4;
+      border-radius: 12px;
+      padding: 28px 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px 40px;
+      justify-content: center;
+    }
+    .spec__item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 140px;
+    }
+    .spec__item-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #a8a29e;
+      text-transform: uppercase;
+    }
+    .spec__item-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: #1c1917;
+    }
+
+    /* ---------- Gallery: 2-col grid ---------- */
+    .gallery {
+      padding: 64px 56px;
+    }
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .gallery__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HERO: full-bleed 860x860 with title overlay -->
+    <section class="hero">
+      <img class="hero__image" src="{{ main_image_url }}" alt="{{ title_ko }}" loading="eager" />
+      <div class="hero__overlay">
+        <h1 class="hero__title">{{ title_ko }}</h1>
+        {% if highlight %}
+        <p class="hero__highlight">{{ highlight }}</p>
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- AIDA: alternating left/right with circled numbers -->
+    <section class="aida">
+      {% if aida.attention %}
+      <div class="aida__block">
+        <div class="aida__num">①</div>
+        <div class="aida__text">
+          <span class="aida__label">Attention</span>
+          <p class="aida__body">{{ aida.attention }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% if aida.interest %}
+      <div class="aida__block aida__block--right">
+        <div class="aida__num">②</div>
+        <div class="aida__text">
+          <span class="aida__label">Interest</span>
+          <p class="aida__body">{{ aida.interest }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% if aida.desire %}
+      <div class="aida__block">
+        <div class="aida__num">③</div>
+        <div class="aida__text">
+          <span class="aida__label">Desire</span>
+          <p class="aida__body">{{ aida.desire }}</p>
+        </div>
+      </div>
+      {% endif %}
+      {% if aida.action %}
+      <div class="aida__block aida__block--right">
+        <div class="aida__num">④</div>
+        <div class="aida__text">
+          <span class="aida__label">Action</span>
+          <p class="aida__body">{{ aida.action }}</p>
+        </div>
+      </div>
+      {% endif %}
+    </section>
+
+    <!-- OPTIONS -->
+    {% if options and options|length > 0 %}
+    <section class="options">
+      <h2 class="options__title">옵션</h2>
+      <div class="options__grid">
+        {% for opt in options %}
+        <div class="option-card">
+          <img class="option-card__image" src="{{ opt.image_url }}" alt="{{ opt.name }}" loading="eager" />
+          <div class="option-card__name">{{ opt.name }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- SPEC: single horizontal summary card -->
+    {% if spec_table and spec_table|length > 0 %}
+    <section class="spec">
+      <h2 class="spec__title">상품 정보</h2>
+      <div class="spec__card">
+        {% for row in spec_table %}
+        <div class="spec__item">
+          <span class="spec__item-label">{{ row.label }}</span>
+          <span class="spec__item-value">{{ row.value }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- GALLERY: 2-col grid -->
+    {% if gallery and gallery|length > 0 %}
+    <section class="gallery">
+      <div class="gallery__grid">
+        {% for img in gallery %}
+        <img class="gallery__image" src="{{ img }}" alt="상세 이미지 {{ loop.index }}" loading="eager" />
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+  </div>
+</body>
+</html>

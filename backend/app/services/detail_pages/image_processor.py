@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
+from typing import Any
 
 import httpx
 
@@ -37,13 +38,22 @@ except ImportError:  # pragma: no cover - exercised only without Pillow
 
 try:  # noqa: SIM105
     import pytesseract  # type: ignore
+    from pytesseract import Output  # type: ignore
     _HAVE_TESSERACT = True
 except ImportError:  # pragma: no cover
     pytesseract = None  # type: ignore[assignment]
+    Output = None  # type: ignore[assignment]
     _HAVE_TESSERACT = False
     logger.warning(
         "pytesseract not installed; detect_chinese_ratio will return 0.0 (no filtering)"
     )
+
+try:  # noqa: SIM105 — ImageDraw is a Pillow submodule we import lazily
+    from PIL import ImageDraw  # type: ignore
+    _HAVE_IMAGEDRAW = True
+except ImportError:  # pragma: no cover
+    ImageDraw = None  # type: ignore[assignment]
+    _HAVE_IMAGEDRAW = False
 
 
 # --- tunables --------------------------------------------------------
@@ -159,6 +169,138 @@ def filter_clean_images(
                 p, ratio, max_chinese_ratio,
             )
     return kept
+
+
+# --- OCR-based masking ----------------------------------------------
+
+
+def _copy_file(src: Path, dst: Path) -> None:
+    """Byte-copy ``src`` to ``dst`` without requiring Pillow."""
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    with src.open("rb") as r, dst.open("wb") as w:
+        while True:
+            chunk = r.read(64 * 1024)
+            if not chunk:
+                break
+            w.write(chunk)
+
+
+def mask_chinese_regions(
+    src: Path,
+    dst: Path,
+    *,
+    padding_px: int = 4,
+    min_confidence: float = 30.0,
+) -> int:
+    """Paint white rectangles over detected Chinese text bboxes.
+
+    Returns the number of regions masked. Writes to ``dst`` (PNG/JPG
+    per src extension). When pytesseract is unavailable or no text is
+    detected, copies src→dst unmodified and returns 0.
+    """
+    if not src.exists():
+        raise FileNotFoundError(f"mask_chinese_regions: source not found: {src}")
+
+    # Degrade gracefully when optional deps aren't installed (dev/CI).
+    if not _HAVE_TESSERACT or not _HAVE_PIL or not _HAVE_IMAGEDRAW:
+        logger.warning(
+            "mask_chinese_regions: optional deps missing "
+            "(tesseract=%s pil=%s draw=%s); copying %s unmodified",
+            _HAVE_TESSERACT, _HAVE_PIL, _HAVE_IMAGEDRAW, src,
+        )
+        _copy_file(src, dst)
+        return 0
+
+    try:
+        img = Image.open(src)
+        # OCR is most reliable in RGB; some inputs are CMYK/P/etc.
+        if img.mode not in ("RGB", "RGBA"):
+            img = img.convert("RGB")
+        data = pytesseract.image_to_data(
+            img, lang="chi_sim", output_type=Output.DICT
+        )
+    except Exception as exc:  # noqa: BLE001 — tesseract binary failures, etc.
+        logger.warning(
+            "mask_chinese_regions: OCR failed for %s: %s; copying unmodified",
+            src, exc,
+        )
+        _copy_file(src, dst)
+        return 0
+
+    texts = data.get("text") or []
+    confs = data.get("conf") or []
+    lefts = data.get("left") or []
+    tops = data.get("top") or []
+    widths = data.get("width") or []
+    heights = data.get("height") or []
+
+    masked = 0
+    draw = ImageDraw.Draw(img)
+    img_w, img_h = img.size
+
+    for idx, text in enumerate(texts):
+        if not isinstance(text, str) or not text.strip():
+            continue
+        # Require at least one CJK Unified Ideograph in the token.
+        if not any("\u4e00" <= c <= "\u9fff" for c in text):
+            continue
+        # ``conf`` is a string like "-1" / "94" depending on tesseract build.
+        try:
+            conf = float(confs[idx])
+        except (TypeError, ValueError, IndexError):
+            continue
+        if conf < min_confidence:
+            continue
+        try:
+            x = int(lefts[idx])
+            y = int(tops[idx])
+            w = int(widths[idx])
+            h = int(heights[idx])
+        except (TypeError, ValueError, IndexError):
+            continue
+        if w <= 0 or h <= 0:
+            continue
+        x0 = max(0, x - padding_px)
+        y0 = max(0, y - padding_px)
+        x1 = min(img_w, x + w + padding_px)
+        y1 = min(img_h, y + h + padding_px)
+        if x1 <= x0 or y1 <= y0:
+            continue
+        draw.rectangle((x0, y0, x1, y1), fill="white")
+        masked += 1
+
+    if masked == 0:
+        # Nothing to paint — preserve original bytes/format.
+        img.close()
+        _copy_file(src, dst)
+        return 0
+
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    ext = src.suffix.lower()
+    save_kwargs: dict[str, Any] = {}
+    if ext in (".jpg", ".jpeg"):
+        save_kwargs["format"] = "JPEG"
+        save_kwargs["quality"] = 90
+        if img.mode != "RGB":
+            img = img.convert("RGB")
+    elif ext == ".png":
+        save_kwargs["format"] = "PNG"
+    else:
+        # Fall back to source extension's implicit format; if Pillow
+        # can't infer it (rare), force JPEG.
+        try:
+            img.save(dst)
+            img.close()
+            return masked
+        except (OSError, ValueError):
+            save_kwargs["format"] = "JPEG"
+            save_kwargs["quality"] = 90
+            if img.mode != "RGB":
+                img = img.convert("RGB")
+
+    img.save(dst, **save_kwargs)
+    img.close()
+    return masked
 
 
 # --- optimisation ---------------------------------------------------

@@ -6,6 +6,8 @@ import {
   DetailPageDetail,
   DetailPageDetailSchema,
   DetailPageStatus,
+  DetailPageTemplate,
+  DetailPageTemplateListSchema,
   OpportunityListSchema,
   OpportunityResponse,
   PaginatedDetailPagesResponse,
@@ -134,6 +136,19 @@ export function useDetailPages(params: UseDetailPagesParams = {}) {
           ...(status ? { status } : {}),
         },
         schema: PaginatedDetailPagesResponseSchema,
+      }),
+  });
+}
+
+export function useDetailPageTemplates() {
+  return useQuery({
+    queryKey: ['detail-page-templates'],
+    // Templates are static per deploy; cache aggressively so the picker
+    // isn't refetched every navigation.
+    staleTime: 1000 * 60 * 60,
+    queryFn: () =>
+      apiRequest<DetailPageTemplate[]>('/detail-pages/templates', {
+        schema: DetailPageTemplateListSchema,
       }),
   });
 }

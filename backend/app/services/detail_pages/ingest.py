@@ -29,7 +29,11 @@ from app.db.session import SessionLocal
 from app.models import DetailPage, SourceProduct
 
 from .copywriter import generate_copy
-from .image_processor import download_image, filter_clean_images
+from .image_processor import (
+    detect_chinese_ratio,
+    download_image,
+    mask_chinese_regions,
+)
 from .renderer import render_to_jpg
 
 logger = logging.getLogger(__name__)
@@ -38,6 +42,21 @@ logger = logging.getLogger(__name__)
 # Mount root used by the FastAPI StaticFiles handler. Resolved relative
 # to the backend working directory (Docker: ``/app/generated``).
 GENERATED_ROOT: Path = Path("generated")
+
+# --- Chinese-text handling thresholds for detail images -------------
+#
+# We tier detail images by Chinese-character density (see
+# ``detect_chinese_ratio``) instead of a single hard cutoff:
+#
+#   ratio >= HEAVY_CHINESE_RATIO  → drop entirely. The image is mostly
+#       marketing copy; even after masking there's nothing useful left.
+#   ratio >= MASK_CHINESE_RATIO   → keep but paint white rectangles
+#       over each detected CJK token (``mask_chinese_regions``). These
+#       are real product photos with a few Chinese labels we can hide.
+#   ratio <  MASK_CHINESE_RATIO   → use as-is (incidental noise / no
+#       text). OCR isn't free, so we skip masking when the gain is low.
+HEAVY_CHINESE_RATIO: float = 0.50
+MASK_CHINESE_RATIO: float = 0.05
 
 
 # ---- helpers --------------------------------------------------------
@@ -187,8 +206,39 @@ async def _run_pipeline(detail_page: DetailPage, source: SourceProduct) -> None:
         main_paths_task, detail_paths_task, option_paths_task
     )
 
-    # 2. drop detail images that are mostly Chinese marketing copy
-    cleaned_detail_paths = filter_clean_images(detail_paths)
+    # 2. tier detail images by Chinese-text density: drop heavy ones,
+    #    mask moderate ones, keep light ones unchanged. Masked variants
+    #    are written next to the originals as ``masked_<filename>`` so
+    #    the raw downloads stay around for debugging.
+    gallery_paths: list[Path] = []
+    for path in detail_paths:
+        ratio = detect_chinese_ratio(path)
+        if ratio >= HEAVY_CHINESE_RATIO:
+            logger.info(
+                "detail image dropped (chinese_ratio=%.2f >= %.2f): %s",
+                ratio, HEAVY_CHINESE_RATIO, path,
+            )
+            continue
+        if ratio >= MASK_CHINESE_RATIO:
+            masked_path = path.with_name(f"masked_{path.name}")
+            try:
+                regions = mask_chinese_regions(path, masked_path)
+            except Exception as exc:  # noqa: BLE001 — never fail the pipeline on masking
+                logger.warning(
+                    "mask_chinese_regions failed for %s: %s; using original",
+                    path, exc,
+                )
+                gallery_paths.append(path)
+                continue
+            logger.info(
+                "detail image masked (chinese_ratio=%.2f, regions=%d): %s",
+                ratio, regions, path,
+            )
+            gallery_paths.append(
+                masked_path if masked_path.exists() else path
+            )
+        else:
+            gallery_paths.append(path)
 
     # 3. LLM copy
     copy = await generate_copy(title_zh, category_path, specs)
@@ -197,7 +247,7 @@ async def _run_pipeline(detail_page: DetailPage, source: SourceProduct) -> None:
     main_image_url = (
         _public_path(detail_page_id, main_paths[0]) if main_paths else ""
     )
-    gallery = [_public_path(detail_page_id, p) for p in cleaned_detail_paths]
+    gallery = [_public_path(detail_page_id, p) for p in gallery_paths]
 
     # Re-pair option metadata with the locally-downloaded images. We
     # rely on positional alignment — option_paths preserves input order,
@@ -228,7 +278,11 @@ async def _run_pipeline(detail_page: DetailPage, source: SourceProduct) -> None:
 
     # 5. render
     output_jpg = _generated_dir(detail_page_id) / "page.jpg"
-    await render_to_jpg(props, output_jpg)
+    await render_to_jpg(
+        props,
+        output_jpg,
+        template_name=detail_page.template_name,
+    )
 
     # 6. mark done
     detail_page.image_path = f"{detail_page_id}/page.jpg"

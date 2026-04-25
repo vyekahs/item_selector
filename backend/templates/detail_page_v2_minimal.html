@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+{#
+  detail_page_v2_minimal.html — minimalist 860px detail page.
+
+  Shares the EXACT same Jinja2 props contract as detail_page_v1.html:
+
+    title_ko        : str — H1 hero title (Korean)
+    highlight       : str | None — single hook line under the title
+    main_image_url  : str — URL of the hero image (1:1 ideally)
+    aida            : dict with optional keys:
+                        attention | interest | desire | action  (str)
+    spec_table      : list[{label: str, value: str}]
+    options         : list[{name: str, image_url: str}]
+    gallery         : list[str]   (URLs of detail/gallery images)
+
+  Style brief:
+    - Clean minimalist. Big whitespace, sans-serif, almost no color.
+    - Single accent color #0ea5e9 (used very sparingly).
+    - Spec table rendered as plain rows (no zebra/header bg).
+    - Hero is just an H1 + small image (NOT full-bleed).
+    - AIDA is intentionally flat: 4 paragraphs with no per-block
+      visual differentiation (no badges, no color swap on ACTION).
+#}
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title_ko }}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    body {
+      font-family: 'Inter', 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #111111;
+      background: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      word-break: keep-all;
+      font-weight: 300;
+    }
+
+    .page {
+      width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+    }
+
+    .section {
+      padding: 96px 80px;
+    }
+
+    /* ---------- Hero (small image + title only) ---------- */
+    .hero {
+      padding: 96px 80px 64px 80px;
+      text-align: center;
+    }
+    .hero__title {
+      font-size: 36px;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px 0;
+      color: #111111;
+      line-height: 1.4;
+    }
+    .hero__highlight {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      color: #0ea5e9;
+      letter-spacing: 0.06em;
+      margin: 0 0 56px 0;
+      text-transform: uppercase;
+    }
+    .hero__image {
+      width: 480px;
+      height: 480px;
+      object-fit: cover;
+      margin: 0 auto;
+      background: #fafafa;
+    }
+
+    /* ---------- AIDA: flat 4 paragraphs ---------- */
+    .aida__block {
+      margin-bottom: 48px;
+    }
+    .aida__block:last-child {
+      margin-bottom: 0;
+    }
+    .aida__body {
+      font-size: 17px;
+      color: #333333;
+      margin: 0;
+      white-space: pre-line;
+      font-weight: 300;
+    }
+
+    /* ---------- Options ---------- */
+    .options__title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #888888;
+      margin: 0 0 40px 0;
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .options__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .option-card__image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #fafafa;
+    }
+    .option-card__name {
+      padding: 16px 0 0 0;
+      font-size: 14px;
+      font-weight: 400;
+      color: #555555;
+      text-align: center;
+    }
+
+    /* ---------- Spec table — plain rows, no zebra ---------- */
+    .spec__title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #888888;
+      margin: 0 0 32px 0;
+      text-align: center;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .spec__row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      padding: 18px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 15px;
+      font-weight: 300;
+    }
+    .spec__row:first-child {
+      border-top: 1px solid #f0f0f0;
+    }
+    .spec__label {
+      color: #888888;
+    }
+    .spec__value {
+      color: #111111;
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallery {
+      padding: 0;
+    }
+    .gallery__image {
+      width: 860px;
+      display: block;
+      margin-bottom: 32px;
+    }
+    .gallery__image:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="hero__title">{{ title_ko }}</h1>
+      {% if highlight %}
+      <p class="hero__highlight">{{ highlight }}</p>
+      {% endif %}
+      <img class="hero__image" src="{{ main_image_url }}" alt="{{ title_ko }}" loading="eager" />
+    </section>
+
+    <!-- AIDA — flat 4 paragraphs, no per-block visual differentiation -->
+    <section class="section aida">
+      {% if aida.attention %}
+      <div class="aida__block">
+        <p class="aida__body">{{ aida.attention }}</p>
+      </div>
+      {% endif %}
+      {% if aida.interest %}
+      <div class="aida__block">
+        <p class="aida__body">{{ aida.interest }}</p>
+      </div>
+      {% endif %}
+      {% if aida.desire %}
+      <div class="aida__block">
+        <p class="aida__body">{{ aida.desire }}</p>
+      </div>
+      {% endif %}
+      {% if aida.action %}
+      <div class="aida__block">
+        <p class="aida__body">{{ aida.action }}</p>
+      </div>
+      {% endif %}
+    </section>
+
+    <!-- OPTIONS -->
+    {% if options and options|length > 0 %}
+    <section class="section options">
+      <h2 class="options__title">Options</h2>
+      <div class="options__grid">
+        {% for opt in options %}
+        <div class="option-card">
+          <img class="option-card__image" src="{{ opt.image_url }}" alt="{{ opt.name }}" loading="eager" />
+          <div class="option-card__name">{{ opt.name }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- SPEC -->
+    {% if spec_table and spec_table|length > 0 %}
+    <section class="section spec">
+      <h2 class="spec__title">Specification</h2>
+      <div class="spec__rows">
+        {% for row in spec_table %}
+        <div class="spec__row">
+          <div class="spec__label">{{ row.label }}</div>
+          <div class="spec__value">{{ row.value }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- GALLERY -->
+    {% if gallery and gallery|length > 0 %}
+    <section class="gallery">
+      {% for img in gallery %}
+      <img class="gallery__image" src="{{ img }}" alt="상세 이미지 {{ loop.index }}" loading="eager" />
+      {% endfor %}
+    </section>
+    {% endif %}
+
+  </div>
+</body>
+</html>

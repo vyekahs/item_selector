@@ -224,6 +224,7 @@ export const DetailPageSummarySchema = z.object({
   image_path: z.string().nullable().optional().default(null),
   source_url: z.string(),
   source_platform: z.string(),
+  template_name: z.string(),
   created_at: z.string(),
 });
 export type DetailPageSummary = z.infer<typeof DetailPageSummarySchema>;
@@ -233,6 +234,14 @@ export const DetailPageDetailSchema = DetailPageSummarySchema.extend({
   failure_reason: z.string().nullable().optional().default(null),
 });
 export type DetailPageDetail = z.infer<typeof DetailPageDetailSchema>;
+
+export const DetailPageTemplateSchema = z.object({
+  name: z.string(),
+  label: z.string(),
+  description: z.string(),
+});
+export type DetailPageTemplate = z.infer<typeof DetailPageTemplateSchema>;
+export const DetailPageTemplateListSchema = z.array(DetailPageTemplateSchema);
 
 export const PaginatedDetailPagesResponseSchema = z.object({
   items: z.array(DetailPageSummarySchema),

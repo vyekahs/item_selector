@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { API_BASE_URL } from '@/lib/api/client';
-import { useDetailPage } from '@/lib/api/queries';
+import { useDetailPage, useDetailPageTemplates } from '@/lib/api/queries';
 import { useRegenerateDetailPage } from '@/lib/api/mutations';
 import type { DetailPageStatus } from '@/lib/api/types';
 
@@ -40,7 +40,23 @@ export default function DetailPageDetailRoute() {
     Number.isFinite(detailPageId) ? detailPageId : null,
   );
   const regenerate = useRegenerateDetailPage();
+  const templatesQuery = useDetailPageTemplates();
+  const templates = templatesQuery.data ?? [];
   const [flash, setFlash] = useState<string | null>(null);
+  // Pre-fill the picker with the row's current template once both
+  // queries have data; the operator can then switch and click 다시 생성
+  // to regenerate with a different style.
+  const [pickedTemplate, setPickedTemplate] = useState<string>('');
+  useEffect(() => {
+    if (data?.template_name && pickedTemplate === '') {
+      setPickedTemplate(data.template_name);
+    }
+  }, [data?.template_name, pickedTemplate]);
+
+  const currentTemplateLabel =
+    templates.find((t) => t.name === data?.template_name)?.label ??
+    data?.template_name ??
+    '';
 
   if (Number.isNaN(detailPageId)) {
     return <p className="text-rose-600">잘못된 detail page id 입니다.</p>;
@@ -76,7 +92,16 @@ export default function DetailPageDetailRoute() {
   const handleRegenerate = async () => {
     setFlash(null);
     try {
-      await regenerate.mutateAsync(data.id);
+      // Only send template_name when the user actually changed it —
+      // otherwise omit so the backend keeps the row's existing value.
+      const changedTemplate =
+        pickedTemplate && pickedTemplate !== data.template_name
+          ? pickedTemplate
+          : undefined;
+      await regenerate.mutateAsync({
+        detailPageId: data.id,
+        template_name: changedTemplate,
+      });
       setFlash('🔄 재생성을 시작했습니다. 1~2분 후 자동으로 갱신됩니다.');
     } catch (err) {
       setFlash(
@@ -107,10 +132,33 @@ export default function DetailPageDetailRoute() {
             </span>
           </p>
         </div>
-        <StatusBadge status={data.status} />
+        <div className="flex flex-col items-end gap-1">
+          <StatusBadge status={data.status} />
+          <span className="text-xs text-slate-500">
+            템플릿: <strong className="font-medium">{currentTemplateLabel}</strong>
+          </span>
+        </div>
       </header>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap items-center gap-2">
+        <label className="flex items-center gap-2 text-xs text-slate-600">
+          <span>템플릿:</span>
+          <select
+            className="input h-9 py-0 text-xs"
+            value={pickedTemplate}
+            onChange={(e) => setPickedTemplate(e.target.value)}
+            disabled={templates.length === 0 || isProcessing}
+          >
+            {templates.length === 0 && (
+              <option value={data.template_name}>{data.template_name}</option>
+            )}
+            {templates.map((t) => (
+              <option key={t.name} value={t.name}>
+                {t.label}
+              </option>
+            ))}
+          </select>
+        </label>
         <button
           type="button"
           className="btn-secondary"

@@ -27,6 +27,10 @@ class DetailPageSummary(BaseModel):
     )
     source_url: str
     source_platform: str
+    template_name: str = Field(
+        ...,
+        description="이 row가 사용한 Jinja2 템플릿 파일명.",
+    )
     created_at: datetime
 
 
@@ -52,6 +56,16 @@ class PaginatedDetailPagesResponse(BaseModel):
     total: int = Field(..., ge=0)
     limit: int = Field(..., ge=1, le=200)
     offset: int = Field(..., ge=0)
+
+
+class DetailPageTemplateOption(BaseModel):
+    """One pickable template entry exposed via ``GET /detail-pages/templates``."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    name: str = Field(..., description="템플릿 파일명 (예: 'detail_page_v2_minimal.html').")
+    label: str = Field(..., description="UI 표시용 짧은 한국어 라벨.")
+    description: str = Field(..., description="UI 표시용 한 줄 설명.")
 
 
 class IngestAcceptedResponse(BaseModel):

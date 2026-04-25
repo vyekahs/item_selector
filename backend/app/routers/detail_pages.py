@@ -20,7 +20,8 @@ from __future__ import annotations
 import asyncio
 import logging
 
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, Body, HTTPException, Query, status
+from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import desc, func, select
 
 from app.deps import DbSession
@@ -29,9 +30,11 @@ from app.schemas.requests.detail_page import IngestRequest
 from app.schemas.responses.detail_page import (
     DetailPageDetail,
     DetailPageSummary,
+    DetailPageTemplateOption,
     IngestAcceptedResponse,
     PaginatedDetailPagesResponse,
 )
+from app.services.detail_pages.templates import TEMPLATE_NAMES, TEMPLATES
 
 logger = logging.getLogger(__name__)
 
@@ -103,10 +106,26 @@ async def ingest(payload: IngestRequest, db: DbSession) -> IngestAcceptedRespons
         source.raw_payload = raw_payload
         source.source_platform = payload.source_platform
 
-    detail_page = DetailPage(
-        source_product_id=source.id,
-        status="pending",
-    )
+    # ``template_name=None`` falls through to the model default
+    # (``detail_page_v1.html``); a payload value is already validated
+    # against TEMPLATE_NAMES by IngestRequest, but we re-check defensively
+    # so a future schema relaxation can't smuggle a bad name into the DB.
+    detail_page_kwargs: dict[str, object] = {
+        "source_product_id": source.id,
+        "status": "pending",
+    }
+    if payload.template_name is not None:
+        if payload.template_name not in TEMPLATE_NAMES:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=(
+                    f"Unknown template_name {payload.template_name!r}. "
+                    f"Allowed: {sorted(TEMPLATE_NAMES)}"
+                ),
+            )
+        detail_page_kwargs["template_name"] = payload.template_name
+
+    detail_page = DetailPage(**detail_page_kwargs)
     db.add(detail_page)
     db.commit()
     db.refresh(detail_page)
@@ -158,6 +177,7 @@ def list_detail_pages(
             image_path=dp.image_path,
             source_url=sp.source_url,
             source_platform=sp.source_platform,
+            template_name=dp.template_name,
             created_at=dp.created_at,
         )
         for dp, sp in rows
@@ -165,6 +185,25 @@ def list_detail_pages(
     return PaginatedDetailPagesResponse(
         items=items, total=int(total), limit=limit, offset=offset
     )
+
+
+@router.get(
+    "/templates",
+    response_model=list[DetailPageTemplateOption],
+    summary="List available detail-page templates (for the picker UI)",
+)
+def list_templates() -> list[DetailPageTemplateOption]:
+    """Return the static catalog of pickable templates.
+
+    Frontend populates its template ``<select>`` from this. The list is
+    small, immutable per-deploy, and changing it requires a code change
+    + new HTML file under ``backend/templates/`` — no DB lookup needed.
+
+    NOTE: Declared before ``GET /{detail_page_id}`` so Starlette matches
+    the literal path first; otherwise FastAPI would try to coerce
+    ``"templates"`` to ``int`` and 422.
+    """
+    return [DetailPageTemplateOption(**entry) for entry in TEMPLATES]
 
 
 @router.get(
@@ -191,9 +230,29 @@ def get_detail_page(detail_page_id: int, db: DbSession) -> DetailPageDetail:
         image_path=dp.image_path,
         source_url=sp.source_url,
         source_platform=sp.source_platform,
+        template_name=dp.template_name,
         created_at=dp.created_at,
         props=dp.props,
         failure_reason=dp.failure_reason,
+    )
+
+
+class RegenerateRequest(BaseModel):
+    """Optional body for ``POST /detail-pages/{id}/regenerate``.
+
+    When ``template_name`` is provided the row's stored template is
+    switched before the pipeline reruns, so the operator can A/B
+    different visual styles without re-ingesting the source product.
+    """
+
+    model_config = ConfigDict(extra="forbid")
+
+    template_name: str | None = Field(
+        default=None,
+        description=(
+            "변경할 템플릿 파일명 (예: 'detail_page_v3_storytelling.html'). "
+            "생략 시 기존 row의 template_name을 그대로 사용합니다."
+        ),
     )
 
 
@@ -204,7 +263,9 @@ def get_detail_page(detail_page_id: int, db: DbSession) -> DetailPageDetail:
     summary="Reset a detail page to pending and re-run the pipeline",
 )
 async def regenerate(
-    detail_page_id: int, db: DbSession
+    detail_page_id: int,
+    db: DbSession,
+    payload: RegenerateRequest | None = Body(default=None),
 ) -> IngestAcceptedResponse:
     detail_page = db.execute(
         select(DetailPage).where(DetailPage.id == detail_page_id)
@@ -214,6 +275,17 @@ async def regenerate(
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"detail page {detail_page_id} not found",
         )
+
+    if payload is not None and payload.template_name is not None:
+        if payload.template_name not in TEMPLATE_NAMES:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=(
+                    f"Unknown template_name {payload.template_name!r}. "
+                    f"Allowed: {sorted(TEMPLATE_NAMES)}"
+                ),
+            )
+        detail_page.template_name = payload.template_name
 
     detail_page.status = "pending"
     detail_page.image_path = None

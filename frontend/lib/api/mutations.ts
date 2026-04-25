@@ -146,18 +146,29 @@ export function useIngestDetailPage() {
   });
 }
 
+export interface RegenerateDetailPageVars {
+  detailPageId: number;
+  template_name?: string;
+}
+
 export function useRegenerateDetailPage() {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (detailPageId: number) =>
-      apiRequest<DetailPageIngestAccepted>(
+    mutationFn: ({ detailPageId, template_name }: RegenerateDetailPageVars) => {
+      const body =
+        typeof template_name === 'string' && template_name.length > 0
+          ? { template_name }
+          : {};
+      return apiRequest<DetailPageIngestAccepted>(
         `/detail-pages/${detailPageId}/regenerate`,
         {
           method: 'POST',
+          body,
           schema: DetailPageIngestAcceptedSchema,
         },
-      ),
-    onSuccess: (_data, detailPageId) => {
+      );
+    },
+    onSuccess: (_data, { detailPageId }) => {
       qc.invalidateQueries({ queryKey: ['detail-pages'] });
       qc.invalidateQueries({ queryKey: ['detail-page', detailPageId] });
     },

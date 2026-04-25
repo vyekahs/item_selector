@@ -46,6 +46,15 @@ class DetailPage(Base, TimestampMixin):
     props: Mapped[dict[str, Any] | None] = mapped_column(JSONB, nullable=True)
     image_path: Mapped[str | None] = mapped_column(String(255), nullable=True)
     failure_reason: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # Which Jinja2 template under ``backend/templates/`` to render with.
+    # Persisted so a regenerate uses the same look unless the operator
+    # explicitly switches it (see ``services.detail_pages.templates``).
+    template_name: Mapped[str] = mapped_column(
+        String(64),
+        nullable=False,
+        default="detail_page_v1.html",
+        server_default="detail_page_v1.html",
+    )
 
     source_product: Mapped["SourceProduct"] = relationship(
         "SourceProduct", back_populates="detail_pages"
