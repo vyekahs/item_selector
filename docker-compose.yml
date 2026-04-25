@@ -12,6 +12,10 @@ networks:
 volumes:
   postgres_data:
   redis_data:
+  # Detail-page generator writes rendered JPGs to /app/generated.
+  # Named volume = survives ``docker compose up --build`` so existing
+  # detail pages stay viewable across deploys.
+  generated_pages:
 
 services:
   postgres:
@@ -65,6 +69,9 @@ services:
       - .env
     environment:
       TZ: "Asia/Seoul"
+    volumes:
+      # Persist generated detail-page JPGs across rebuilds.
+      - generated_pages:/app/generated
     depends_on:
       postgres:
         condition: service_healthy
