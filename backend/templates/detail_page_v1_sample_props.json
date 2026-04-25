@@ -1,0 +1,35 @@
+{
+  "title_ko": "스마트 자동급식기 5L 대용량 - 우리 강아지 식사 시간을 정확하게",
+  "highlight": "하루 4끼까지 자동 분배 · 음성 녹음 기능 탑재",
+  "main_image_url": "https://placehold.co/860x860?text=메인+이미지",
+  "aida": {
+    "attention": "출근하느라 강아지 밥, 매일 늦으셨죠?",
+    "interest": "5L 대용량 호퍼에 일주일치 사료를 한 번에 채우고, 앱 없이도 본체 버튼만으로 하루 최대 4번까지 정확한 그램 단위로 자동 급여됩니다.\n저소음 모터로 잠든 반려동물을 깨우지 않고, 건조제 칸이 따로 있어 사료의 신선함도 그대로 유지합니다.",
+    "desire": "주인의 목소리로 직접 녹음한 10초 멘트가 매 식사마다 재생되어, 혼자 있는 시간에도 반려동물의 분리불안을 덜어줍니다.\n투명 호퍼로 잔량을 한눈에 확인하고, 사료가 떨어지면 LED와 알림음으로 알려주는 안심 설계입니다.",
+    "action": "지금 주문하면 오늘 출고 · 무료배송"
+  },
+  "spec_table": [
+    {"label": "용량", "value": "5L (사료 약 2.2kg)"},
+    {"label": "급여 횟수", "value": "1일 1~4회 설정 가능"},
+    {"label": "1회 급여량", "value": "10g ~ 100g (10g 단위)"},
+    {"label": "전원", "value": "USB-C 어댑터 + 건전지 백업 (4xD)"},
+    {"label": "녹음 기능", "value": "최대 10초, 식사마다 자동 재생"},
+    {"label": "재질", "value": "식품용 ABS, BPA-Free"},
+    {"label": "본체 사이즈", "value": "200 x 200 x 340mm"},
+    {"label": "무게", "value": "1.6kg"},
+    {"label": "구성품", "value": "본체, 스테인리스 식기, USB-C 케이블, 한글 설명서"},
+    {"label": "A/S", "value": "구매일로부터 1년 무상"}
+  ],
+  "gallery": [
+    "https://placehold.co/860x600?text=상세+이미지+1+(사용+장면)",
+    "https://placehold.co/860x720?text=상세+이미지+2+(구성품)",
+    "https://placehold.co/860x540?text=상세+이미지+3+(사이즈+안내)",
+    "https://placehold.co/860x800?text=상세+이미지+4+(녹음+기능)"
+  ],
+  "options": [
+    {"name": "아이보리 화이트", "image_url": "https://placehold.co/430x430?text=화이트"},
+    {"name": "차콜 그레이", "image_url": "https://placehold.co/430x430?text=그레이"},
+    {"name": "민트 그린", "image_url": "https://placehold.co/430x430?text=민트"},
+    {"name": "코랄 핑크", "image_url": "https://placehold.co/430x430?text=핑크"}
+  ]
+}

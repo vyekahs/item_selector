@@ -23,6 +23,8 @@ EXPECTED_TABLES = {
     "customs_duty_rates",
     "international_shipping_rates",
     "seed_candidates",
+    "source_products",
+    "detail_pages",
 }
 
 

@@ -11,6 +11,7 @@ from .category import Category
 from .channel_profit import Channel, ChannelProfit
 from .coupang_fee import CoupangFee
 from .customs_duty_rate import CustomsDutyRate
+from .detail_page import DetailPage
 from .exchange_rate import ExchangeRate
 from .feedback import Feedback
 from .hs_code import HsCode
@@ -23,6 +24,7 @@ from .opportunity_score import OpportunityScore
 from .product import Product
 from .product_score import ProductScore, Recommendation
 from .seed_candidate import SeedCandidate
+from .source_product import SourceProduct
 
 __all__ = [
     "ApiCache",
@@ -31,6 +33,7 @@ __all__ = [
     "ChannelProfit",
     "CoupangFee",
     "CustomsDutyRate",
+    "DetailPage",
     "ExchangeRate",
     "Feedback",
     "HsCode",
@@ -45,4 +48,5 @@ __all__ = [
     "ProductScore",
     "Recommendation",
     "SeedCandidate",
+    "SourceProduct",
 ]

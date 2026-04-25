@@ -29,15 +29,28 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PATH="/app/.venv/bin:$PATH" \
     VIRTUAL_ENV=/app/.venv
 
-# curl is used by the HEALTHCHECK
+# curl: HEALTHCHECK
+# tesseract-ocr + chi_sim/kor: detail-page image_processor OCR
+# Chromium runtime libs: Playwright headless screenshot for detail-page renderer
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl \
+    && apt-get install -y --no-install-recommends \
+        curl \
+        tesseract-ocr \
+        tesseract-ocr-chi-sim \
+        tesseract-ocr-kor \
+        libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 \
+        libdbus-1-3 libxkbcommon0 libxcomposite1 libxdamage1 libxext6 \
+        libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
 # Copy the prebuilt virtualenv from the builder
 COPY --from=builder /app/.venv /app/.venv
+
+# Install Playwright Chromium browser into the venv. Skip browser deps
+# (we installed them above via apt) to keep the image lean.
+RUN /app/.venv/bin/python -m playwright install chromium
 
 # Copy application source (includes data/ with seed xlsx/xls files and
 # docker-entrypoint.sh which runs migrations + data bootstrap on start).

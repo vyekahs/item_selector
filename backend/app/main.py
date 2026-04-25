@@ -7,14 +7,18 @@ docker-compose alongside ``web``, ``collector``, ``scheduler``,
 """
 from __future__ import annotations
 
+from pathlib import Path
+
 from fastapi import FastAPI, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.routers import (
     admin,
     calculator,
     categories,
+    detail_pages,
     feedback,
     keywords,
     opportunities,
@@ -121,6 +125,23 @@ app.include_router(categories.router)
 app.include_router(keywords.router)
 app.include_router(admin.router)
 app.include_router(calculator.router)
+app.include_router(detail_pages.router)
+
+
+# ---------------------------------------------------------------------
+# Static files — generated detail-page JPGs
+# ---------------------------------------------------------------------
+# Mount AFTER routers so explicit API paths win over the static handler.
+# Module C writes to ``/app/generated/{detail_page_id}/page.jpg`` (CWD
+# in the container is ``/app``); we resolve relative to CWD and create
+# the dir on import so StaticFiles doesn't error on a fresh deploy.
+_generated_dir = Path("generated")
+_generated_dir.mkdir(exist_ok=True)
+app.mount(
+    "/generated",
+    StaticFiles(directory=str(_generated_dir)),
+    name="generated",
+)
 
 
 # ---------------------------------------------------------------------
