@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>itemSelector 설정</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>itemSelector</h1>
+      <p class="subtitle">상세페이지 생성기 설정</p>
+    </header>
+
+    <main>
+      <label>
+        <span>백엔드 base URL</span>
+        <input
+          type="url"
+          id="backendUrl"
+          placeholder="https://itemselector.mooo.com/api"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <small class="hint">
+          끝의 <code>/</code>는 자동 제거됩니다. 예: <code>https://itemselector.mooo.com/api</code>
+        </small>
+      </label>
+
+      <label>
+        <span>사용자명</span>
+        <input
+          type="text"
+          id="username"
+          placeholder="arang"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </label>
+
+      <label>
+        <span>비밀번호</span>
+        <input
+          type="password"
+          id="password"
+          placeholder="••••••••"
+          autocomplete="off"
+        />
+        <small class="hint">
+          Caddy basic_auth 자격증명. 평문으로 <code>chrome.storage.sync</code>에 저장됩니다.
+        </small>
+      </label>
+
+      <div class="actions">
+        <button type="button" id="saveBtn" class="primary">💾 저장</button>
+        <button type="button" id="testBtn">🩺 연결 테스트</button>
+      </div>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer>
+      <small>
+        v0.1.0 · 1688 / 타오바오 / 티몰 상품 페이지에서 우측 상단의
+        <strong>🎨 상세페이지 생성</strong> 버튼을 클릭하세요.
+      </small>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

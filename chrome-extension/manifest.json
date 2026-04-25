@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "itemSelector — 상세페이지 생성기",
+  "version": "0.1.0",
+  "description": "1688/타오바오 상품 페이지 데이터를 itemSelector 백엔드로 전송",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "itemSelector 설정",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://detail.1688.com/*",
+        "https://item.taobao.com/*",
+        "https://detail.tmall.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
